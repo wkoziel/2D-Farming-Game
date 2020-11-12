@@ -3411,10 +3411,10 @@ TextureImporter:
       name: objects_138
       rect:
         serializedVersion: 2
-        x: 7
-        y: 4
-        width: 120
-        height: 25
+        x: 64
+        y: 3
+        width: 63
+        height: 26
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -3458,7 +3458,7 @@ TextureImporter:
         width: 114
         height: 77
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
