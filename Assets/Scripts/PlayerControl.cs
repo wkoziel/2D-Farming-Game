@@ -7,6 +7,8 @@ public class PlayerControl : MonoBehaviour
     public float speed;
     private Rigidbody2D myRigidbody2D;
     private Vector3 vector;
+    Vector2 motionVector;
+    public Vector2 lastMotionVector;
     private Animator animator;
 
     //Use this for initialization
@@ -22,7 +24,15 @@ public class PlayerControl : MonoBehaviour
         vector = Vector3.zero;
         vector.x = Input.GetAxis("Horizontal");
         vector.y = Input.GetAxis("Vertical");
+
+        motionVector = new Vector2(vector.x, vector.y);
+
         UpdateAnimationAndMove();
+
+        if (vector.x != 0 || vector.y != 0)
+        {
+            lastMotionVector = new Vector2(vector.x, vector.y).normalized;
+        }
     }
     void UpdateAnimationAndMove()
     {
