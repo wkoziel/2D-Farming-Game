@@ -26,6 +26,7 @@ public class PlayerControl : MonoBehaviour
         vector.y = Input.GetAxis("Vertical");
 
         motionVector = new Vector2(vector.x, vector.y);
+        
 
         UpdateAnimationAndMove();
 
@@ -46,11 +47,19 @@ public class PlayerControl : MonoBehaviour
         else
         {
             animator.SetBool("moving", false);
+            if (FindObjectOfType<SoundManager>().SoundIsPlaying("Walk"))
+            {
+                FindObjectOfType<SoundManager>().Stop("Walk");
+            }
         }
     }
     //Move character
     void Move()
     {
         myRigidbody2D.MovePosition(transform.position + vector * speed * Time.deltaTime);
+        if (!FindObjectOfType<SoundManager>().SoundIsPlaying("Walk"))
+        {
+            FindObjectOfType<SoundManager>().Play("Walk");
+        }
     }
 }
