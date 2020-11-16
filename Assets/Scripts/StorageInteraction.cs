@@ -5,6 +5,7 @@ using UnityEngine;
 public class StorageInteraction : MonoBehaviour
 {
     public bool playerInRange;
+    [SerializeField] GameObject panel;
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,7 @@ public class StorageInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
+            panel.SetActive(!panel.activeInHierarchy);
         }
     }
 
@@ -31,6 +33,7 @@ public class StorageInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = false;
+            panel.SetActive(false);
         }
     }
 }
