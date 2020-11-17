@@ -45,14 +45,26 @@ public class ToolsCharacterController : MonoBehaviour
     {
         selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
         TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
-        if (!crops.ContainsKey((Vector2Int)selectedTilePosition))
+        try
         {
-            crops.Add((Vector2Int)selectedTilePosition, tileMapReadController.GetTileData(tileBase));
+            TileData tileData = tileMapReadController.GetTileData(tileBase);
+            if (!(tileData is null))
+            {
+                if (!crops.ContainsKey((Vector2Int)selectedTilePosition))
+                {
+                    crops.Add((Vector2Int)selectedTilePosition, tileData);
+                }
+                else
+                {
+                    crops[(Vector2Int)selectedTilePosition] = tileData;
+                }
+            }
         }
-        else
+        catch
         {
-            crops[(Vector2Int)selectedTilePosition] = tileMapReadController.GetTileData(tileBase);
+            return;
         }
+
     }
 
     void CanSelectCheck()
