@@ -33,6 +33,11 @@ public class ItemPanel : MonoBehaviour
         }
     }
 
+    private void OnEnable()
+    {
+        Show();
+    }
+
     public void Show()
     {
         // setting or hiding buttons based on the inventory
