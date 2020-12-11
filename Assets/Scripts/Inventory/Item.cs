@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Data/ItemInInventory")]
+[CreateAssetMenu(menuName = "Data/Item")]
 
-public class ItemInInventory : ScriptableObject
+public class Item : ScriptableObject
 {
     public string Name;
     public bool stackable;

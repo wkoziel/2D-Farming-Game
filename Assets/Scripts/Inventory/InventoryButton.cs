@@ -10,6 +10,7 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Image icon;
     [SerializeField] Text text;
+    [SerializeField] Image highlight;
 
     int myIndex;
 
@@ -47,9 +48,19 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         // When we press the button we want to associate it with the drag and drop controller
-        ItemContainer inventory = GameManager.instance.inventoryContainer;
-        GameManager.instance.dragAndDropController.OnClick(inventory.slots[myIndex]);
-        transform.parent.GetComponent<InventoryPanel>().Show();
 
+        //ItemContainer inventory = GameManager.instance.inventoryContainer;
+        //GameManager.instance.dragAndDropController.OnClick(inventory.slots[myIndex]);
+        //transform.parent.GetComponent<InventoryPanel>().Show();
+
+        ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
+        itemPanel.OnClick(myIndex);
+
+        // In toolbar we should select the item and not drag it around
+    }
+
+    public void Highlight(bool param)
+    {
+        highlight.gameObject.SetActive(param);
     }
 }

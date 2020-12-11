@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public class ItemSlot
 {
-    public ItemInInventory item;
+    public Item item;
     public int count;
 
     public void Copy(ItemSlot slot)
@@ -16,7 +16,7 @@ public class ItemSlot
     }
 
     // Sets up the item in the item slot
-    public void Set(ItemInInventory item, int count)
+    public void Set(Item item, int count)
     {
         this.item = item;
         this.count = count;
@@ -39,7 +39,7 @@ public class ItemContainer : ScriptableObject
     // Defining all methods which we use to interact with the inventory
 
     // Adds item to the container
-    public void Add(ItemInInventory item, int count = 1)
+    public void Add(Item item, int count = 1)
     {
         // Determining if the item is stackable - if it's not then find the first free
         // slot and insert the item there

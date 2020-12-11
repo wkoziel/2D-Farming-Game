@@ -6,6 +6,7 @@ public class StorageInteraction : MonoBehaviour
 {
     public bool playerInRange;
     [SerializeField] GameObject panel;
+    [SerializeField] GameObject toolbarPanel;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,7 @@ public class StorageInteraction : MonoBehaviour
         {
             playerInRange = true;
             panel.SetActive(!panel.activeInHierarchy);
+            toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
         }
     }
 
@@ -34,6 +36,8 @@ public class StorageInteraction : MonoBehaviour
         {
             playerInRange = false;
             panel.SetActive(false);
+            toolbarPanel.SetActive(true);
+
         }
     }
 }
