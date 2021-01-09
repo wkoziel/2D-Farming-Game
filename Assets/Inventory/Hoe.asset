@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dd7d8549eaf9954e8fdae81ffb89fcd, type: 3}
-  m_Name: Shovel
+  m_Name: Hoe
   m_EditorClassIdentifier: 
-  Name: Shovel
+  Name: Hoe
   stackable: 0
-  icon: {fileID: 21300000, guid: d90abf16c93fa7d4e9242802c8d7bfd2, type: 3}
+  icon: {fileID: 21300000, guid: 62fd94b034ac9ab49b37083bd5187965, type: 3}

@@ -17,6 +17,33 @@ public class ToolbarController : MonoBehaviour
     {
         selectedTool = id;
     }
-    
+
+    public Item GetItem
+    {
+        get
+        {
+            return GameManager.instance.inventoryContainer.slots[selectedTool].item;
+        }
+    }
+
+    public int GetCount
+    {
+        get
+        {
+            return GameManager.instance.inventoryContainer.slots[selectedTool].count;
+        }
+    }
+
+    // Alternative for the method RemoveItem in ItemContainer
+    //public void ReduceCount()
+    //{
+    //    GameManager.instance.inventoryContainer.slots[selectedTool].count--;
+
+    //    if (GameManager.instance.inventoryContainer.slots[selectedTool].count <= 0)
+    //    {
+
+    //    }
+    //}
+
 
 }

@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\DayTimeController.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\HouseInteraction.cs" />
+    <Compile Include="Assets\Scripts\Inventory\CountUpdateScript.cs" />
     <Compile Include="Assets\Scripts\Inventory\DragAndDropController.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryButton.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryController.cs" />

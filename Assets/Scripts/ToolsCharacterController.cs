@@ -14,11 +14,16 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] TileData plowableTiles;
     [SerializeField] TileData toMowTiles;
     [SerializeField] TileData toSeedTiles;
+    ToolbarController toolbarController;
+
+    CountUpdateScript countUpdateScript;
 
     Vector3Int selectedTilePosition;
     bool selectable;
 
     public static Dictionary<Vector2Int, TileData> crops;
+
+    public ItemContainer inventory;
 
 
     // Start is called before the first frame update
@@ -27,6 +32,8 @@ public class ToolsCharacterController : MonoBehaviour
         character = GetComponent<PlayerControl>();
         rgbd2d = GetComponent<Rigidbody2D>();
         crops = new Dictionary<Vector2Int, TileData>();
+        toolbarController = GetComponent<ToolbarController>();
+        //countUpdateScript = GetComponent<CountUpdateScript>();
     }
 
     // Update is called once per frame
@@ -82,7 +89,7 @@ public class ToolsCharacterController : MonoBehaviour
 
     private void UseTool()
     {
-        if (selectable == true)
+        if (selectable == true && toolbarController.GetItem != null)
         {
             TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
             TileData tileData = tileMapReadController.GetTileData(tileBase);
@@ -92,17 +99,24 @@ public class ToolsCharacterController : MonoBehaviour
                 return;
             }
 
-            if (crops[(Vector2Int)selectedTilePosition].ableToMow)
+            // Debug.Log("Wybrane narzędzie: " + toolbarController.GetItem.Name);
+
+            if (crops[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel" )
             {
                 cropsManager.Mow(selectedTilePosition);
             }
-            else if (crops[(Vector2Int)selectedTilePosition].plowable)
+            else if (crops[(Vector2Int)selectedTilePosition].plowable && toolbarController.GetItem.Name == "Hoe")
             {
                 cropsManager.Plow(selectedTilePosition);
             }
-            else if (crops[(Vector2Int)selectedTilePosition].ableToSeed)
+            else if (crops[(Vector2Int)selectedTilePosition].ableToSeed && toolbarController.GetItem.isSeed == true)
             {
                 cropsManager.Seed(selectedTilePosition);
+                //toolbarController.ReduceCount();
+                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 5);
+
+                //countUpdateScript.countValue -= 5;
+
             }
         }
     }
