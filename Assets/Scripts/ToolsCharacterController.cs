@@ -15,15 +15,13 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] TileData toMowTiles;
     [SerializeField] TileData toSeedTiles;
     ToolbarController toolbarController;
+    [SerializeField] GameObject toolbarPanel;
 
-    CountUpdateScript countUpdateScript;
 
     Vector3Int selectedTilePosition;
     bool selectable;
 
     public static Dictionary<Vector2Int, TileData> crops;
-
-    public ItemContainer inventory;
 
 
     // Start is called before the first frame update
@@ -33,7 +31,6 @@ public class ToolsCharacterController : MonoBehaviour
         rgbd2d = GetComponent<Rigidbody2D>();
         crops = new Dictionary<Vector2Int, TileData>();
         toolbarController = GetComponent<ToolbarController>();
-        //countUpdateScript = GetComponent<CountUpdateScript>();
     }
 
     // Update is called once per frame
@@ -111,11 +108,16 @@ public class ToolsCharacterController : MonoBehaviour
             }
             else if (crops[(Vector2Int)selectedTilePosition].ableToSeed && toolbarController.GetItem.isSeed == true)
             {
-                cropsManager.Seed(selectedTilePosition);
-                //toolbarController.ReduceCount();
-                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 5);
-
-                //countUpdateScript.countValue -= 5;
+                // Checking whether we have more than 20 seeds to seed
+                if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 20)
+                {
+                    cropsManager.Seed(selectedTilePosition);
+                    GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 20);       // Deletes 20 seeds
+                }
+                
+                // Refreshing the count of seeds
+                toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
+                toolbarPanel.SetActive(true);
 
             }
         }

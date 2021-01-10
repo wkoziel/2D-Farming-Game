@@ -7,7 +7,6 @@ public class ItemPanel : MonoBehaviour
     // Instead of creating two very similar functionalities for InventoryPanel and
     // ToolbarPanel there's one class: ItemPanel
 
-    //[SerializeField] ItemContainer inventory;
     public ItemContainer inventory;
     public List<InventoryButton> buttons;         // Serialized list of buttons
 

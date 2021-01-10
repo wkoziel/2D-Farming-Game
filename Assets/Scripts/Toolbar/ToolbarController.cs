@@ -8,7 +8,7 @@ public class ToolbarController : MonoBehaviour
     // We can later change it in the inspector because it's serialized
 
     [SerializeField] int toolbarSize = 8;
-    int selectedTool;                               // Holds the id of the selected tool
+    public int selectedTool;                               // Holds the id of the selected tool
 
     // Scroll functionality?
    

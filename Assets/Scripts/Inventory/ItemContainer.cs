@@ -45,10 +45,10 @@ public class ItemContainer : ScriptableObject
         // Determining if the item is stackable - if it's not then find the first free
         // slot and insert the item there
 
-        if (item.stackable == true)
-        {
-            // Seeing if there's already a stackable item - if there is then add the count
+        if (item.stackable)
+        {        
             ItemSlot itemSlot = slots.Find(x => x.item == item);
+
 
             if (itemSlot != null)
             {
@@ -74,6 +74,7 @@ public class ItemContainer : ScriptableObject
             if (itemSlot != null)
             {
                 itemSlot.item = item;
+                itemSlot.count = count;
             }
         }
     }
@@ -85,6 +86,7 @@ public class ItemContainer : ScriptableObject
         if (removedItem.stackable)
         {
             // Finding the item which is going to be removed
+
             ItemSlot itemSlot = slots.Find(slot => slot.item == removedItem);
 
             if (itemSlot == null)

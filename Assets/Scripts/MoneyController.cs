@@ -35,6 +35,15 @@ public class MoneyController : MonoBehaviour
         }
     }
 
+    public bool canBuyItems(long moneyToSubstract)
+    {
+        if (money - moneyToSubstract < 0)
+        {
+            return false;
+        }
+        else return true;
+    }
+
     private string formatMoney(long moneyToFormat)
     {
         string suffix;
