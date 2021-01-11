@@ -73,42 +73,42 @@ public class UI_ShopController : MonoBehaviour
                 }
 
                 // If it's not in the inventory we need to connect it to one of the created items
-                //else
-                //{
-                //    bool isSeed = false;
-                //    bool stackable = false;
+                else
+                {
+                    //bool isSeed = false;
+                    //bool stackable = false;
 
-                //    if (itemName.Contains("Seed"))
-                //    {
-                //        isSeed = true;
-                //        stackable = true;
-                //    }
+                    //if (itemName.Contains("Seed"))
+                    //{
+                    //    isSeed = true;
+                    //    stackable = true;
+                    //}
 
-                //    //Debug.Log(GameManager.instance.allItemsContainer.slots);
+                    //Debug.Log(GameManager.instance.allItemsContainer.slots);
 
-                //    foreach (ItemSlot itemSlot1 in GameManager.instance.allItemsContainer.slots)
-                //    {
+                    //foreach (ItemSlot itemSlot1 in GameManager.instance.allItemsContainer.slots)
+                    //{
 
-                //        if (itemSlot1.item.Name == itemName && itemSlot1.item.isSeed == isSeed && itemSlot1.item.icon == itemSprite &&
-                //            itemSlot1.item.stackable == stackable)
-                //        {
-                //            newItem = itemSlot1.item;
-                //        }
-                //    }
-
-
-                //    // Creating new item (object) if it doesn't exist in the inventory yet
-                //    //newItem.Name = itemName;
-                //    //newItem.icon = itemSprite;
-
-                //    //if (itemName.Contains("Seed"))
-                //    //{
-                //    //    newItem.isSeed = true;
-                //    //    newItem.stackable = true;
-                //    //}
+                    //    if (itemSlot1.item.Name == itemName && itemSlot1.item.isSeed == isSeed && itemSlot1.item.icon == itemSprite &&
+                    //        itemSlot1.item.stackable == stackable)
+                    //    {
+                    //        newItem = itemSlot1.item;
+                    //    }
+                    //}
 
 
-                //}
+                    // Creating new item (object) if it doesn't exist in the inventory yet
+                    newItem.Name = itemName;
+                    newItem.icon = itemSprite;
+
+                    if (itemName.Contains("Seed"))
+                    {
+                        newItem.isSeed = true;
+                        newItem.stackable = true;
+                    }
+
+
+                }
             }
             
         }
