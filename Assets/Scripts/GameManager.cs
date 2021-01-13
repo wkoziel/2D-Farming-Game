@@ -12,5 +12,6 @@ public class GameManager : MonoBehaviour
     }
 
     public ItemContainer inventoryContainer;
+    public ItemContainer allItemsContainer;
     public DragAndDropController dragAndDropController;
 }

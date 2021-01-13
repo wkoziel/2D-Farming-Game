@@ -10349,7 +10349,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventoryContainer: {fileID: 11400000, guid: f6136b0e5c6311d4b821f028c20bd111, type: 2}
-  allItemsContainer: {fileID: 0}
+  allItemsContainer: {fileID: 11400000, guid: e4830b8ed89f4b245b0c4cdfd26f62e9, type: 2}
   dragAndDropController: {fileID: 827739990}
 --- !u!114 &827739990
 MonoBehaviour:

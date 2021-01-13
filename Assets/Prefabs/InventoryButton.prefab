@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4909159327148950818}
   - component: {fileID: 8034755984791787069}
   - component: {fileID: 4853094147506483550}
-  - component: {fileID: 5911117714502065979}
   m_Layer: 5
   m_Name: InventoryButton
   m_TagString: Untagged
@@ -139,19 +138,6 @@ MonoBehaviour:
   icon: {fileID: 2203739710722657034}
   text: {fileID: 2474712096381692345}
   highlight: {fileID: 4856765476677452449}
---- !u!114 &5911117714502065979
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 631018798192250878}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8547ca89e3b03bd4c9def0295dcb1f9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countValue: 0
 --- !u!1 &4921654818546793159
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +223,6 @@ GameObject:
   - component: {fileID: 5545587001175147235}
   - component: {fileID: 363391768064823900}
   - component: {fileID: 2474712096381692345}
-  - component: {fileID: 6588141153082580291}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -305,19 +290,6 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 999
---- !u!114 &6588141153082580291
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5234355843552365963}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8547ca89e3b03bd4c9def0295dcb1f9f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  countValue: 0
 --- !u!1 &6343135485131590621
 GameObject:
   m_ObjectHideFlags: 0
