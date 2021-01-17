@@ -10,6 +10,7 @@ public class UI_ShopController : MonoBehaviour
     [SerializeField] private MoneyController money;
     public Button btn;
     [SerializeField] GameObject toolbarPanel;
+    [SerializeField] GameObject inventoryPanel;
 
     private void Awake()
     {
@@ -96,6 +97,9 @@ public class UI_ShopController : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
+        inventoryPanel.SetActive(false);
+        toolbarPanel.SetActive(true);
+        
     }
 
     public void Hide()

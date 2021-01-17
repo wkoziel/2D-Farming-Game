@@ -25,8 +25,10 @@ public class StorageInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = true;
-            panel.SetActive(!panel.activeInHierarchy);
-            toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
+            //panel.SetActive(!panel.activeInHierarchy);
+            panel.SetActive(false);
+            toolbarPanel.SetActive(true);
+            //toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
         }
     }
 
@@ -35,8 +37,8 @@ public class StorageInteraction : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             playerInRange = false;
-            panel.SetActive(false);
-            toolbarPanel.SetActive(true);
+            //panel.SetActive(false);
+            //toolbarPanel.SetActive(true);
 
         }
     }
