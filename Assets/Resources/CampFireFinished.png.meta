@@ -1,28 +1,91 @@
 fileFormatVersion: 2
-guid: 4ae2a4ad1ed698c49ba10e80d1714997
+guid: b90013a577770e9468c64d8925bf42bb
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2182124076254010665
-    second: rock_0
+      213: 2568837401350651815
+    second: CampFireFinished_0
   - first:
-      213: 2115267796186251350
-    second: rock_1
+      213: -5784929331180331738
+    second: CampFireFinished_1
   - first:
-      213: -6546699357316064334
-    second: rock_2
+      213: 6703503656626188089
+    second: CampFireFinished_2
   - first:
-      213: 4414985671160336941
-    second: rock_3
+      213: -836580246522959223
+    second: CampFireFinished_3
   - first:
-      213: 6745779496355511533
-    second: rock_4
+      213: -6237535784788995661
+    second: CampFireFinished_4
   - first:
-      213: -2490388491417578302
-    second: rock_5
+      213: 8740249354941347519
+    second: CampFireFinished_5
   - first:
-      213: -3915639213292744380
-    second: rock_6
+      213: 2553746823598205273
+    second: CampFireFinished_6
+  - first:
+      213: 7920154339131280931
+    second: CampFireFinished_7
+  - first:
+      213: -2961174128460336156
+    second: CampFireFinished_8
+  - first:
+      213: 8447836514572629557
+    second: CampFireFinished_9
+  - first:
+      213: 5789404013695292574
+    second: CampFireFinished_10
+  - first:
+      213: 925805934976160653
+    second: CampFireFinished_11
+  - first:
+      213: 730288572525777205
+    second: CampFireFinished_12
+  - first:
+      213: 5281378983055110741
+    second: CampFireFinished_13
+  - first:
+      213: 2726465622376489245
+    second: CampFireFinished_14
+  - first:
+      213: 8885844500899863825
+    second: CampFireFinished_15
+  - first:
+      213: -709205707082391123
+    second: CampFireFinished_16
+  - first:
+      213: -4734934450099583461
+    second: CampFireFinished_17
+  - first:
+      213: 6543498127657159952
+    second: CampFireFinished_18
+  - first:
+      213: 6205329886078459751
+    second: CampFireFinished_19
+  - first:
+      213: -3500117419914139935
+    second: CampFireFinished_20
+  - first:
+      213: 4821429050875532118
+    second: CampFireFinished_21
+  - first:
+      213: -6956462604349466085
+    second: CampFireFinished_22
+  - first:
+      213: -5134765371445005668
+    second: CampFireFinished_0
+  - first:
+      213: -2153206964521884633
+    second: CampFireFinished_1
+  - first:
+      213: 6446657985115360398
+    second: CampFireFinished_2
+  - first:
+      213: -9075901769124465744
+    second: CampFireFinished_3
+  - first:
+      213: 6962089050531257532
+    second: CampFireFinished_4
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,13 +171,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock_0
+      name: CampFireFinished_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -122,125 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7d26d0bc6b987b1e0800000000000000
-      internalID: -2182124076254010665
+      spriteID: c923b0e8916adb8b0800000000000000
+      internalID: -5134765371445005668
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rock_1
+      name: CampFireFinished_1
       rect:
         serializedVersion: 2
-        x: 35
-        y: 23
-        width: 16
-        height: 9
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 650418c7ad0fa5d10800000000000000
-      internalID: 2115267796186251350
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock_2
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 25
-        width: 4
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2bbd5e3de937525a0800000000000000
-      internalID: -6546699357316064334
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock_3
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 13
-        width: 10
-        height: 6
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d2293f9831e254d30800000000000000
-      internalID: 4414985671160336941
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock_4
-      rect:
-        serializedVersion: 2
-        x: 43
-        y: 6
-        width: 18
-        height: 15
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: dec326516b2dd9d50800000000000000
-      internalID: 6745779496355511533
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock_5
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 1
-        width: 7
-        height: 4
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2c495589cdc507dd0800000000000000
-      internalID: -2490388491417578302
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rock_6
-      rect:
-        serializedVersion: 2
-        x: 53
+        x: 64
         y: 0
-        width: 7
-        height: 4
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -248,8 +206,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4419817a1ead8a9c0800000000000000
-      internalID: -3915639213292744380
+      spriteID: 724a6c78ca54e12e0800000000000000
+      internalID: -2153206964521884633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CampFireFinished_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8c8c371841277950800000000000000
+      internalID: 6446657985115360398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CampFireFinished_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b33ffa5d6beb0280800000000000000
+      internalID: -9075901769124465744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CampFireFinished_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbc5d8fca1f4e9060800000000000000
+      internalID: 6962089050531257532
       vertices: []
       indices: 
       edges: []
