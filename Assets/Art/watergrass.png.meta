@@ -1,0 +1,698 @@
+fileFormatVersion: 2
+guid: ac49f611b1058f349afba9ccb4fd1727
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 507110579660749318
+    second: watergrass_0
+  - first:
+      213: -8513210304079244384
+    second: watergrass_1
+  - first:
+      213: -7545204914771921804
+    second: watergrass_2
+  - first:
+      213: 1787054802417041348
+    second: watergrass_3
+  - first:
+      213: 8290218710383247403
+    second: watergrass_4
+  - first:
+      213: -1127190942304739560
+    second: watergrass_5
+  - first:
+      213: -780603861287004156
+    second: watergrass_6
+  - first:
+      213: -1785294025900096360
+    second: watergrass_7
+  - first:
+      213: -1923398338618151859
+    second: watergrass_8
+  - first:
+      213: 3183329816176961621
+    second: watergrass_9
+  - first:
+      213: -7483259442969508358
+    second: watergrass_10
+  - first:
+      213: 8876612985640186104
+    second: watergrass_11
+  - first:
+      213: 3628933251788633873
+    second: watergrass_12
+  - first:
+      213: 5984553939006657834
+    second: watergrass_13
+  - first:
+      213: -5498015527673059172
+    second: watergrass_14
+  - first:
+      213: -8645649824751603984
+    second: watergrass_15
+  - first:
+      213: -4107775894480735506
+    second: watergrass_16
+  - first:
+      213: 2012845195225917754
+    second: watergrass_17
+  - first:
+      213: -5434802878175738829
+    second: watergrass_18
+  - first:
+      213: 554724736710609063
+    second: watergrass_19
+  - first:
+      213: -663964810057903615
+    second: watergrass_20
+  - first:
+      213: -8316455078721073570
+    second: watergrass_21
+  - first:
+      213: 1842248238535853683
+    second: watergrass_22
+  - first:
+      213: 8031497429941113020
+    second: watergrass_23
+  - first:
+      213: -3005650642628264323
+    second: watergrass_24
+  - first:
+      213: 1334628304347394114
+    second: watergrass_25
+  - first:
+      213: 2232014781799707577
+    second: watergrass_26
+  - first:
+      213: 8756296441212463609
+    second: watergrass_27
+  - first:
+      213: 94118810785414134
+    second: watergrass_28
+  - first:
+      213: 5704691901869544121
+    second: watergrass_29
+  - first:
+      213: 4706939335966955856
+    second: watergrass_30
+  - first:
+      213: -4901553234915001104
+    second: watergrass_31
+  - first:
+      213: -4580607421992839221
+    second: watergrass_32
+  - first:
+      213: 4541818820115669988
+    second: watergrass_33
+  - first:
+      213: 1477836172454271700
+    second: watergrass_34
+  - first:
+      213: 4511164483704440371
+    second: watergrass_35
+  - first:
+      213: -4472392489205676020
+    second: watergrass_36
+  - first:
+      213: 9070603296755432315
+    second: watergrass_37
+  - first:
+      213: -2455236838976004880
+    second: watergrass_38
+  - first:
+      213: 5197127772048253360
+    second: watergrass_39
+  - first:
+      213: 6485427774238655480
+    second: watergrass_40
+  - first:
+      213: -2817180813136813116
+    second: watergrass_41
+  - first:
+      213: 1540255887199390553
+    second: watergrass_42
+  - first:
+      213: 2468420159731917526
+    second: watergrass_43
+  - first:
+      213: 5663211266681946471
+    second: watergrass_44
+  - first:
+      213: -8506026214919052201
+    second: watergrass_45
+  - first:
+      213: -472698383166486113
+    second: watergrass_46
+  - first:
+      213: 2434598255890201699
+    second: watergrass_47
+  - first:
+      213: 8015568745720498815
+    second: watergrass_48
+  - first:
+      213: -2038027605860049809
+    second: watergrass_49
+  - first:
+      213: -4002729555036701132
+    second: watergrass_50
+  - first:
+      213: -4390917591187096862
+    second: watergrass_51
+  - first:
+      213: -7068183557005047807
+    second: watergrass_52
+  - first:
+      213: -228444966345156393
+    second: watergrass_53
+  - first:
+      213: 5888365134055636846
+    second: watergrass_54
+  - first:
+      213: -7046014494257102555
+    second: watergrass_55
+  - first:
+      213: -8748947892046978916
+    second: watergrass_56
+  - first:
+      213: 7084654380718759915
+    second: watergrass_57
+  - first:
+      213: 4060616426983860267
+    second: watergrass_58
+  - first:
+      213: -8660513734203174464
+    second: watergrass_59
+  - first:
+      213: 4818578122796086295
+    second: watergrass_60
+  - first:
+      213: 4120689606193834313
+    second: watergrass_61
+  - first:
+      213: 3437584372521591673
+    second: watergrass_62
+  - first:
+      213: 8891303975916483052
+    second: watergrass_63
+  - first:
+      213: 1507047952234038050
+    second: watergrass_64
+  - first:
+      213: 1057767347169812843
+    second: watergrass_65
+  - first:
+      213: -1383764203217175666
+    second: watergrass_66
+  - first:
+      213: 6097833528178594798
+    second: watergrass_67
+  - first:
+      213: -4774112595556713261
+    second: watergrass_68
+  - first:
+      213: 5857838920689550863
+    second: watergrass_69
+  - first:
+      213: 2490536028300756898
+    second: watergrass_70
+  - first:
+      213: 3400186144463057654
+    second: watergrass_71
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: watergrass_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60a758aa26e990700800000000000000
+      internalID: 507110579660749318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a3592755500bd980800000000000000
+      internalID: -8513210304079244384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 474fc713b1c0a4790800000000000000
+      internalID: -7545204914771921804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cf3934efd4ecc810800000000000000
+      internalID: 1787054802417041348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b20c0be5ef5cc0370800000000000000
+      internalID: 8290218710383247403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 128
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f53e16fc96b50f0800000000000000
+      internalID: -1127190942304739560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40890b98cecba25f0800000000000000
+      internalID: -780603861287004156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_7
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8940996da8c5937e0800000000000000
+      internalID: -1785294025900096360
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4ca611d667be45e0800000000000000
+      internalID: -1923398338618151859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55823201a957d2c20800000000000000
+      internalID: 3183329816176961621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_10
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af507b34f2f162890800000000000000
+      internalID: -7483259442969508358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_11
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f0f3b9ea70103b70800000000000000
+      internalID: 8876612985640186104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 117f67ac09f8c5230800000000000000
+      internalID: 3628933251788633873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_13
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2518a999186d0350800000000000000
+      internalID: 5984553939006657834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_14
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 32
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98277fd10023b3b0800000000000000
+      internalID: -5498015527673059172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fe234f7a4b740880800000000000000
+      internalID: -8645649824751603984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_16
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee23090869f3ef6c0800000000000000
+      internalID: -4107775894480735506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: watergrass_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a39ea416a001feb10800000000000000
+      internalID: 2012845195225917754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
