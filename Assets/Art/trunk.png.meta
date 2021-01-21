@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 1240751488bc089439dbed5034b0ea35
+guid: c8046358b94a183428968ac0d8d36b1e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4849719822153787251
-    second: treetop_0
+      213: 9120211361127971695
+    second: trunk_0
   - first:
-      213: -3222322254821047183
-    second: treetop_1
-  - first:
-      213: 1806590598938579021
-    second: treetop_2
-  - first:
-      213: 7506719289454322073
-    second: treetop_3
+      213: 668681886451446590
+    second: trunk_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -99,13 +93,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: treetop_0
+      name: trunk_0
       rect:
         serializedVersion: 2
-        x: 1
-        y: 144
-        width: 94
-        height: 80
+        x: 16
+        y: 23
+        width: 64
+        height: 73
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -113,20 +107,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d885a54448552bcb0800000000000000
-      internalID: -4849719822153787251
+      spriteID: f6bb38879ef719e70800000000000000
+      internalID: 9120211361127971695
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: treetop_1
+      name: trunk_1
       rect:
         serializedVersion: 2
-        x: 97
-        y: 128
-        width: 94
-        height: 80
+        x: 115
+        y: 25
+        width: 59
+        height: 71
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,50 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1744e895bf20843d0800000000000000
-      internalID: -3222322254821047183
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: treetop_2
-      rect:
-        serializedVersion: 2
-        x: 4
-        y: 32
-        width: 85
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: d405b48f39c421910800000000000000
-      internalID: 1806590598938579021
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: treetop_3
-      rect:
-        serializedVersion: 2
-        x: 102
-        y: 16
-        width: 85
-        height: 91
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9916f74eb693d2860800000000000000
-      internalID: 7506719289454322073
+      spriteID: e333da502a2a74900800000000000000
+      internalID: 668681886451446590
       vertices: []
       indices: 
       edges: []
