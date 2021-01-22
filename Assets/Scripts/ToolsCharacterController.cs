@@ -10,6 +10,7 @@ public class ToolsCharacterController : MonoBehaviour
     Rigidbody2D rgbd2d;
     [SerializeField] MarkerManager markerManager;
     [SerializeField] TileMapReadController tileMapReadController;
+    [SerializeField] CropsReadController cropsReadController;
     [SerializeField] float maxDistance = 2f;
     [SerializeField] CropsManager cropsManager;
     [SerializeField] TileData plowableTiles;
@@ -21,11 +22,19 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] float offsetDistance = 1f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
 
+    [SerializeField] Corn corn;
+    [SerializeField] Parsley parsley;
+    [SerializeField] Potato potato;
+    [SerializeField] Strawberry strawberry;
+    [SerializeField] Tomato tomato;
+
 
     Vector3Int selectedTilePosition;
+    Vector3Int selectedCropPosition;
     bool selectable;
 
-    public static Dictionary<Vector2Int, TileData> crops;
+    public static Dictionary<Vector2Int, TileData> fields;
+    public static Dictionary<Vector2Int, CropData> crops;
 
 
     // Start is called before the first frame update
@@ -33,7 +42,8 @@ public class ToolsCharacterController : MonoBehaviour
     {
         character = GetComponent<PlayerControl>();
         rgbd2d = GetComponent<Rigidbody2D>();
-        crops = new Dictionary<Vector2Int, TileData>();
+        fields = new Dictionary<Vector2Int, TileData>();
+        crops = new Dictionary<Vector2Int, CropData>();
         toolbarController = GetComponent<ToolbarController>();
     }
 
@@ -79,13 +89,35 @@ public class ToolsCharacterController : MonoBehaviour
             TileData tileData = tileMapReadController.GetTileData(tileBase);
             if (!(tileData is null))
             {
-                if (!crops.ContainsKey((Vector2Int)selectedTilePosition))
+                if (!fields.ContainsKey((Vector2Int)selectedTilePosition))
                 {
-                    crops.Add((Vector2Int)selectedTilePosition, tileData);
+                    fields.Add((Vector2Int)selectedTilePosition, tileData);
                 }
                 else
                 {
-                    crops[(Vector2Int)selectedTilePosition] = tileData;
+                    fields[(Vector2Int)selectedTilePosition] = tileData;
+                }
+            }
+        }
+        catch
+        {
+            return;
+        }
+
+        selectedCropPosition = cropsReadController.GetGridPosition(Input.mousePosition, true);
+        TileBase cropBase = cropsReadController.GetTileBase(selectedTilePosition);
+        try
+        {
+            CropData cropData = cropsReadController.GetCropData(cropBase);
+            if (!(cropData is null))
+            {
+                if (!crops.ContainsKey((Vector2Int)selectedTilePosition))
+                {
+                    crops.Add((Vector2Int)selectedTilePosition, cropData);
+                }
+                else
+                {
+                    crops[(Vector2Int)selectedTilePosition] = cropData;
                 }
             }
         }
@@ -144,6 +176,7 @@ public class ToolsCharacterController : MonoBehaviour
         {
             TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
             TileData tileData = tileMapReadController.GetTileData(tileBase);
+            //TileData cropData = cropsReadController.GetTileData(tileBase);
 
             if (tileData != plowableTiles && tileData != toMowTiles && tileData != toSeedTiles)
             {
@@ -151,31 +184,71 @@ public class ToolsCharacterController : MonoBehaviour
             }
 
             // Debug.Log("Wybrane narzędzie: " + toolbarController.GetItem.Name);
-
-            if (crops[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel" )
+            //Debug.Log(crops[(Vector2Int)selectedTilePosition]);
+            //if ((!crops[(Vector2Int)selectedTilePosition].withTomato && !crops[(Vector2Int)selectedTilePosition].withStrawberry && !crops[(Vector2Int)selectedTilePosition].withPotato && !crops[(Vector2Int)selectedTilePosition].withParsley && !crops[(Vector2Int)selectedTilePosition].withCorn) || !crops[(Vector2Int)selectedTilePosition])
+            if (crops[(Vector2Int)selectedTilePosition].noPlant)
             {
-                cropsManager.Mow(selectedTilePosition);
-            }
-            else if (crops[(Vector2Int)selectedTilePosition].plowable && toolbarController.GetItem.Name == "Hoe")
-            {
-                cropsManager.Plow(selectedTilePosition);
-            }
-            else if (crops[(Vector2Int)selectedTilePosition].ableToSeed && toolbarController.GetItem.isSeed == true)
-            {
-
-                // Checking whether we have more than 20 seeds to seed
-                if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 20)
+                if (fields[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel")
                 {
-                    cropsManager.Seed(selectedTilePosition);
-                    GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 20);       // Deletes 20 seeds
+                    cropsManager.Mow(selectedTilePosition);
                 }
+                else if (fields[(Vector2Int)selectedTilePosition].plowable && toolbarController.GetItem.Name == "Hoe")
+                {
+                    cropsManager.Plow(selectedTilePosition);
+                }
+                else if (fields[(Vector2Int)selectedTilePosition].ableToSeed && toolbarController.GetItem.isSeed == true)
+                {
+                    switch (toolbarController.GetItem.Name)
+                    {
+                        case "Seeds_Corn":
+                            // Checking whether we have more than 4 seeds to seed
+                            if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 4)
+                            {
+                                corn.Seed(selectedTilePosition);
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 4);       // Deletes 4 seeds
+                            }
+                        break;
+                        case "Seeds_Parsley":
+                            // Checking whether we have more than 3 seeds to seed
+                            if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 3)
+                            {
+                                parsley.Seed(selectedTilePosition);
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 3);       // Deletes 3 seeds
+                            }
+                        break;
+                        case "Seeds_Potato":
+                            // Checking whether we have more than 1 seed to seed
+                            if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 1)
+                            {
+                                potato.Seed(selectedTilePosition);
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 1);       // Deletes 1 seed
+                            }
+                        break;
+                        case "Seeds_Strawberry":
+                            // Checking whether we have more than 6 seeds to seed
+                            if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 6)
+                            {
+                                strawberry.Seed(selectedTilePosition);
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 6);       // Deletes 6 seeds
+                            }
+                        break;
+                        case "Seeds_Tomato":
+                            // Checking whether we have more than 3 seeds to seed
+                            if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 3)
+                            {
+                                tomato.Seed(selectedTilePosition);
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 3);       // Deletes 3 seeds
+                            }
+                        break;
+                    }
 
+                    // Refreshing the count of seeds
+                    toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
+                    toolbarPanel.SetActive(true);
 
-                // Refreshing the count of seeds
-                toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
-                toolbarPanel.SetActive(true);
-
+                }
             }
+            
         }
     }
 }

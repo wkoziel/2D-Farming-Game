@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: Unable
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: be3abf381a570ca448a534cc192d34ef, type: 2}
-  - {fileID: 11400000, guid: 70d75a3454b503b428b599bc58c66cc9, type: 2}
+  - {fileID: 11400000, guid: 85260e3c04b42794b8388af19b90c769, type: 2}
   plowable: 0
   ableToMow: 0
   ableToSeed: 0

@@ -3,34 +3,66 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-
 public class CropsManager : MonoBehaviour
 {
     [SerializeField] TileBase plowed;
-    [SerializeField] TileBase seeded;
+    /*[SerializeField] TileBase seeded_corn;
+    [SerializeField] TileBase seeded_parsley;
+    [SerializeField] TileBase seeded_potato;
+    [SerializeField] TileBase seeded_strawberry;
+    [SerializeField] TileBase seeded_tomato;*/
+    //[SerializeField] TileBase seeded;
     [SerializeField] TileBase mowed;
-    [SerializeField] Tilemap targetTilemap;
+    [SerializeField] Tilemap groundTilemap;
+    [SerializeField] Tilemap cropTilemap;
 
     Dictionary<Vector2Int, TileData> crops = new Dictionary<Vector2Int, TileData>();
 
+    TileBase seeded;
+
     private void Start()
     {
-        crops = ToolsCharacterController.crops;
+        crops = ToolsCharacterController.fields;
     }
 
     public void Mow(Vector3Int position)
     {
-        targetTilemap.SetTile(position, mowed);
+        groundTilemap.SetTile(position, mowed);
     }
 
     public void Plow(Vector3Int position)
     {
-        targetTilemap.SetTile(position, plowed);
+        groundTilemap.SetTile(position, plowed);
     }
 
-    public void Seed(Vector3Int position)
+    /*public void SeedCorn(Vector3Int position)
     {
-        targetTilemap.SetTile(position, seeded);
+        cropTilemap.SetTile(position, seeded_corn);
     }
 
+    public void SeedParsley(Vector3Int position)
+    {
+        cropTilemap.SetTile(position, seeded_parsley);
+    }
+
+    public void SeedPotato(Vector3Int position)
+    {
+        cropTilemap.SetTile(position, seeded_potato);
+    }
+
+    public void SeedStrawberry(Vector3Int position)
+    {
+        cropTilemap.SetTile(position, seeded_strawberry);
+    }
+
+    public void SeedTomato(Vector3Int position)
+    {
+        cropTilemap.SetTile(position, seeded_tomato);
+    }*/
+
+    /*public void Seed(Vector3Int position)
+    {
+        seeded = corn.state0;
+        cropTilemap.SetTile(position, seeded);
+    }*/
 }

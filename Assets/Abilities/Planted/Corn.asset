@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348970da7a89457449bd9a313adb7b71, type: 3}
+  m_Name: Corn
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 70f9d904bd7a40546bdc37d5fef26f88, type: 2}
+  - {fileID: 11400000, guid: dc1fbd34106692d469a1adcef3967557, type: 2}
+  - {fileID: 11400000, guid: 5ec510b3d1254d14c869c80726b0855e, type: 2}
+  - {fileID: 11400000, guid: f537cf2d62ff427449e977ace6633a59, type: 2}
+  - {fileID: 11400000, guid: d6ff94e22d202fe4e8d706c40ca62dc8, type: 2}
+  - {fileID: 11400000, guid: ca9ebb65846e0bd46bff751ccb6747d4, type: 2}
+  noPlant: 0
+  withCorn: 1
+  withParsley: 0
+  withPotato: 0
+  withStrawberry: 0
+  withTomato: 0

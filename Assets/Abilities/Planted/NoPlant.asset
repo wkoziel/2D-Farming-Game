@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6dd7d8549eaf9954e8fdae81ffb89fcd, type: 3}
-  m_Name: Seeds1
+  m_Script: {fileID: 11500000, guid: 348970da7a89457449bd9a313adb7b71, type: 3}
+  m_Name: NoPlant
   m_EditorClassIdentifier: 
-  Name: Seeds1
-  stackable: 1
-  icon: {fileID: 1352955200029874055, guid: 82c8ecf54cdd52042b173e08e8540933, type: 3}
-  isSeed: 1
+  tiles:
+  - {fileID: 11400000, guid: bb3585806e772374c8056242765f9e93, type: 2}
+  noPlant: 1
+  withCorn: 0
+  withParsley: 0
+  withPotato: 0
+  withStrawberry: 0
+  withTomato: 0

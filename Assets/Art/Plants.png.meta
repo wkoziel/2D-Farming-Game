@@ -1,0 +1,1925 @@
+fileFormatVersion: 2
+guid: 5e600f920a0664149b03b6c074709e66
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1352955200029874055
+    second: Parsley_0
+  - first:
+      213: -4881008103234269068
+    second: Parsley_1
+  - first:
+      213: -1268064389544249124
+    second: Parsley_2
+  - first:
+      213: -7391759607893831176
+    second: Parsley_3
+  - first:
+      213: -5840972274582744104
+    second: Parsley_4
+  - first:
+      213: 3442116038242085032
+    second: Parsley_Collected
+  - first:
+      213: 8635903978712429406
+    second: Tomato_0
+  - first:
+      213: 6612842843856697754
+    second: Tomato_1
+  - first:
+      213: 3365857472248335254
+    second: Tomato_2
+  - first:
+      213: 2818887975088091370
+    second: Tomato_3
+  - first:
+      213: -5981771769347585550
+    second: Tomato_4
+  - first:
+      213: -4623013704069786145
+    second: Tomato_5
+  - first:
+      213: -3293256711928181663
+    second: Tomato_Collected
+  - first:
+      213: 3771794143540122796
+    second: Potato_0
+  - first:
+      213: 1382702579413758816
+    second: Potato_1
+  - first:
+      213: -854724729293753505
+    second: Potato_2
+  - first:
+      213: 2250893151467517711
+    second: Potato_3
+  - first:
+      213: -6122111789870299419
+    second: Potato_4
+  - first:
+      213: 2899441650435199170
+    second: Potato_5
+  - first:
+      213: -2873419383981771206
+    second: Potato_Collected
+  - first:
+      213: 28957958560412503
+    second: Strawberry_0
+  - first:
+      213: -6977799265050867761
+    second: Strawberry_1
+  - first:
+      213: -6275190098688083881
+    second: Strawberry_2
+  - first:
+      213: 2469693042209497120
+    second: Strawberry_3
+  - first:
+      213: 3417127870617691774
+    second: Strawberry_4
+  - first:
+      213: -7155205528536916930
+    second: Strawberry_5
+  - first:
+      213: -3665902485383732164
+    second: Strawberry_Collected
+  - first:
+      213: -5672623778664467425
+    second: Corn_0
+  - first:
+      213: -2035428738516297807
+    second: Corn_1
+  - first:
+      213: 5847049274800468493
+    second: Corn_2
+  - first:
+      213: -3267802180754169167
+    second: Corn_3
+  - first:
+      213: -4574371936455361759
+    second: Corn_4
+  - first:
+      213: 31694560097805967
+    second: Corn_5
+  - first:
+      213: 4652486491411619603
+    second: Corn_Collected
+  - first:
+      213: -4875957200950293933
+    second: Invisible
+  - first:
+      213: 5451708962410280881
+    second: Plants_35
+  - first:
+      213: 673361343155567652
+    second: Plants_36
+  - first:
+      213: -3647601992573513787
+    second: Plants_37
+  - first:
+      213: -8360555590962334211
+    second: Plants_38
+  - first:
+      213: 3470055270388754837
+    second: Plants_39
+  - first:
+      213: -2525185337393479436
+    second: Plants_40
+  - first:
+      213: -958177266262987413
+    second: Plants_41
+  - first:
+      213: 7873097318456453801
+    second: Plants_42
+  - first:
+      213: 8159737664329404222
+    second: Plants_43
+  - first:
+      213: 2031912943186060170
+    second: Plants_44
+  - first:
+      213: 2573657844570334042
+    second: Plants_45
+  - first:
+      213: 8308596782256997869
+    second: Plants_46
+  - first:
+      213: -8170969580361214890
+    second: Plants_47
+  - first:
+      213: 5639664214036212299
+    second: Plants_48
+  - first:
+      213: -2819746134950046184
+    second: Plants_49
+  - first:
+      213: 6360189329595452482
+    second: Plants_50
+  - first:
+      213: -4294862379032105519
+    second: Plants_51
+  - first:
+      213: 7617245747322175410
+    second: Plants_52
+  - first:
+      213: 6288560040239760837
+    second: Plants_53
+  - first:
+      213: 8770373422609272313
+    second: Plants_54
+  - first:
+      213: 6372940984079891689
+    second: Plants_55
+  - first:
+      213: 501674891198874538
+    second: Plants_56
+  - first:
+      213: -8864902006001986957
+    second: Plants_57
+  - first:
+      213: -8968550371163442005
+    second: Plants_58
+  - first:
+      213: 4394890074375008864
+    second: Plants_59
+  - first:
+      213: -4416211128346510477
+    second: Plants_60
+  - first:
+      213: -5873002839204074206
+    second: Plants_61
+  - first:
+      213: -5098453067065298794
+    second: Plants_62
+  - first:
+      213: -3010657372522845141
+    second: Plants_63
+  - first:
+      213: -5627180808167394197
+    second: Plants_64
+  - first:
+      213: 5608943934998689063
+    second: Plants_65
+  - first:
+      213: 8555978131515424987
+    second: Plants_66
+  - first:
+      213: 1982588138459069360
+    second: Plants_67
+  - first:
+      213: 626748952408735207
+    second: Plants_68
+  - first:
+      213: 3324814377713793236
+    second: Plants_69
+  - first:
+      213: -8861867773951327039
+    second: Plants_70
+  - first:
+      213: -7745966106790870727
+    second: Plants_71
+  - first:
+      213: 8017029517586084227
+    second: Plants_72
+  - first:
+      213: -8308087131508410904
+    second: Plants_73
+  - first:
+      213: 1751850973550159720
+    second: Plants_74
+  - first:
+      213: 8389465967761243873
+    second: Plants_75
+  - first:
+      213: -61980618694489346
+    second: Plants_76
+  - first:
+      213: -8605717975986014516
+    second: Plants_77
+  - first:
+      213: 8524343660835097735
+    second: Plants_78
+  - first:
+      213: -9166013198143636047
+    second: Plants_79
+  - first:
+      213: 2903511939907674428
+    second: Plants_80
+  - first:
+      213: 4859479763972928074
+    second: Plants_81
+  - first:
+      213: -7447585583338139350
+    second: Plants_82
+  - first:
+      213: 4267322187048309198
+    second: Plants_83
+  - first:
+      213: 8245696554083763515
+    second: Plants_84
+  - first:
+      213: -5643570187534199698
+    second: Plants_85
+  - first:
+      213: -3377368900200519635
+    second: Plants_86
+  - first:
+      213: -4091233366025871113
+    second: Plants_87
+  - first:
+      213: 5342973406481538332
+    second: Plants_88
+  - first:
+      213: -5343777985933255334
+    second: Plants_89
+  - first:
+      213: -526773507545474756
+    second: Plants_90
+  - first:
+      213: 1318573946295524760
+    second: Plants_91
+  - first:
+      213: -3064355190075445666
+    second: Plants_92
+  - first:
+      213: 3614400796753534691
+    second: Plants_93
+  - first:
+      213: -3031137596704136134
+    second: Plants_94
+  - first:
+      213: 8089399692946356209
+    second: Plants_95
+  - first:
+      213: 5387845627617069576
+    second: Plants_96
+  - first:
+      213: -8163006481574901292
+    second: Plants_97
+  - first:
+      213: 7921663806590055455
+    second: Plants_98
+  - first:
+      213: 7455499021165781261
+    second: Plants_99
+  - first:
+      213: -5166329743284900749
+    second: Plants_100
+  - first:
+      213: 7472766423692034405
+    second: Plants_101
+  - first:
+      213: 2998170248828173990
+    second: Plants_102
+  - first:
+      213: -2689068344148386120
+    second: Plants_103
+  - first:
+      213: 3920680591375729926
+    second: Plants_104
+  - first:
+      213: 8067289655415684374
+    second: Plants_105
+  - first:
+      213: -3066748336635186513
+    second: Plants_106
+  - first:
+      213: 1961007747102258509
+    second: Plants_107
+  - first:
+      213: -567439086853304433
+    second: Plants_108
+  - first:
+      213: 8105151658731668638
+    second: Plants_109
+  - first:
+      213: 3836210254766709903
+    second: Plants_110
+  - first:
+      213: -6513889345089917345
+    second: Plants_111
+  - first:
+      213: 3838599673191224881
+    second: Plants_112
+  - first:
+      213: 7975183512772578963
+    second: Plants_113
+  - first:
+      213: 8989727865031213441
+    second: Plants_114
+  - first:
+      213: 1414943435136461877
+    second: Plants_115
+  - first:
+      213: 6876100789670022146
+    second: Plants_116
+  - first:
+      213: -5593769320971142558
+    second: Plants_117
+  - first:
+      213: 8021308815057325509
+    second: Plants_118
+  - first:
+      213: -3005837099221199268
+    second: Plants_119
+  - first:
+      213: 5380567915839277534
+    second: Plants_120
+  - first:
+      213: 2546822118570519650
+    second: Plants_121
+  - first:
+      213: -2199105140979789573
+    second: Plants_122
+  - first:
+      213: 1408628064316227398
+    second: Plants_123
+  - first:
+      213: 8572410228555196881
+    second: Plants_124
+  - first:
+      213: -2269277166046119823
+    second: Plants_125
+  - first:
+      213: 7410177728126456103
+    second: Plants_126
+  - first:
+      213: 6190159492053972792
+    second: Plants_127
+  - first:
+      213: -6742778427198045263
+    second: Plants_128
+  - first:
+      213: -3108892371310464736
+    second: Plants_129
+  - first:
+      213: -3516425859912041157
+    second: Plants_130
+  - first:
+      213: -3152730980413090404
+    second: Plants_131
+  - first:
+      213: -4221004948442617148
+    second: Plants_132
+  - first:
+      213: -762728580797636147
+    second: Plants_133
+  - first:
+      213: 3655288302624767769
+    second: Plants_134
+  - first:
+      213: -6693152464593359845
+    second: Plants_135
+  - first:
+      213: 6228494214738888450
+    second: Plants_136
+  - first:
+      213: 811948784874473179
+    second: Plants_137
+  - first:
+      213: -3758666389460575705
+    second: Plants_138
+  - first:
+      213: -4582144326953314718
+    second: Plants_139
+  - first:
+      213: -2973110000720196043
+    second: Plants_140
+  - first:
+      213: -224259753154622424
+    second: Plants_141
+  - first:
+      213: -6022852856677880169
+    second: Plants_142
+  - first:
+      213: -3158467926551681834
+    second: Plants_143
+  - first:
+      213: -5583591113382492845
+    second: Plants_144
+  - first:
+      213: 2665973728296829089
+    second: Plants_145
+  - first:
+      213: 8573608436166158478
+    second: Plants_146
+  - first:
+      213: -5460867091274776930
+    second: Plants_147
+  - first:
+      213: -7401449756934747490
+    second: Plants_148
+  - first:
+      213: -438960423073608525
+    second: Plants_149
+  - first:
+      213: -5911033040868417878
+    second: Plants_150
+  - first:
+      213: -5253268440023131792
+    second: Plants_151
+  - first:
+      213: -9146501901286005085
+    second: Plants_152
+  - first:
+      213: 939110243510593623
+    second: Plants_153
+  - first:
+      213: -7782226570627883610
+    second: Plants_154
+  - first:
+      213: 899096603696274762
+    second: Plants_155
+  - first:
+      213: 5238792058103264743
+    second: Plants_156
+  - first:
+      213: 6405667227282512442
+    second: Plants_157
+  - first:
+      213: -5082489381910250917
+    second: Plants_158
+  - first:
+      213: 6428283586376057321
+    second: Plants_159
+  - first:
+      213: 1902870868164833610
+    second: Plants_160
+  - first:
+      213: 2535383924896182698
+    second: Plants_161
+  - first:
+      213: 5599560342971742773
+    second: Plants_162
+  - first:
+      213: 2368635125563432145
+    second: Plants_163
+  - first:
+      213: 2576935478629798074
+    second: Plants_164
+  - first:
+      213: 1315754279932293017
+    second: Plants_165
+  - first:
+      213: 7683485089274053362
+    second: Plants_166
+  - first:
+      213: -3227291276861468421
+    second: Plants_167
+  - first:
+      213: -132211859213580269
+    second: Plants_168
+  - first:
+      213: -4942667919200424960
+    second: Plants_169
+  - first:
+      213: -4704003227172573303
+    second: Plants_170
+  - first:
+      213: 4992426552370586798
+    second: Plants_171
+  - first:
+      213: -8419413670975465261
+    second: Plants_172
+  - first:
+      213: 7055327969922287106
+    second: Plants_173
+  - first:
+      213: -2944118814248348869
+    second: Plants_174
+  - first:
+      213: -4175780601578647737
+    second: Plants_175
+  - first:
+      213: 9033829226064644526
+    second: Plants_176
+  - first:
+      213: 2726139296150419026
+    second: Plants_177
+  - first:
+      213: -1941937691156614228
+    second: Plants_178
+  - first:
+      213: 9181687008001186932
+    second: Plants_179
+  - first:
+      213: 4237696924927843788
+    second: Plants_180
+  - first:
+      213: 4623756103501333319
+    second: Plants_181
+  - first:
+      213: -7942789627065409331
+    second: Plants_182
+  - first:
+      213: 7209228367613639486
+    second: Plants_183
+  - first:
+      213: 6636299825134952936
+    second: Plants_184
+  - first:
+      213: 4573849851805422415
+    second: Plants_185
+  - first:
+      213: -8983025767442538378
+    second: Plants_186
+  - first:
+      213: -9192202030222088307
+    second: Plants_187
+  - first:
+      213: -3670553119986809865
+    second: Plants_188
+  - first:
+      213: -7839099357823960469
+    second: Plants_189
+  - first:
+      213: -1476046365062220419
+    second: Plants_190
+  - first:
+      213: -5993793875275688422
+    second: Plants_191
+  - first:
+      213: 8905641121075733972
+    second: Plants_192
+  - first:
+      213: -4565303188158357322
+    second: Plants_193
+  - first:
+      213: 2325381789637509207
+    second: Plants_194
+  - first:
+      213: 2073503362477126934
+    second: Plants_195
+  - first:
+      213: -6654069484975000866
+    second: Plants_196
+  - first:
+      213: -8130819633068791385
+    second: Plants_197
+  - first:
+      213: -6459636464935094943
+    second: Plants_198
+  - first:
+      213: 925621348188289481
+    second: Plants_199
+  - first:
+      213: 2473937982202435085
+    second: Plants_200
+  - first:
+      213: -3256216725075643848
+    second: Plants_201
+  - first:
+      213: 6894914689549954077
+    second: Plants_202
+  - first:
+      213: -4959599898430768357
+    second: Plants_203
+  - first:
+      213: -514613608479685519
+    second: Plants_204
+  - first:
+      213: 8452031732398680904
+    second: Plants_205
+  - first:
+      213: 8068715531768489129
+    second: Plants_206
+  - first:
+      213: -5740636779374689173
+    second: Plants_207
+  - first:
+      213: 4580847715567312135
+    second: Plants_208
+  - first:
+      213: -7007241637898886170
+    second: Plants_209
+  - first:
+      213: -2158820993363121607
+    second: Plants_210
+  - first:
+      213: -2915957510275156232
+    second: Plants_211
+  - first:
+      213: -177854451682129375
+    second: Plants_212
+  - first:
+      213: -3846847420589492319
+    second: Plants_213
+  - first:
+      213: 9141088704828753914
+    second: Plants_214
+  - first:
+      213: -6430155296847554831
+    second: Plants_215
+  - first:
+      213: -7958380832251223876
+    second: Plants_216
+  - first:
+      213: -8886962948882562695
+    second: Plants_217
+  - first:
+      213: 6744532502396020914
+    second: Plants_218
+  - first:
+      213: -8997537739889791134
+    second: Plants_219
+  - first:
+      213: -8718715952070233549
+    second: Plants_220
+  - first:
+      213: 8200958866028808081
+    second: Plants_221
+  - first:
+      213: -3349379686792753141
+    second: Plants_222
+  - first:
+      213: 1051641206915232206
+    second: Plants_223
+  - first:
+      213: -7324229317565855201
+    second: Plants_224
+  - first:
+      213: 3673780018021401421
+    second: Plants_225
+  - first:
+      213: 2395454400699328033
+    second: Plants_226
+  - first:
+      213: -964937512905101804
+    second: Plants_227
+  - first:
+      213: -414031830719896489
+    second: Plants_228
+  - first:
+      213: 4055413947429202559
+    second: Plants_229
+  - first:
+      213: -2307011974467884861
+    second: Plants_230
+  - first:
+      213: 2763205488688041453
+    second: Plants_231
+  - first:
+      213: -3433518727947194479
+    second: Plants_232
+  - first:
+      213: -7943932274356151522
+    second: Plants_233
+  - first:
+      213: -8893287673267310660
+    second: Plants_234
+  - first:
+      213: -1833041107734515137
+    second: Plants_235
+  - first:
+      213: 6200619461471861860
+    second: Plants_236
+  - first:
+      213: -117538322457699911
+    second: Plants_237
+  - first:
+      213: 4654809397773564434
+    second: Plants_238
+  - first:
+      213: 3465256103078034588
+    second: Plants_239
+  - first:
+      213: 4614235996482450210
+    second: Plants_240
+  - first:
+      213: -2458396639896842111
+    second: Plants_241
+  - first:
+      213: 1088742256997912081
+    second: Plants_242
+  - first:
+      213: -8897728516697876171
+    second: Plants_243
+  - first:
+      213: -7049588990303268402
+    second: Plants_244
+  - first:
+      213: 2448743330522215686
+    second: Plants_245
+  - first:
+      213: -4307962926403182112
+    second: Plants_246
+  - first:
+      213: -2908088655554441361
+    second: Plants_247
+  - first:
+      213: -2584383629995010432
+    second: Plants_248
+  - first:
+      213: -8927134482898959373
+    second: Plants_249
+  - first:
+      213: -4733426232631315194
+    second: Plants_250
+  - first:
+      213: -4363649505515292477
+    second: Plants_251
+  - first:
+      213: -7875624442438474647
+    second: Plants_252
+  - first:
+      213: -8935776236014512338
+    second: Plants_253
+  - first:
+      213: 2041214455172206543
+    second: Plants_254
+  - first:
+      213: -4711583567094917879
+    second: Plants_255
+  - first:
+      213: -349155214691217897
+    second: Plants_256
+  - first:
+      213: -7242079375925394136
+    second: Plants_257
+  - first:
+      213: -2343594654280863671
+    second: Plants_258
+  - first:
+      213: 5049814865311650771
+    second: Plants_259
+  - first:
+      213: -3049381364525525479
+    second: Plants_260
+  - first:
+      213: 6804054226633342145
+    second: Plants_261
+  - first:
+      213: 9186144635467293595
+    second: Plants_262
+  - first:
+      213: -2666421800942952271
+    second: Plants_263
+  - first:
+      213: 3952994533380576986
+    second: Plants_264
+  - first:
+      213: -6694221670473905106
+    second: Plants_265
+  - first:
+      213: 1166570041713910730
+    second: Plants_266
+  - first:
+      213: -4222684695311574196
+    second: Plants_267
+  - first:
+      213: 7190941862336378806
+    second: Plants_268
+  - first:
+      213: -6947905753825891041
+    second: Plants_269
+  - first:
+      213: -521713138745738977
+    second: Plants_270
+  - first:
+      213: 8084670696141645966
+    second: Plants_271
+  - first:
+      213: 2619466316742371350
+    second: Plants_272
+  - first:
+      213: 3065316241291302159
+    second: Plants_273
+  - first:
+      213: 4080586198955543659
+    second: Plants_274
+  - first:
+      213: 8585597465288300915
+    second: Plants_275
+  - first:
+      213: 5981906048623078830
+    second: Plants_276
+  - first:
+      213: 7551805349875341551
+    second: Plants_277
+  - first:
+      213: 8300861489438146357
+    second: Plants_278
+  - first:
+      213: 5411291948239576508
+    second: Plants_279
+  - first:
+      213: 2339808623590537393
+    second: Plants_280
+  - first:
+      213: 4799350540325251086
+    second: Plants_281
+  - first:
+      213: -5990427037710348888
+    second: Plants_282
+  - first:
+      213: 2517922216568736991
+    second: Plants_283
+  - first:
+      213: -4232644812811448015
+    second: Plants_284
+  - first:
+      213: 647408728535395441
+    second: Plants_285
+  - first:
+      213: -6829519123399956836
+    second: Plants_286
+  - first:
+      213: 6385141944190241756
+    second: Plants_287
+  - first:
+      213: -3388267526273866470
+    second: Plants_288
+  - first:
+      213: 4424513209799409664
+    second: Plants_289
+  - first:
+      213: -4961532649124124144
+    second: Plants_290
+  - first:
+      213: 899427530169972561
+    second: Plants_291
+  - first:
+      213: -1011081230457511225
+    second: Plants_292
+  - first:
+      213: 5754711897349536462
+    second: Plants_293
+  - first:
+      213: 6013752921690258022
+    second: Plants_294
+  - first:
+      213: -4493756082855307254
+    second: Plants_295
+  - first:
+      213: -8081581228125496856
+    second: Plants_296
+  - first:
+      213: -4342023513566245288
+    second: Plants_297
+  - first:
+      213: -1465490054966080562
+    second: Plants_298
+  - first:
+      213: -5942366165557681369
+    second: Plants_299
+  - first:
+      213: 3110773091419926307
+    second: Plants_300
+  - first:
+      213: 2076746622432797915
+    second: Plants_301
+  - first:
+      213: -2010390720890436585
+    second: Plants_302
+  - first:
+      213: -3296766851576103853
+    second: Plants_303
+  - first:
+      213: 304287853155070168
+    second: Plants_304
+  - first:
+      213: -1136836713392475589
+    second: Plants_305
+  - first:
+      213: 1334053675291783014
+    second: Plants_306
+  - first:
+      213: -4735574730042235364
+    second: Plants_307
+  - first:
+      213: 704527647208829460
+    second: Plants_308
+  - first:
+      213: -3710580848833923354
+    second: Plants_309
+  - first:
+      213: 4898825355393323078
+    second: Plants_310
+  - first:
+      213: -6237357083552091971
+    second: Plants_311
+  - first:
+      213: 8040927831730001856
+    second: Plants_312
+  - first:
+      213: -3506175316623435928
+    second: Plants_313
+  - first:
+      213: 5905561722686954920
+    second: Plants_314
+  - first:
+      213: -3873477368224315240
+    second: Plants_315
+  - first:
+      213: -3818410625272432427
+    second: Plants_316
+  - first:
+      213: -9046314113821619821
+    second: Plants_317
+  - first:
+      213: 4364486601738509524
+    second: Plants_318
+  - first:
+      213: -4707707313690200356
+    second: Plants_319
+  - first:
+      213: 5726739677085134403
+    second: Plants_320
+  - first:
+      213: 5564490075912137311
+    second: Plants_321
+  - first:
+      213: 6088318407507762300
+    second: Plants_322
+  - first:
+      213: 6266744236198663724
+    second: Plants_323
+  - first:
+      213: -1726186911146388525
+    second: Plants_324
+  - first:
+      213: 3089134982036798791
+    second: Plants_325
+  - first:
+      213: 4299824608697338236
+    second: Plants_326
+  - first:
+      213: 6672392157177402372
+    second: Plants_327
+  - first:
+      213: 9092773434494630565
+    second: Plants_328
+  - first:
+      213: 3532415662489183680
+    second: Plants_329
+  - first:
+      213: 5673462489556095009
+    second: Plants_330
+  - first:
+      213: 6170464311437387812
+    second: Plants_331
+  - first:
+      213: -3614617170202853885
+    second: Plants_332
+  - first:
+      213: -8404878362209369882
+    second: Plants_333
+  - first:
+      213: 6764907506675059548
+    second: Plants_334
+  - first:
+      213: -4853997256754071715
+    second: Plants_335
+  - first:
+      213: 2528559479584679480
+    second: Plants_336
+  - first:
+      213: 2353689396800007632
+    second: Plants_337
+  - first:
+      213: -5251431854535067208
+    second: Plants_338
+  - first:
+      213: 6734569681488687539
+    second: Plants_339
+  - first:
+      213: -7765852343765362959
+    second: Plants_340
+  - first:
+      213: -8789569866385143087
+    second: Plants_341
+  - first:
+      213: 8510513699054062472
+    second: Plants_342
+  - first:
+      213: -1171057728858212361
+    second: Plants_343
+  - first:
+      213: 7365020622575767952
+    second: Plants_344
+  - first:
+      213: -4963327368536365866
+    second: Plants_345
+  - first:
+      213: 4436668807942722836
+    second: Plants_346
+  - first:
+      213: -8867432538330418062
+    second: Plants_347
+  - first:
+      213: -5681937375582390152
+    second: Plants_348
+  - first:
+      213: -123707581844540690
+    second: Plants_349
+  - first:
+      213: -1155838532644387546
+    second: Plants_350
+  - first:
+      213: 7378368016386841474
+    second: Plants_351
+  - first:
+      213: -2038343531723410038
+    second: Plants_352
+  - first:
+      213: -6574403003344345687
+    second: Plants_353
+  - first:
+      213: 8011573890847799474
+    second: Plants_354
+  - first:
+      213: 5380223689747340126
+    second: Plants_355
+  - first:
+      213: -5576619008739215660
+    second: Plants_356
+  - first:
+      213: 4891116934151663516
+    second: Plants_357
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 9
+  spritePivot: {x: 0.06008249, y: 0.7727553}
+  spritePixelsToUnits: 25
+  spriteBorder: {x: 16, y: 511, z: 360, w: 143}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Parsley_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 639
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7875cce0699a6c210800000000000000
+      internalID: 1352955200029874055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parsley_1
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 639
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4701be4adfc234cb0800000000000000
+      internalID: -4881008103234269068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parsley_2
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 640
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd874ecf72ee66ee0800000000000000
+      internalID: -1268064389544249124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parsley_3
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 642
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f15862ccc13b6990800000000000000
+      internalID: -7391759607893831176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parsley_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 642
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d3179eb9a2b0fea0800000000000000
+      internalID: -5840972274582744104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Parsley_Collected
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 642
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a82817bc4ad4cf20800000000000000
+      internalID: 3442116038242085032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 511
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e537985e9e4e8d770800000000000000
+      internalID: 8635903978712429406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_1
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 511
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a99ff87b78985cb50800000000000000
+      internalID: 6612842843856697754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_2
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 514
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69bc4f5b98de5be20800000000000000
+      internalID: 3365857472248335254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_3
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 515
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae0feb0ada3be1720800000000000000
+      internalID: 2818887975088091370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_4
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 515
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f9c390c44a7cfca0800000000000000
+      internalID: -5981771769347585550
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_5
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 515
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd55829a781c7dfb0800000000000000
+      internalID: -4623013704069786145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tomato_Collected
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 514
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16c895b08700c42d0800000000000000
+      internalID: -3293256711928181663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potato_0
+      rect:
+        serializedVersion: 2
+        x: 187
+        y: 607
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca49b9b2aca185430800000000000000
+      internalID: 3771794143540122796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potato_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 607
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06339fb8ba8503310800000000000000
+      internalID: 1382702579413758816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potato_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 608
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5334b123686324f0800000000000000
+      internalID: -854724729293753505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potato_3
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 609
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f07b4904567cc3f10800000000000000
+      internalID: 2250893151467517711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potato_4
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 610
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6cc8173c3e90ba0800000000000000
+      internalID: -6122111789870299419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potato_5
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 610
+        width: 18
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c09925b1d2ec3820800000000000000
+      internalID: 2899441650435199170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Potato_Collected
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 609
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a367b075b409f18d0800000000000000
+      internalID: -2873419383981771206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Strawberry_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753f9612c11e66000800000000000000
+      internalID: 28957958560412503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Strawberry_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 63
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc749a4d980e92f90800000000000000
+      internalID: -6977799265050867761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Strawberry_2
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 63
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758f5a54adb0ae8a0800000000000000
+      internalID: -6275190098688083881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Strawberry_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 64
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 020a625acbc164220800000000000000
+      internalID: 2469693042209497120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Strawberry_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 66
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e76214091b31c6f20800000000000000
+      internalID: 3417127870617691774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Strawberry_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 66
+        width: 16
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c55a05b7a93bc90800000000000000
+      internalID: -7155205528536916930
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Strawberry_Collected
+      rect:
+        serializedVersion: 2
+        x: 129
+        y: 66
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c342b71cc19102dc0800000000000000
+      internalID: -3665902485383732164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corn_0
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 416
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1435486abac641b0800000000000000
+      internalID: -5672623778664467425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corn_1
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 415
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b75d13b854b0c3e0800000000000000
+      internalID: -2035428738516297807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corn_2
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 416
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d02ffa02654e42150800000000000000
+      internalID: 5847049274800468493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corn_3
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 418
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b2a6ebea3f66a2d0800000000000000
+      internalID: -3267802180754169167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corn_4
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 419
+        width: 18
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bff09b5f09480c0800000000000000
+      internalID: -4574371936455361759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corn_5
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 419
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8621f3d80a907000800000000000000
+      internalID: 31694560097805967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Corn_Collected
+      rect:
+        serializedVersion: 2
+        x: 299
+        y: 421
+        width: 18
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f94e260d3f09040800000000000000
+      internalID: 4652486491411619603
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Invisible
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 358
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a895972ce155cb0800000000000000
+      internalID: -4875957200950293933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

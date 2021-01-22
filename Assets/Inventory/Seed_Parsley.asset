@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6dd7d8549eaf9954e8fdae81ffb89fcd, type: 3}
-  m_Name: Seed3
+  m_Name: Seed_Parsley
   m_EditorClassIdentifier: 
-  Name: Seed3
+  Name: Seeds_Parsley
   stackable: 1
-  icon: {fileID: -1268064389544249124, guid: 82c8ecf54cdd52042b173e08e8540933, type: 3}
+  icon: {fileID: 1352955200029874055, guid: 5e600f920a0664149b03b6c074709e66, type: 3}
   isSeed: 1
