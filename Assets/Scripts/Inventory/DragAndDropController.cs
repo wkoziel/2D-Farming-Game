@@ -37,7 +37,7 @@ public class DragAndDropController : MonoBehaviour
                 // This checks whether we're over any UI elements
                 if (EventSystem.current.IsPointerOverGameObject() == false)
                 {
-                    // Debug.Log("We are clicking outside the panel");
+                    //Debug.Log("We are clicking outside the panel");
                 }
             }
             

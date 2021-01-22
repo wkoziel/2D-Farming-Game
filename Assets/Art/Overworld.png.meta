@@ -595,7 +595,7 @@ TextureImporter:
     second: Overworld_196
   - first:
       213: -3085000837880981780
-    second: Overworld_197
+    second: log
   - first:
       213: -4898110375821382468
     second: Overworld_198
@@ -6939,12 +6939,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_197
+      name: log
       rect:
         serializedVersion: 2
-        x: 48
+        x: 50
         y: 480
-        width: 16
+        width: 45
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}

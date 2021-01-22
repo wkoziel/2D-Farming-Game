@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using UnityEngine.EventSystems;
 
 public class ToolsCharacterController : MonoBehaviour
 {
@@ -16,6 +17,9 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] TileData toSeedTiles;
     ToolbarController toolbarController;
     [SerializeField] GameObject toolbarPanel;
+
+    [SerializeField] float offsetDistance = 1f;
+    [SerializeField] float sizeOfInteractableArea = 1.2f;
 
 
     Vector3Int selectedTilePosition;
@@ -39,10 +43,31 @@ public class ToolsCharacterController : MonoBehaviour
         SelectTile();
         CanSelectCheck();
         Marker();
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0)) // lewy przycisk myszki
         {
+            
+            if (UseToolWorld() == true )
+            {
+                return;
+            }
             UseTool();
         }
+    }
+
+    private bool CastRay()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        if (hit)
+        {
+            // Debug.Log(hit.collider.gameObject.name);
+            if (hit.collider.gameObject.name.Contains("Tree"))
+            {
+                return true;
+            }
+           
+        }
+        return false;
     }
 
     private void SelectTile()
@@ -84,8 +109,37 @@ public class ToolsCharacterController : MonoBehaviour
         markerManager.markedCellPosition = selectedTilePosition;
     }
 
+    // interacting with physical objects in the world
+    private bool UseToolWorld()
+    {
+        // CUTTING TREE
+        Vector2 position = rgbd2d.position + character.lastMotionVector * offsetDistance;
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
+
+
+        foreach (Collider2D collidor in colliders)
+        {
+            ToolHit hit = collidor.GetComponent<ToolHit>();
+            if (hit != null && toolbarController.GetItem.Name == "Axe" && CastRay() == true)
+            {
+                hit.Hit();
+                // Debug.Log("we can hit");
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void RefreshToolbar()
+    {
+        toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
+        toolbarPanel.SetActive(true);
+    }
+
     private void UseTool()
     {
+        // when sth is present on the grid but you can't plant there
         if (selectable == true && toolbarController.GetItem != null)
         {
             TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
@@ -108,13 +162,15 @@ public class ToolsCharacterController : MonoBehaviour
             }
             else if (crops[(Vector2Int)selectedTilePosition].ableToSeed && toolbarController.GetItem.isSeed == true)
             {
+
                 // Checking whether we have more than 20 seeds to seed
                 if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 20)
                 {
                     cropsManager.Seed(selectedTilePosition);
                     GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 20);       // Deletes 20 seeds
                 }
-                
+
+
                 // Refreshing the count of seeds
                 toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
                 toolbarPanel.SetActive(true);
