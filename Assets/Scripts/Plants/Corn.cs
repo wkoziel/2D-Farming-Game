@@ -5,55 +5,37 @@ using UnityEngine.Tilemaps;
 using System.Globalization;
 using UnityEngine.UI;
 
-//[CreateAssetMenu(menuName = "Data/Corn")]
+[CreateAssetMenu(menuName = "Data/Corn")]
 
-public class Corn : MonoBehaviour
+public class Corn : ScriptableObject
 {
-    [SerializeField] TileBase state0;
+    public TileBase state0;
 
-    [SerializeField] TileBase state1;
+    public TileBase state1;
 
-    [SerializeField] TileBase state2;
+    public TileBase state2;
 
-    [SerializeField] TileBase state3;
+    public TileBase state3;
 
-    [SerializeField] TileBase state4;
+    public TileBase state4;
 
-    [SerializeField] TileBase state5;
+    public TileBase state5;
 
-    [SerializeField] Tilemap cropTilemap;
+    //public Tilemap cropTilemap;
 
     TileBase state;
     Vector3Int pos;
 
-    //private string currentTime;
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     public Text timeText;
 
-    public void Seed(Vector3Int position)
+    /*public void Seed(Vector3Int position)
     {
-        //currentTime = Time.time.ToString("f6");
         timerIsRunning = true;
-        //Debug.Log(currentTime.ToString());
         cropTilemap.SetTile(position, state0);
         state = state0;
         pos = position;
-    }
-
-    public Corn(Vector3Int position)
-    {
-        //currentTime = Time.time.ToString("f6");
-        timerIsRunning = true;
-        //Debug.Log(currentTime.ToString());
-        cropTilemap.SetTile(position, state0);
-        state = state0;
-        pos = position;
-    }
-
-    void Update()
-    {
-        Grow(this);
     }
 
     void Grow(Corn corn)
@@ -91,5 +73,5 @@ public class Corn : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         return string.Format("{0:00}:{1:00}", minutes, seconds);
-    }
+    }*/
 }

@@ -19,10 +19,15 @@ public class CropsManager : MonoBehaviour
     Dictionary<Vector2Int, TileData> crops = new Dictionary<Vector2Int, TileData>();
 
     TileBase seeded;
+    List<Corn> corns;
+    public GameObject cornPrefab;
+    Corn corn;
 
     private void Start()
     {
         crops = ToolsCharacterController.fields;
+        corns = new List<Corn>();
+        corn = new Corn();
     }
 
     public void Mow(Vector3Int position)
@@ -34,6 +39,18 @@ public class CropsManager : MonoBehaviour
     {
         groundTilemap.SetTile(position, plowed);
     }
+
+    public void SeedCorn(Vector3Int position)
+    {
+        corn = ScriptableObject.CreateInstance<Corn>();
+        Debug.Log(corn.state0);
+        corns.Add(corn);
+        Instantiate(cornPrefab, position, Quaternion.identity);
+        corn.timerIsRunning = true;
+        cropTilemap.SetTile(position, corn.state0);
+    }
+
+
 
     /*public void SeedCorn(Vector3Int position)
     {

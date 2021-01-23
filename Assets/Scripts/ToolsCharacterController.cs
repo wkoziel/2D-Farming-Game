@@ -204,7 +204,7 @@ public class ToolsCharacterController : MonoBehaviour
                             // Checking whether we have more than 4 seeds to seed
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 4)
                             {
-                                corn.Seed(selectedTilePosition);
+                                cropsManager.SeedCorn(selectedTilePosition);
                                 GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 4);       // Deletes 4 seeds
                             }
                         break;
