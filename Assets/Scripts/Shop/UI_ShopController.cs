@@ -23,12 +23,15 @@ public class UI_ShopController : MonoBehaviour
         CreateItemButton(Resources.Load<Sprite>("starter_hoe"), "Hoe", 30, 0, "Hoe");        //to jest ten sam obiekt, który jest domyślnie utworzony jako shopItemTemplate
         CreateItemButton(Resources.Load<Sprite>("starter_shovel"), "Shovel", 30, 1, "Shovel");
         CreateItemButton(Resources.Load<Sprite>("WateringCan"), "WateringCan", 50, 2, "Watering Can");
+        //CreateItemButton(Resources.Load<Sprite>("backpack"), "Backpack", 100, 5);
 
         Dictionary<string, Sprite> plantsDictionary = CreateSeedsFromSprite();
         CreateItemButton(plantsDictionary["Seed3"], "Seed3", 100, 3, "50 red seeds");
         CreateItemButton(plantsDictionary["Seeds1"], "Seeds1", 100, 4, "50 yellow seeds");
 
-        //CreateItemButton(Resources.Load<Sprite>("backpack"), "Backpack", 100, 5);
+        // to nie dziala ponizej na razie:
+        //CreateItemButton(plantsDictionary["Corn_0"], "Corn_0", 100, 3, "4 corn seeds");
+        //CreateItemButton(plantsDictionary["Parsley_0"], "Parsley_0", 100, 4, "3 parsley seeds");
 
         gameObject.SetActive(false);
         Hide();
@@ -79,6 +82,7 @@ public class UI_ShopController : MonoBehaviour
 
         if (money.canBuyItems(itemCost))
         {
+            // w tym miejscu trzeba bedzie zrobic if dla kazdego z rodzajow nasiona
             if (item.Name.Contains("Seed"))
             {
                 GameManager.instance.inventoryContainer.Add(item, 50);
