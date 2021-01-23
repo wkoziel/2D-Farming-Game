@@ -23,12 +23,13 @@ public class Corn : ScriptableObject
 
     //public Tilemap cropTilemap;
 
-    TileBase state;
-    Vector3Int pos;
+    public TileBase state;
+    public Vector3Int position;
 
     public float timeRemaining = 10;
     public bool timerIsRunning = false;
     public Text timeText;
+    public string Name = "corn";
 
     /*public void Seed(Vector3Int position)
     {

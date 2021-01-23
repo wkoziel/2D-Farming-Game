@@ -29,9 +29,9 @@ public class UI_ShopController : MonoBehaviour
         CreateItemButton(plantsDictionary["Seed3"], "Seed3", 100, 3, "50 red seeds");
         CreateItemButton(plantsDictionary["Seeds1"], "Seeds1", 100, 4, "50 yellow seeds");
 
-        // to nie dziala ponizej na razie:
-        //CreateItemButton(plantsDictionary["Corn_0"], "Corn_0", 100, 3, "4 corn seeds");
-        //CreateItemButton(plantsDictionary["Parsley_0"], "Parsley_0", 100, 4, "3 parsley seeds");
+        // to trzeba naprawic:
+        //CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 3, "4 corn seeds");
+        //CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 100, 4, "3 parsley seeds");
 
         gameObject.SetActive(false);
         Hide();
