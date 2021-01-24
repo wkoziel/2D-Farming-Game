@@ -68,7 +68,7 @@ public class DayTimeController : MonoBehaviour
         }
         //Lights down 20 - 4
         if ((time > 72000f && time < 86400f) || ((time > 0f && time < 14400f)))
-            if (light.intensity > 0.65f)
+            if (light.intensity > 0.3f)
             {
                 light.intensity -= LightTransition;
                 //proba wskaznika temperatury

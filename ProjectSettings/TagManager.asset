@@ -45,6 +45,9 @@ TagManager:
   - name: Objects
     uniqueID: 2763335865
     locked: 0
+  - name: Fire
+    uniqueID: 2059618581
+    locked: 0
   - name: Background
     uniqueID: 4266508753
     locked: 0
