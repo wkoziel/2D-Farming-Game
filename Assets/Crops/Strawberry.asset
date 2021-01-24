@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
+  m_Name: Strawberry
+  m_EditorClassIdentifier: 
+  state0: {fileID: 11400000, guid: 86cb7153cbc51984bb14d240ed6e0d23, type: 2}
+  state1: {fileID: 11400000, guid: 589ca961d693ced43a8842a7da74aa07, type: 2}
+  state2: {fileID: 11400000, guid: 7ed5df4f870840d4d88fd78f3e1d3318, type: 2}
+  state3: {fileID: 11400000, guid: 662e4aadef9cbad4aa9c50699cf3b10c, type: 2}
+  state4: {fileID: 11400000, guid: 5beab1aa86ba57e439b4a3e01f4733d0, type: 2}
+  state5: {fileID: 11400000, guid: 091e1b1febe22574b840537a6253d916, type: 2}
+  stages:
+  - {fileID: 11400000, guid: 86cb7153cbc51984bb14d240ed6e0d23, type: 2}
+  - {fileID: 11400000, guid: 589ca961d693ced43a8842a7da74aa07, type: 2}
+  - {fileID: 11400000, guid: 7ed5df4f870840d4d88fd78f3e1d3318, type: 2}
+  - {fileID: 11400000, guid: 662e4aadef9cbad4aa9c50699cf3b10c, type: 2}
+  - {fileID: 11400000, guid: 5beab1aa86ba57e439b4a3e01f4733d0, type: 2}
+  - {fileID: 11400000, guid: 091e1b1febe22574b840537a6253d916, type: 2}
+  state: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  timeRemaining: 10
+  timerIsRunning: 0
+  timeText: {fileID: 0}
+  Name: strawberry

@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
+  m_Name: Parsley
+  m_EditorClassIdentifier: 
+  state0: {fileID: 11400000, guid: 466e6382193f660459895c6342a43e51, type: 2}
+  state1: {fileID: 11400000, guid: f5b6783d44a55d04182a4dc2668e6534, type: 2}
+  state2: {fileID: 11400000, guid: eb096d47a51c2f34497c9c23f37c7432, type: 2}
+  state3: {fileID: 11400000, guid: b4e7a60ddc9d78c4dbcb8e844c45758e, type: 2}
+  state4: {fileID: 11400000, guid: 67208945f274d3246ad87f9635fb7e32, type: 2}
+  state5: {fileID: 0}
+  stages:
+  - {fileID: 11400000, guid: 466e6382193f660459895c6342a43e51, type: 2}
+  - {fileID: 11400000, guid: f5b6783d44a55d04182a4dc2668e6534, type: 2}
+  - {fileID: 11400000, guid: eb096d47a51c2f34497c9c23f37c7432, type: 2}
+  - {fileID: 11400000, guid: b4e7a60ddc9d78c4dbcb8e844c45758e, type: 2}
+  - {fileID: 11400000, guid: 67208945f274d3246ad87f9635fb7e32, type: 2}
+  state: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
+  timeRemaining: 10
+  timerIsRunning: 0
+  timeText: {fileID: 0}
+  Name: parsley

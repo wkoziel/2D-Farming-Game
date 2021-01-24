@@ -22,11 +22,12 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] float offsetDistance = 1f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
 
-    [SerializeField] Corn corn;
+    /*[SerializeField] Corn corn;
     [SerializeField] Parsley parsley;
     [SerializeField] Potato potato;
     [SerializeField] Strawberry strawberry;
-    [SerializeField] Tomato tomato;
+    [SerializeField] Tomato tomato;*/
+    //[SerializeField] Crop crop;
 
 
     Vector3Int selectedTilePosition;
@@ -204,7 +205,7 @@ public class ToolsCharacterController : MonoBehaviour
                             // Checking whether we have more than 4 seeds to seed
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 4)
                             {
-                                cropsManager.SeedCorn(selectedTilePosition);
+                                cropsManager.SeedCrop(selectedTilePosition, "corn");
                                 GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 4);       // Deletes 4 seeds
                             }
                         break;
@@ -212,7 +213,7 @@ public class ToolsCharacterController : MonoBehaviour
                             // Checking whether we have more than 3 seeds to seed
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 3)
                             {
-                                parsley.Seed(selectedTilePosition);
+                                cropsManager.SeedCrop(selectedTilePosition, "parsley");
                                 GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 3);       // Deletes 3 seeds
                             }
                         break;
@@ -220,7 +221,7 @@ public class ToolsCharacterController : MonoBehaviour
                             // Checking whether we have more than 1 seed to seed
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 1)
                             {
-                                potato.Seed(selectedTilePosition);
+                                cropsManager.SeedCrop(selectedTilePosition, "potato");
                                 GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 1);       // Deletes 1 seed
                             }
                         break;
@@ -228,7 +229,7 @@ public class ToolsCharacterController : MonoBehaviour
                             // Checking whether we have more than 6 seeds to seed
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 6)
                             {
-                                strawberry.Seed(selectedTilePosition);
+                                cropsManager.SeedCrop(selectedTilePosition, "strawberry");
                                 GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 6);       // Deletes 6 seeds
                             }
                         break;
@@ -236,7 +237,7 @@ public class ToolsCharacterController : MonoBehaviour
                             // Checking whether we have more than 3 seeds to seed
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 3)
                             {
-                                tomato.Seed(selectedTilePosition);
+                                cropsManager.SeedCrop(selectedTilePosition, "tomato");
                                 GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 3);       // Deletes 3 seeds
                             }
                         break;

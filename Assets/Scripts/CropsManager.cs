@@ -6,52 +6,91 @@ using UnityEngine.Tilemaps;
 public class CropsManager : MonoBehaviour
 {
     [SerializeField] TileBase plowed;
-    /*[SerializeField] TileBase seeded_corn;
-    [SerializeField] TileBase seeded_parsley;
-    [SerializeField] TileBase seeded_potato;
-    [SerializeField] TileBase seeded_strawberry;
-    [SerializeField] TileBase seeded_tomato;*/
-    //[SerializeField] TileBase seeded;
     [SerializeField] TileBase mowed;
     [SerializeField] Tilemap groundTilemap;
     [SerializeField] Tilemap cropTilemap;
     ToolbarController toolbarController;
 
-    Dictionary<Vector2Int, TileData> crops = new Dictionary<Vector2Int, TileData>();
+    Dictionary<Vector2Int, TileData> fields = new Dictionary<Vector2Int, TileData>();
 
-    TileBase seeded;
-    public List<Corn> corns;
-    public GameObject cornPrefab;
-    Corn corn;
+    public List<Crop> crops;
+    Crop crop;
+    public List<Crop> corns;
+    Crop corn;
+    public List<Crop> parsleys;
+    Crop parsley;
+    public List<Crop> potatoes;
+    Crop potato;
+    public List<Crop> strawberries;
+    Crop strawberry;
+    public List<Crop> tomatoes;
+    Crop tomato;
 
     private void Awake()
     {
-        corn = ScriptableObject.CreateInstance<Corn>();
+        //crop = ScriptableObject.CreateInstance<Crop>();
+        corn = ScriptableObject.CreateInstance<Crop>();
+        parsley = ScriptableObject.CreateInstance<Crop>();
+        potato = ScriptableObject.CreateInstance<Crop>();
+        strawberry = ScriptableObject.CreateInstance<Crop>();
+        tomato = ScriptableObject.CreateInstance<Crop>();
 
     }
 
     private void Start()
     {
-        // Looking for the corn item in the game
+        // Looking for the crop item in the game
+        /*foreach (SeedSlot itemSlot in GameManager.instance.allSeedsContainer.slots)
+        {
+            if (itemSlot.item.Name == "corn" || itemSlot.item.Name == "parsley" || itemSlot.item.Name == "potato" || itemSlot.item.Name == "strawberry" || itemSlot.item.Name == "tomato")
+            {
+                crop = itemSlot.item;
+            }
+
+
+        }*/
+
         foreach (SeedSlot itemSlot in GameManager.instance.allSeedsContainer.slots)
         {
             if (itemSlot.item.Name == "corn")
             {
                 corn = itemSlot.item;
             }
+            else if (itemSlot.item.Name == "parsley")
+            {
+                parsley = itemSlot.item;
+            }
+            else if (itemSlot.item.Name == "potato")
+            {
+                potato = itemSlot.item;
+            }
+            else if (itemSlot.item.Name == "strawberry")
+            {
+                strawberry = itemSlot.item;
+            }
+            else if (itemSlot.item.Name == "tomato")
+            {
+                tomato = itemSlot.item;
+            }
         }
 
-        crops = ToolsCharacterController.fields;
-        corns = new List<Corn>();
+        fields = ToolsCharacterController.fields;
+        crops = new List<Crop>();
+        corns = new List<Crop>();
+        parsleys = new List<Crop>();
+        potatoes = new List<Crop>();
+        strawberries = new List<Crop>();
+        tomatoes = new List<Crop>();
+        
         toolbarController = GetComponent<ToolbarController>();
     }
 
     private void Update()
     {
-        foreach(var corn in corns)
+        foreach(var crop in crops)
         {
-            //Debug.Log(corn.position);
-            Grow(corn);
+            //Debug.Log(crop.position);
+            Grow(crop);
         }
         
     }
@@ -66,19 +105,75 @@ public class CropsManager : MonoBehaviour
         groundTilemap.SetTile(position, plowed);
     }
 
-    public void SeedCorn(Vector3Int position)
+    public void SeedCrop(Vector3Int position, string name)
     {
-        Corn cornSeeded = Instantiate(corn);
-        
-        cornSeeded.position = position;
-        cornSeeded.state = cornSeeded.state0;
-        cornSeeded.timeRemaining = 10;
+        Crop cropSeeded;
+        if (name == "corn")
+        {
+            cropSeeded = Instantiate(corn);
+            cropSeeded.position = position;
+            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.timeRemaining = 5;
 
-        corns.Add(cornSeeded);
-        cornSeeded.timerIsRunning = true;
-        // Debug.Log(DisplayTime(cornSeeded.timeRemaining));
-        cropTilemap.SetTile(cornSeeded.position, cornSeeded.state0);
-        
+            cropSeeded.timerIsRunning = true;
+            crops.Add(cropSeeded);
+            corns.Add(cropSeeded);
+            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
+            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+        }    
+        else if (name == "parsley")
+        {
+            cropSeeded = Instantiate(parsley);
+            cropSeeded.position = position;
+            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.timeRemaining = 5;
+
+            cropSeeded.timerIsRunning = true;
+            crops.Add(cropSeeded);
+            parsleys.Add(cropSeeded);
+            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
+            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+        }
+        else if (name == "potato")
+        {
+            cropSeeded = Instantiate(potato);
+            cropSeeded.position = position;
+            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.timeRemaining = 5;
+
+            cropSeeded.timerIsRunning = true;
+            crops.Add(cropSeeded);
+            potatoes.Add(cropSeeded);
+            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
+            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+        }
+        else if (name == "strawberry")
+        {
+            cropSeeded = Instantiate(strawberry);
+            cropSeeded.position = position;
+            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.timeRemaining = 5;
+
+            cropSeeded.timerIsRunning = true;
+            crops.Add(cropSeeded);
+            strawberries.Add(cropSeeded);
+            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
+            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+        }
+        else if (name == "tomato")
+        {
+            cropSeeded = Instantiate(tomato);
+            cropSeeded.position = position;
+            cropSeeded.state = cropSeeded.state0;
+            cropSeeded.timeRemaining = 5;
+
+            cropSeeded.timerIsRunning = true;
+            crops.Add(cropSeeded);
+            tomatoes.Add(cropSeeded);
+            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
+            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+        }
+
     }
 
     string DisplayTime(float timeToDisplay)
@@ -89,40 +184,71 @@ public class CropsManager : MonoBehaviour
         return string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
-    void Grow(Corn corn)
+    void Grow(Crop crop)
     {
-        if (corn.timerIsRunning)
+        if (crop.timerIsRunning)
         {
-            if (corn.timeRemaining > 0)
+            if (crop.timeRemaining > 0)
             {
-                corn.timeRemaining -= Time.deltaTime;
-                //Debug.Log(DisplayTime(corn.timeRemaining));
+                crop.timeRemaining -= Time.deltaTime;
+                //Debug.Log(DisplayTime(crop.timeRemaining));
             }
             else
             {
-                if (corn.state == corn.state0)
-                    corn.state = corn.state1;
-                else if (corn.state == corn.state1)
-                    corn.state = corn.state2;
-                else if (corn.state == corn.state2)
-                    corn.state = corn.state3;
-                else if (corn.state == corn.state3)
-                    corn.state = corn.state4;
-                else if (corn.state == corn.state4)
-                    corn.state = corn.state5;
-
-                cropTilemap.SetTile(corn.position, corn.state);
-                
-
-                if (corn.state == corn.state5)
+                if (crop.name == "Parsley(Clone)")
                 {
-                    corn.timerIsRunning = false;
+                    if (crop.state == crop.state0)
+                        crop.state = crop.state1;
+                    else if (crop.state == crop.state1)
+                        crop.state = crop.state2;
+                    else if (crop.state == crop.state2)
+                        crop.state = crop.state3;
+                    else if (crop.state == crop.state3)
+                        crop.state = crop.state4;
+
+                    cropTilemap.SetTile(crop.position, crop.state);
+
+
+                    if (crop.state == crop.state4)
+                    {
+                        crop.timerIsRunning = false;
+                    }
+                    else
+                    {
+                        crop.timeRemaining = 5;
+                        crop.timerIsRunning = true;
+                    }
                 }
                 else
                 {
-                    corn.timeRemaining = 10;
-                    corn.timerIsRunning = true;
+                    if (crop.state == crop.state0)
+                        crop.state = crop.state1;
+                    else if (crop.state == crop.state1)
+                        crop.state = crop.state2;
+                    else if (crop.state == crop.state2)
+                        crop.state = crop.state3;
+                    else if (crop.state == crop.state3)
+                        crop.state = crop.state4;
+                    else if (crop.state == crop.state4)
+                        crop.state = crop.state5;
+
+                    cropTilemap.SetTile(crop.position, crop.state);
+
+
+                    if (crop.state == crop.state5)
+                    {
+                        crop.timerIsRunning = false;
+                    }
+                    else
+                    {
+                        crop.timeRemaining = 5;
+                        crop.timerIsRunning = true;
+                    }
                 }
+
+                //Debug.Log(crop.stages.Count);
+
+
             }
         }
     }

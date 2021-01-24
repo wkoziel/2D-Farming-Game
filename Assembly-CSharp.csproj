@@ -88,6 +88,7 @@
     <Compile Include="Assets\Scripts\Parameters\HungerController.cs" />
     <Compile Include="Assets\Scripts\Parameters\TemperatureController.cs" />
     <Compile Include="Assets\Scripts\Plants\Corn.cs" />
+    <Compile Include="Assets\Scripts\Plants\Crop.cs" />
     <Compile Include="Assets\Scripts\Plants\Parsley.cs" />
     <Compile Include="Assets\Scripts\Plants\Potato.cs" />
     <Compile Include="Assets\Scripts\Plants\Strawberry.cs" />

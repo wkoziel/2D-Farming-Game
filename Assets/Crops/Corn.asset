@@ -9,7 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e3349f3d938958b42b5d45924a99df6b, type: 3}
+  m_Script: {fileID: 11500000, guid: e5d41da853ab7184ba2b993dee120434, type: 3}
   m_Name: Corn
   m_EditorClassIdentifier: 
   state0: {fileID: 11400000, guid: 70f9d904bd7a40546bdc37d5fef26f88, type: 2}
@@ -18,8 +18,14 @@ MonoBehaviour:
   state3: {fileID: 11400000, guid: f537cf2d62ff427449e977ace6633a59, type: 2}
   state4: {fileID: 11400000, guid: d6ff94e22d202fe4e8d706c40ca62dc8, type: 2}
   state5: {fileID: 11400000, guid: ca9ebb65846e0bd46bff751ccb6747d4, type: 2}
-  state: {fileID: 11400000, guid: dc1fbd34106692d469a1adcef3967557, type: 2}
-  position: {x: 2, y: 7, z: 0}
+  stages:
+  - {fileID: 11400000, guid: 70f9d904bd7a40546bdc37d5fef26f88, type: 2}
+  - {fileID: 11400000, guid: dc1fbd34106692d469a1adcef3967557, type: 2}
+  - {fileID: 11400000, guid: 5ec510b3d1254d14c869c80726b0855e, type: 2}
+  - {fileID: 11400000, guid: f537cf2d62ff427449e977ace6633a59, type: 2}
+  - {fileID: 11400000, guid: d6ff94e22d202fe4e8d706c40ca62dc8, type: 2}
+  state: {fileID: 0}
+  position: {x: 0, y: 0, z: 0}
   timeRemaining: 10
   timerIsRunning: 0
   timeText: {fileID: 0}

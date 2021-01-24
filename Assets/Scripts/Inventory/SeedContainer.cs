@@ -6,7 +6,7 @@ using System;
 [Serializable]
 public class SeedSlot
 {
-    public Corn item;
+    public Crop item;
     public int count;
 
     // Set the item in the drag and drop controller
@@ -17,7 +17,7 @@ public class SeedSlot
     }
 
     // Sets up the item in the item slot
-    public void Set(Corn item, int count)
+    public void Set(Crop item, int count)
     {
         this.item = item;
         this.count = count;
@@ -39,7 +39,7 @@ public class SeedContainer : ScriptableObject
     // Defining all methods which we use to interact with the inventory
 
     // Adds item to the container
-    public void Add(Corn item, int count = 1)
+    public void Add(Crop item, int count = 1)
     {
         // Determining if the item is stackable - if it's not then find the first free
         // slot and insert the item there
