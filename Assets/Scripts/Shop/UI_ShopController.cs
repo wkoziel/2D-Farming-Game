@@ -20,18 +20,17 @@ public class UI_ShopController : MonoBehaviour
 
     private void Start()
     {
-        CreateItemButton(Resources.Load<Sprite>("starter_hoe"), "Hoe", 30, 0, "Hoe");        //to jest ten sam obiekt, który jest domyślnie utworzony jako shopItemTemplate
-        CreateItemButton(Resources.Load<Sprite>("starter_shovel"), "Shovel", 30, 1, "Shovel");
-        CreateItemButton(Resources.Load<Sprite>("WateringCan"), "WateringCan", 50, 2, "Watering Can");
-        //CreateItemButton(Resources.Load<Sprite>("backpack"), "Backpack", 100, 5);
-
         Dictionary<string, Sprite> plantsDictionary = CreateSeedsFromSprite();
-        CreateItemButton(plantsDictionary["Seed3"], "Seed3", 100, 3, "50 red seeds");
-        CreateItemButton(plantsDictionary["Seeds1"], "Seeds1", 100, 4, "50 yellow seeds");
+        //CreateItemButton(plantsDictionary["Seed3"], "Seed3", 100, 0, "50 red seeds");
+        //CreateItemButton(plantsDictionary["Seeds1"], "Seeds1", 100, 1, "50 yellow seeds");
 
         // to trzeba naprawic:
-        //CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 3, "4 corn seeds");
-        //CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 100, 4, "3 parsley seeds");
+        CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 0, "4 corn seeds");
+        CreateItemButton(plantsDictionary["Seeds_Beetroot"], "Seeds_Beetroot", 100,1, "4 beetroot seeds");
+        CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 100, 2, "4 parsley seeds");
+        CreateItemButton(plantsDictionary["Seeds_Pumpkin"], "Seeds_Pumpkin", 100, 3, "4 pumpkin seeds");
+        CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", 100, 4, "4 tomato seeds");
+        CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", 100, 5, "4 strawberry seeds");
 
         gameObject.SetActive(false);
         Hide();
@@ -55,7 +54,7 @@ public class UI_ShopController : MonoBehaviour
     {
         Transform shopItemTransform = Instantiate(shopItemTemplate, container);
         RectTransform shopItemRectTransform = shopItemTransform.GetComponent<RectTransform>();
-        float shopItemHeight = 90f;
+        float shopItemHeight = 60f;
         shopItemRectTransform.anchoredPosition = new Vector2(0, 200 + (-shopItemHeight * positionIndex));
         shopItemTransform.Find("nameText").GetComponent<TextMeshProUGUI>().SetText(displayedName);
         shopItemTransform.Find("priceText").GetComponent<TextMeshProUGUI>().SetText(itemCost.ToString());
