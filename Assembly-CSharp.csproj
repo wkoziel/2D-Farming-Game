@@ -72,6 +72,8 @@
     <Compile Include="Assets\Scripts\CropsManager.cs" />
     <Compile Include="Assets\Scripts\CropsReadController.cs" />
     <Compile Include="Assets\Scripts\DayTimeController.cs" />
+    <Compile Include="Assets\Scripts\FireCamp\CampFireHit.cs" />
+    <Compile Include="Assets\Scripts\FireCamp\CampFireReaction.cs" />
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Inventory\DragAndDropController.cs" />
     <Compile Include="Assets\Scripts\Inventory\InventoryButton.cs" />

@@ -71,8 +71,12 @@ public class ToolsCharacterController : MonoBehaviour
         RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
         if (hit)
         {
-            // Debug.Log(hit.collider.gameObject.name);
+            //Debug.Log(hit.collider.gameObject.name);
             if (hit.collider.gameObject.name.Contains("Tree"))
+            {
+                return true;
+            }
+            if (hit.collider.gameObject.name.Contains("CampFire"))
             {
                 return true;
             }
@@ -152,11 +156,17 @@ public class ToolsCharacterController : MonoBehaviour
 
         foreach (Collider2D collidor in colliders)
         {
-            ToolHit hit = collidor.GetComponent<ToolHit>();
-            if (hit != null && toolbarController.GetItem.Name == "Axe" && CastRay() == true)
+            ToolHit hitTree = collidor.GetComponent<ToolHit>();
+            CampFireHit hitFire = collidor.GetComponent<CampFireHit>();
+            if (hitTree != null && toolbarController.GetItem.Name == "Axe" && CastRay() == true)
             {
-                hit.Hit();
+                hitTree.Hit();
                 // Debug.Log("we can hit");
+                return true;
+            }
+            if (hitFire != null && toolbarController.GetItem.Name == "Wood" && CastRay() == true)
+            {
+                hitFire.Hit();
                 return true;
             }
         }
