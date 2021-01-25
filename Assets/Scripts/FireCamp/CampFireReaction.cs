@@ -6,9 +6,21 @@ public class CampFireReaction : CampFireHit
 {
     public float time;
     public GameObject fire;
+    GameObject toolbar;
+
+    private void Start()
+    {
+        toolbar = GameObject.FindWithTag("toolbar");
+    }
     public override void Hit()
     {
         fire.SetActive(true);
+
+        GameManager.instance.inventoryContainer.RemoveItem(GameManager.instance.toolbarControllerGlobal.GetItem, 5);
+
+        toolbar.SetActive(!toolbar.activeInHierarchy);
+        toolbar.SetActive(true);
+
         StartCoroutine(LateCall());
     }
 

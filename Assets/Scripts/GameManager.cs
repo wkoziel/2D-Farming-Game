@@ -16,4 +16,6 @@ public class GameManager : MonoBehaviour
     public ItemContainer allItemsContainer;
     public SeedContainer allSeedsContainer;
     public DragAndDropController dragAndDropController;
+
+    public ToolbarController toolbarControllerGlobal;
 }

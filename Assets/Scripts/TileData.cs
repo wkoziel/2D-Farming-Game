@@ -17,5 +17,5 @@ public class TileData : ScriptableObject
 
     //public bool waterable;
     
-    //public bool collectible;
+    public bool collectible;
 }

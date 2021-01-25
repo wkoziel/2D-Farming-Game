@@ -41,6 +41,8 @@ public class PickUpItem : MonoBehaviour
 
                 toolbar.SetActive(!toolbar.activeInHierarchy);
                 toolbar.SetActive(true);
+
+                //Debug.Log(GameManager.instance.toolbarControllerGlobal.GetItem.Name);
             }
             else
             {
