@@ -69,7 +69,6 @@
     <Compile Include="Assets\Scripts\Character\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\ChestHit.cs" />
-    <Compile Include="Assets\Scripts\ChestInteraction.cs" />
     <Compile Include="Assets\Scripts\CropData.cs" />
     <Compile Include="Assets\Scripts\CropsManager.cs" />
     <Compile Include="Assets\Scripts\CropsReadController.cs" />

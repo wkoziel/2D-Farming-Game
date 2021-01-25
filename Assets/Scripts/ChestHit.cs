@@ -8,8 +8,9 @@ public class ChestHit : ToolHit
     [SerializeField] GameObject pickUpWateringCan;
     [SerializeField] GameObject pickUpHoe;
     [SerializeField] GameObject pickUpShovel;
+    [SerializeField] GameObject pickUpBag;
 
-    [SerializeField] int dropCount = 4;
+    [SerializeField] int dropCount = 5;
     [SerializeField] float spread = 0.9f;
 
     List<GameObject> items;
@@ -21,6 +22,7 @@ public class ChestHit : ToolHit
         items.Add(pickUpWateringCan);
         items.Add(pickUpHoe);
         items.Add(pickUpShovel);
+        items.Add(pickUpBag);
     }
 
     public override void Hit()
