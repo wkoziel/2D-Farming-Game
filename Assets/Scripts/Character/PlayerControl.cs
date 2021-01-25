@@ -2,18 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum PlayerState
+{
+    walk,
+    click
+}
+
 public class PlayerControl : MonoBehaviour
 {
     public float speed;
+    public PlayerState currentState;
     private Rigidbody2D myRigidbody2D;
     private Vector3 vector;
-    Vector2 motionVector;
     public Vector2 lastMotionVector;
     private Animator animator;
 
     //Use this for initialization
     void Start()
     {
+        currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
     }
@@ -25,15 +32,24 @@ public class PlayerControl : MonoBehaviour
         vector.x = Input.GetAxis("Horizontal");
         vector.y = Input.GetAxis("Vertical");
 
-        motionVector = new Vector2(vector.x, vector.y);
-        
-
-        UpdateAnimationAndMove();
-
-        if (vector.x != 0 || vector.y != 0)
+        if(Input.GetMouseButtonDown(0) && currentState != PlayerState.click)
         {
-            lastMotionVector = new Vector2(vector.x, vector.y).normalized;
+            StartCoroutine(ClickCo());
         }
+        else if (currentState == PlayerState.walk)
+        {
+            UpdateAnimationAndMove();
+        }
+    }
+
+    private IEnumerator ClickCo()
+    {
+        animator.SetBool("clicking", true);
+        currentState = PlayerState.click;
+        yield return null;
+        animator.SetBool("clicking", false);
+        yield return new WaitForSeconds(.3f);
+        currentState = PlayerState.walk;
     }
     void UpdateAnimationAndMove()
     {
