@@ -29,6 +29,12 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] Tomato tomato;*/
     //[SerializeField] Crop crop;
 
+    private static int cornAmount = 4;
+    private static int parsleyAmount = 3;
+    private static int potatoAmount = 1;
+    private static int strawberryAmount = 6;
+    private static int tomatoAmount = 3;
+
 
     Vector3Int selectedTilePosition;
     Vector3Int selectedCropPosition;
@@ -174,7 +180,7 @@ public class ToolsCharacterController : MonoBehaviour
         return false;
     }
 
-    public void RefreshToolbar()
+    private void RefreshToolbar()
     {
         toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
         toolbarPanel.SetActive(true);
@@ -216,7 +222,7 @@ public class ToolsCharacterController : MonoBehaviour
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 4)
                             {
                                 cropsManager.SeedCrop(selectedTilePosition, "corn");
-                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 4);       // Deletes 4 seeds
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, cornAmount);   // Deletes 4 seeds
                             }
                         break;
                         case "Seeds_Parsley":
@@ -224,7 +230,7 @@ public class ToolsCharacterController : MonoBehaviour
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 3)
                             {
                                 cropsManager.SeedCrop(selectedTilePosition, "parsley");
-                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 3);       // Deletes 3 seeds
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, parsleyAmount);  // Deletes 3 seeds
                             }
                         break;
                         case "Seeds_Potato":
@@ -232,7 +238,7 @@ public class ToolsCharacterController : MonoBehaviour
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 1)
                             {
                                 cropsManager.SeedCrop(selectedTilePosition, "potato");
-                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 1);       // Deletes 1 seed
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, potatoAmount);   // Deletes 1 seed
                             }
                         break;
                         case "Seeds_Strawberry":
@@ -240,7 +246,7 @@ public class ToolsCharacterController : MonoBehaviour
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 6)
                             {
                                 cropsManager.SeedCrop(selectedTilePosition, "strawberry");
-                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 6);       // Deletes 6 seeds
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, strawberryAmount); // Deletes 6 seeds
                             }
                         break;
                         case "Seeds_Tomato":
@@ -248,124 +254,88 @@ public class ToolsCharacterController : MonoBehaviour
                             if (GameManager.instance.inventoryContainer.slots[toolbarController.selectedTool].count >= 3)
                             {
                                 cropsManager.SeedCrop(selectedTilePosition, "tomato");
-                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, 3);       // Deletes 3 seeds
+                                GameManager.instance.inventoryContainer.RemoveItem(toolbarController.GetItem, tomatoAmount);   // Deletes 3 seeds
                             }
                         break;
                     }
 
                     // Refreshing the count of seeds
-                    toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
-                    toolbarPanel.SetActive(true);
+                    RefreshToolbar();
 
                 }
                 
             }
-            /*else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
-            {
-                Debug.Log("collectible corn");
-            }
-            else if (crops[(Vector2Int)selectedTilePosition].collectible)
-            {
-                Debug.Log("kliknelismy i chcemy zbierac");
-                Item newItem = ScriptableObject.CreateInstance<Item>();
-
-                switch (toolbarController.GetItem.Name)
-                {
-                    case "Seeds_Corn":
-
-                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
-                        {
-                            if (itemSlot.item.Name == "Food_Corn")
-                            {
-                                newItem = itemSlot.item;
-                                GameManager.instance.inventoryContainer.Add(newItem, 4);
-                                Debug.Log("dodajemy corn");
-                                break;
-                            }
-                        }
-                        break;
-
-                    case "Seeds_Parsley":
-
-                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
-                        {
-                            if (itemSlot.item.Name == "Food_Parsley")
-                            {
-                                newItem = itemSlot.item;
-                                GameManager.instance.inventoryContainer.Add(newItem, 3);
-                                Debug.Log("dodajemy parsley");
-                                break;
-                            }
-                        }
-                        break;
-
-                    case "Seeds_Potato":
-
-                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
-                        {
-                            if (itemSlot.item.Name == "Food_Potato")
-                            {
-                                newItem = itemSlot.item;
-                                GameManager.instance.inventoryContainer.Add(newItem, 1);
-                                Debug.Log("dodajemy potato");
-                                break;
-                            }
-                        }
-                        break;
-
-                    case "Seeds_Strawberry":
-
-                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
-                        {
-                            if (itemSlot.item.Name == "Food_Strawberry")
-                            {
-                                newItem = itemSlot.item;
-                                GameManager.instance.inventoryContainer.Add(newItem, 6);
-                                Debug.Log("dodajemy strawberry");
-                                break;
-                            }
-                        }
-                        break;
-
-                    case "Seeds_Tomato":
-
-                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
-                        {
-                            if (itemSlot.item.Name == "Food_Tomato")
-                            {
-                                newItem = itemSlot.item;
-                                GameManager.instance.inventoryContainer.Add(newItem, 3);
-                                Debug.Log("dodajemy tomato");
-                                break;
-                            }
-                        }
-                        break;
-                }
-
-                // Refreshing the toolbar
-                toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
-                toolbarPanel.SetActive(true);
-            }*/
-
+            
             else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
             {
                 cropsManager.Collect(selectedTilePosition, "corn");
+                foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                {
+                    if (itemSlot.item.Name == "Food_Corn")
+                    {
+                        GameManager.instance.inventoryContainer.Add(itemSlot.item, cornAmount);
+                        RefreshToolbar();
+                        break;
+                    }
+                }
+                //Debug.Log("dodajemy corn");
+
             }
             else if (crops[(Vector2Int)selectedTilePosition].collectibleParsley)
             {
                 cropsManager.Collect(selectedTilePosition, "parsley");
+                foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                {
+                    if (itemSlot.item.Name == "Food_Parsley")
+                    {
+                        GameManager.instance.inventoryContainer.Add(itemSlot.item, parsleyAmount);
+                        RefreshToolbar();
+                        break;
+                    }
+                }
+                //Debug.Log("dodajemy parsley");
             }
             else if (crops[(Vector2Int)selectedTilePosition].collectiblePotato)
             {
                 cropsManager.Collect(selectedTilePosition, "potato");
+                foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                {
+                    if (itemSlot.item.Name == "Food_Potato")
+                    {
+                        GameManager.instance.inventoryContainer.Add(itemSlot.item, potatoAmount);
+                        RefreshToolbar();
+                        break;
+                    }
+                }
+                //Debug.Log("dodajemy potato");
             }
             else if (crops[(Vector2Int)selectedTilePosition].collectibleStrawberry)
             {
                 cropsManager.Collect(selectedTilePosition, "strawberry");
+                foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                {
+                    if (itemSlot.item.Name == "Food_Strawberry")
+                    {
+                        GameManager.instance.inventoryContainer.Add(itemSlot.item, strawberryAmount);
+                        RefreshToolbar();
+                        break;
+                    }
+                }
+                //Debug.Log("dodajemy strawberry");
             }
             else if (crops[(Vector2Int)selectedTilePosition].collectibleTomato)
             {
                 cropsManager.Collect(selectedTilePosition, "tomato");
+                foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                {
+                    if (itemSlot.item.Name == "Food_Tomato")
+                    {
+                        GameManager.instance.inventoryContainer.Add(itemSlot.item, tomatoAmount);
+                        RefreshToolbar();
+                        break;
+                    }
+                }
+                //Debug.Log("dodajemy tomato");
             }
 
         }
