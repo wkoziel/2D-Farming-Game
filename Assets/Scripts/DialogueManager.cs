@@ -31,9 +31,10 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
+        if (textDisplay.text == sentences[index] && dialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
             GoToNextSentence();
+            pressToContinue.SetActive(true);
         }
         
     }
@@ -49,7 +50,7 @@ public class DialogueManager : MonoBehaviour
 
     public void GoToNextSentence()
     {
-        //pressToContinue.SetActive(false);
+        pressToContinue.SetActive(false);
 
         if (index < sentences.Length - 1)
         {
