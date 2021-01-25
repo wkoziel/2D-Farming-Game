@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class MoneyController : MonoBehaviour
 {
-    public long money;
+    public static long money;
     public Text moneyText; 
 
     void Start()
@@ -15,7 +15,7 @@ public class MoneyController : MonoBehaviour
 
     void Update()
     {
-        moneyText.text = formatMoney(money);
+        moneyText.text = money.ToString();
     }
 
     public void addMoney(long moneyToAdd)
@@ -44,29 +44,29 @@ public class MoneyController : MonoBehaviour
         else return true;
     }
 
-    private string formatMoney(long moneyToFormat)
-    {
-        string suffix;
-        if (moneyToFormat < 1000l)
-        {
-            moneyToFormat = moneyToFormat;
-            suffix = "";
-        }
-        else if (moneyToFormat < 1000000l)
-        {
-            moneyToFormat = moneyToFormat / 1000l;
-            suffix = "K";
-        }
-        else if (moneyToFormat < 1000000000l)
-        {
-            moneyToFormat = moneyToFormat / 1000000l;
-            suffix = "M";
-        }
-        else
-        {
-            moneyToFormat = moneyToFormat / 1000000000l;
-            suffix = "B";
-        }
-        return moneyToFormat.ToString() + suffix;
-    }
+    //private string formatMoney(long moneyToFormat)
+    //{
+    //    string suffix;
+    //    if (moneyToFormat < 1000)
+    //    {
+    //        moneyToFormat = moneyToFormat;
+    //        suffix = "";
+    //    }
+    //    else if (moneyToFormat < 1000000)
+    //    {
+    //        moneyToFormat = moneyToFormat / 1000;
+    //        suffix = "K";
+    //    }
+    //    else if (moneyToFormat < 1000000000)
+    //    {
+    //        moneyToFormat = moneyToFormat / 1000000;
+    //        suffix = "M";
+    //    }
+    //    else
+    //    {
+    //        moneyToFormat = moneyToFormat / 1000000000;
+    //        suffix = "B";
+    //    }
+    //    return moneyToFormat.ToString() + suffix;
+    //}
 }

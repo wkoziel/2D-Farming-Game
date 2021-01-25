@@ -97,11 +97,14 @@ public class DayTimeController : MonoBehaviour
                 temperatureUpdateCounter = 0;
             }
         }
-             
+
         //Zmiana dnia na nowy
         if (time > SecondsInDay)
+        {
             time = 0;
-
+            //codzienna dostawa punktow
+            MoneyController.money += 100;
+        }
         //Jesli zdrowie spranie do 0 zmiana na scene game over
         if(HealthController.currentHealth == 0)
         {
