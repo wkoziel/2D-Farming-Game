@@ -258,12 +258,95 @@ public class ToolsCharacterController : MonoBehaviour
                     toolbarPanel.SetActive(true);
 
                 }
-                else if (crops[(Vector2Int)selectedTilePosition].collectible)
-                {
-
-                }
+                
             }
-            
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
+            {
+                Debug.Log("collectible corn");
+            }
+            else if (crops[(Vector2Int)selectedTilePosition].collectible)
+            {
+                Debug.Log("kliknelismy i chcemy zbierac");
+                Item newItem = ScriptableObject.CreateInstance<Item>();
+
+                switch (toolbarController.GetItem.Name)
+                {
+                    case "Seeds_Corn":
+
+                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                        {
+                            if (itemSlot.item.Name == "Food_Corn")
+                            {
+                                newItem = itemSlot.item;
+                                GameManager.instance.inventoryContainer.Add(newItem, 4);
+                                Debug.Log("dodajemy corn");
+                                break;
+                            }
+                        }
+                        break;
+
+                    case "Seeds_Parsley":
+
+                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                        {
+                            if (itemSlot.item.Name == "Food_Parsley")
+                            {
+                                newItem = itemSlot.item;
+                                GameManager.instance.inventoryContainer.Add(newItem, 3);
+                                Debug.Log("dodajemy parsley");
+                                break;
+                            }
+                        }
+                        break;
+
+                    case "Seeds_Potato":
+
+                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                        {
+                            if (itemSlot.item.Name == "Food_Potato")
+                            {
+                                newItem = itemSlot.item;
+                                GameManager.instance.inventoryContainer.Add(newItem, 1);
+                                Debug.Log("dodajemy potato");
+                                break;
+                            }
+                        }
+                        break;
+
+                    case "Seeds_Strawberry":
+
+                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                        {
+                            if (itemSlot.item.Name == "Food_Strawberry")
+                            {
+                                newItem = itemSlot.item;
+                                GameManager.instance.inventoryContainer.Add(newItem, 6);
+                                Debug.Log("dodajemy strawberry");
+                                break;
+                            }
+                        }
+                        break;
+
+                    case "Seeds_Tomato":
+
+                        foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
+                        {
+                            if (itemSlot.item.Name == "Food_Tomato")
+                            {
+                                newItem = itemSlot.item;
+                                GameManager.instance.inventoryContainer.Add(newItem, 3);
+                                Debug.Log("dodajemy tomato");
+                                break;
+                            }
+                        }
+                        break;
+                }
+
+                // Refreshing the toolbar
+                toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
+                toolbarPanel.SetActive(true);
+            }
+
         }
     }
 }
