@@ -15,7 +15,7 @@ public class HungerController : MonoBehaviour
     void Start()
     {
         currentHunger = maxHunger;
-        fillSlider = (temperatureSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
+        fillSlider = (hungerSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
 
     }
 

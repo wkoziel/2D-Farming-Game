@@ -16,7 +16,7 @@ public class HealthController : MonoBehaviour
     void Start()
     {
         currentHealth = maxHealth;
-        fillSlider = (temperatureSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
+        fillSlider = (healthSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
 
     }
 
