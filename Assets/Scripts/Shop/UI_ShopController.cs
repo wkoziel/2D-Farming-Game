@@ -26,11 +26,11 @@ public class UI_ShopController : MonoBehaviour
 
         // to trzeba naprawic:
         CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 0, "4 corn seeds");
-        CreateItemButton(plantsDictionary["Seeds_Beetroot"], "Seeds_Beetroot", 100,1, "4 beetroot seeds");
-        CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 100, 2, "4 parsley seeds");
-        CreateItemButton(plantsDictionary["Seeds_Pumpkin"], "Seeds_Pumpkin", 100, 3, "4 pumpkin seeds");
-        CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", 100, 4, "4 tomato seeds");
-        CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", 100, 5, "4 strawberry seeds");
+        CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 60, 1, "3 parsley seeds");
+        CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", 85, 2, "4 tomato seeds");
+        CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", 145, 3, "7 strawberry seeds");
+        CreateItemButton(plantsDictionary["Seeds_Potato"], "Seeds_Potato", 70, 4, "Potato tuber");
+
 
         gameObject.SetActive(false);
         Hide();
@@ -82,9 +82,25 @@ public class UI_ShopController : MonoBehaviour
         if (money.canBuyItems(itemCost))
         {
             // w tym miejscu trzeba bedzie zrobic if dla kazdego z rodzajow nasiona
-            if (item.Name.Contains("Seed"))
+            if (item.Name.Contains("Seeds_Corn"))
             {
-                GameManager.instance.inventoryContainer.Add(item, 50);
+                GameManager.instance.inventoryContainer.Add(item, 4);
+            }
+            else if (item.Name.Contains("Seeds_Tomato"))
+            {
+                GameManager.instance.inventoryContainer.Add(item, 4);
+            }
+            else if (item.Name.Contains("Seeds_Strawberry"))
+            {
+                GameManager.instance.inventoryContainer.Add(item, 7);
+            }
+            else if (item.Name.Contains("Seeds_Parsley"))
+            {
+                GameManager.instance.inventoryContainer.Add(item, 3);
+            }
+            else if (item.Name.Contains("Seeds_Potato"))
+            {
+                GameManager.instance.inventoryContainer.Add(item, 1);
             }
             else
             {
