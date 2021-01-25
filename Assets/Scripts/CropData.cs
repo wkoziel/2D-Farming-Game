@@ -24,4 +24,10 @@ public class CropData : ScriptableObject
     public bool planted;
 
     public bool collectible;
+
+    public bool collectibleCorn;
+    public bool collectibleParsley;
+    public bool collectiblePotato;
+    public bool collectibleStrawberry;
+    public bool collectibleTomato;
 }
