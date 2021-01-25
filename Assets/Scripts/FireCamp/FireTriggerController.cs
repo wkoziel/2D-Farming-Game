@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FireTriggerController : MonoBehaviour
 {
+    bool playerinrange = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,14 +14,17 @@ public class FireTriggerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (playerinrange == true && TemperatureController.currentTemperature < 100)
+        {
+            TemperatureController.currentTemperature += 1;
+        }
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player in range");
+            playerinrange = true;
         }
     }
 
@@ -28,7 +32,7 @@ public class FireTriggerController : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Player left range");
+            playerinrange = false;
         }
     }
 }

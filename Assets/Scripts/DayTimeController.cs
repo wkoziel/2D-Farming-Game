@@ -79,7 +79,7 @@ public class DayTimeController : MonoBehaviour
             {
                 light.intensity -= LightTransition;
             }
-            if (temperatureUpdateCounter > 100)
+            if (temperatureUpdateCounter > 50)
             {
                 TemperatureController.currentTemperature -= 1;
                 temperatureUpdateCounter = 0;
@@ -91,7 +91,7 @@ public class DayTimeController : MonoBehaviour
         {
             if (light.intensity < 1f)
                 light.intensity += LightTransition;
-            if (temperatureUpdateCounter > 100)
+            if (temperatureUpdateCounter > 50)
             {
                 TemperatureController.currentTemperature -= 1;
                 temperatureUpdateCounter = 0;
