@@ -676,13 +676,13 @@ TextureImporter:
     second: Overworld_223
   - first:
       213: 8772211705815363909
-    second: Overworld_224
+    second: Chest
   - first:
       213: 3666757032956200155
     second: Overworld_225
   - first:
       213: 2482727840735758997
-    second: Overworld_226
+    second: Open-Chest
   - first:
       213: 7693628570745791804
     second: Overworld_227
@@ -7506,12 +7506,12 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_224
+      name: Chest
       rect:
         serializedVersion: 2
-        x: 496
+        x: 498
         y: 464
-        width: 32
+        width: 29
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -7527,13 +7527,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Overworld_226
+      name: Open-Chest
       rect:
         serializedVersion: 2
-        x: 528
-        y: 480
-        width: 16
-        height: 16
+        x: 527
+        y: 464
+        width: 33
+        height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

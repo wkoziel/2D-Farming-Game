@@ -86,7 +86,11 @@ public class ToolsCharacterController : MonoBehaviour
             {
                 return true;
             }
-           
+            if (hit.collider.gameObject.name.Contains("Chest"))
+            {
+                return true;
+            }
+
         }
         return false;
     }
@@ -164,6 +168,8 @@ public class ToolsCharacterController : MonoBehaviour
         {
             ToolHit hitTree = collidor.GetComponent<ToolHit>();
             CampFireHit hitFire = collidor.GetComponent<CampFireHit>();
+            ChestHit hitChest = collidor.GetComponent<ChestHit>();
+
             if (hitTree != null && toolbarController.GetItem.Name == "Axe" && CastRay() == true)
             {
                 hitTree.Hit();
@@ -173,6 +179,11 @@ public class ToolsCharacterController : MonoBehaviour
             if (hitFire != null && toolbarController.GetItem.Name == "Wood" && CastRay() == true)
             {
                 hitFire.Hit();
+                return true;
+            }
+            if (hitChest != null && CastRay() == true)
+            {
+                hitChest.Hit();
                 return true;
             }
         }

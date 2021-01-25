@@ -37,8 +37,8 @@ MonoBehaviour:
     count: 3
   - item: {fileID: 11400000, guid: a6a6bc5e2520631438ae29344f3daa6b, type: 2}
     count: 12
-  - item: {fileID: 11400000, guid: 8495bbb0964a3544ea0d1ac61f2d2854, type: 2}
-    count: 1
+  - item: {fileID: 0}
+    count: 0
   - item: {fileID: 11400000, guid: 49b5ea417b005ba4792e8dd67cc3f243, type: 2}
     count: 3
   - item: {fileID: 11400000, guid: cfac03f7705cb774a842c305fcb0c688, type: 2}
