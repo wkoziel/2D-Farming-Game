@@ -33,7 +33,7 @@ MonoBehaviour:
     count: 1
   - item: {fileID: 11400000, guid: 83b2a3ba6d8dc60498ca448ad83b28de, type: 2}
     count: 185
-  - item: {fileID: 11400000, guid: 8ff9633ca4c9a614db255a600c4730c5, type: 2}
+  - item: {fileID: 0}
     count: 1
   - item: {fileID: 0}
     count: 0

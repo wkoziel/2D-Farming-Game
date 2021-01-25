@@ -15,6 +15,12 @@ MonoBehaviour:
   tiles:
   - {fileID: 11400000, guid: 85260e3c04b42794b8388af19b90c769, type: 2}
   - {fileID: 11400000, guid: be3abf381a570ca448a534cc192d34ef, type: 2}
+  - {fileID: 11400000, guid: 30f4de6a3e98315458187ae369617ed7, type: 2}
+  - {fileID: 11400000, guid: 0d18143169b29dd4ab35a82593c97579, type: 2}
+  - {fileID: 11400000, guid: fef2157ccd3b7c54289a02077f30e030, type: 2}
+  - {fileID: 11400000, guid: cd9f2c052aa2383469d7474703d449c4, type: 2}
+  - {fileID: 11400000, guid: 2ea7cb1d43047bd47a9e45772f00d3a6, type: 2}
+  - {fileID: 11400000, guid: eea1e1251f0390643a1fd401bbcdd335, type: 2}
   plowable: 0
   ableToMow: 0
   ableToSeed: 0
