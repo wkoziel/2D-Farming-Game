@@ -281,7 +281,7 @@ public class ToolsCharacterController : MonoBehaviour
                 cropsManager.Water(selectedTilePosition);
             }
 
-            else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn && toolbarController.GetItem.Name == "Bag")
             {
                 cropsManager.Collect(selectedTilePosition, "corn");
                 foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
@@ -296,7 +296,7 @@ public class ToolsCharacterController : MonoBehaviour
                 //Debug.Log("dodajemy corn");
 
             }
-            else if (crops[(Vector2Int)selectedTilePosition].collectibleParsley)
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleParsley && toolbarController.GetItem.Name == "Bag")
             {
                 cropsManager.Collect(selectedTilePosition, "parsley");
                 foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
@@ -310,7 +310,7 @@ public class ToolsCharacterController : MonoBehaviour
                 }
                 //Debug.Log("dodajemy parsley");
             }
-            else if (crops[(Vector2Int)selectedTilePosition].collectiblePotato)
+            else if (crops[(Vector2Int)selectedTilePosition].collectiblePotato && toolbarController.GetItem.Name == "Bag")
             {
                 cropsManager.Collect(selectedTilePosition, "potato");
                 foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
@@ -324,7 +324,7 @@ public class ToolsCharacterController : MonoBehaviour
                 }
                 //Debug.Log("dodajemy potato");
             }
-            else if (crops[(Vector2Int)selectedTilePosition].collectibleStrawberry)
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleStrawberry && toolbarController.GetItem.Name == "Bag")
             {
                 cropsManager.Collect(selectedTilePosition, "strawberry");
                 foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)
@@ -338,7 +338,7 @@ public class ToolsCharacterController : MonoBehaviour
                 }
                 //Debug.Log("dodajemy strawberry");
             }
-            else if (crops[(Vector2Int)selectedTilePosition].collectibleTomato)
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleTomato && toolbarController.GetItem.Name == "Bag")
             {
                 cropsManager.Collect(selectedTilePosition, "tomato");
                 foreach (ItemSlot itemSlot in GameManager.instance.allItemsContainer.slots)

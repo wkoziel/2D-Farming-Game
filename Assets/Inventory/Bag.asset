@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dd7d8549eaf9954e8fdae81ffb89fcd, type: 3}
+  m_Name: Bag
+  m_EditorClassIdentifier: 
+  Name: Bag
+  stackable: 0
+  icon: {fileID: 8766740682603709380, guid: 0e9170b4374bf5044a6feca0ccbcd55a, type: 3}
+  isSeed: 0
