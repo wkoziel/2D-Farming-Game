@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348970da7a89457449bd9a313adb7b71, type: 3}
   m_Name: CollectibleStrawberry
   m_EditorClassIdentifier: 
-  tiles: []
+  tiles:
+  - {fileID: 11400000, guid: 091e1b1febe22574b840537a6253d916, type: 2}
   noPlant: 0
   planted: 0
   collectible: 0

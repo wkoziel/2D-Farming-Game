@@ -260,7 +260,7 @@ public class ToolsCharacterController : MonoBehaviour
                 }
                 
             }
-            else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
+            /*else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
             {
                 Debug.Log("collectible corn");
             }
@@ -345,6 +345,27 @@ public class ToolsCharacterController : MonoBehaviour
                 // Refreshing the toolbar
                 toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);
                 toolbarPanel.SetActive(true);
+            }*/
+
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
+            {
+                cropsManager.Collect(selectedTilePosition, "corn");
+            }
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleParsley)
+            {
+                cropsManager.Collect(selectedTilePosition, "parsley");
+            }
+            else if (crops[(Vector2Int)selectedTilePosition].collectiblePotato)
+            {
+                cropsManager.Collect(selectedTilePosition, "potato");
+            }
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleStrawberry)
+            {
+                cropsManager.Collect(selectedTilePosition, "strawberry");
+            }
+            else if (crops[(Vector2Int)selectedTilePosition].collectibleTomato)
+            {
+                cropsManager.Collect(selectedTilePosition, "tomato");
             }
 
         }

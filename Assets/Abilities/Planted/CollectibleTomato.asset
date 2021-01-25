@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 348970da7a89457449bd9a313adb7b71, type: 3}
   m_Name: CollectibleTomato
   m_EditorClassIdentifier: 
-  tiles: []
+  tiles:
+  - {fileID: 11400000, guid: bd471a28033e6be4d994ab55cadeab4b, type: 2}
   noPlant: 0
   planted: 0
   collectible: 0

@@ -7,6 +7,7 @@ public class CropsManager : MonoBehaviour
 {
     [SerializeField] TileBase plowed;
     [SerializeField] TileBase mowed;
+    [SerializeField] TileBase invisible;
     [SerializeField] Tilemap groundTilemap;
     [SerializeField] Tilemap cropTilemap;
     ToolbarController toolbarController;
@@ -15,15 +16,20 @@ public class CropsManager : MonoBehaviour
 
     public List<Crop> crops;
     Crop crop;
-    public List<Crop> corns;
+    //public List<Crop> corns;
+    public Dictionary<Vector3Int, Crop> corns;
     Crop corn;
-    public List<Crop> parsleys;
+    //public List<Crop> parsleys;
+    public Dictionary<Vector3Int, Crop> parsleys;
     Crop parsley;
-    public List<Crop> potatoes;
+    //public List<Crop> potatoes;
+    public Dictionary<Vector3Int, Crop> potatoes;
     Crop potato;
-    public List<Crop> strawberries;
+    //public List<Crop> strawberries;
+    public Dictionary<Vector3Int, Crop> strawberries;
     Crop strawberry;
-    public List<Crop> tomatoes;
+    //public List<Crop> tomatoes;
+    public Dictionary<Vector3Int, Crop> tomatoes;
     Crop tomato;
 
     private void Awake()
@@ -76,23 +82,46 @@ public class CropsManager : MonoBehaviour
 
         fields = ToolsCharacterController.fields;
         crops = new List<Crop>();
-        corns = new List<Crop>();
+        /*corns = new List<Crop>();
         parsleys = new List<Crop>();
         potatoes = new List<Crop>();
         strawberries = new List<Crop>();
         tomatoes = new List<Crop>();
         
+        tomatoes = new List<Crop>();*/
+        corns = new Dictionary<Vector3Int, Crop>();
+        parsleys = new Dictionary<Vector3Int, Crop>();
+        potatoes = new Dictionary<Vector3Int, Crop>();
+        strawberries = new Dictionary<Vector3Int, Crop>();
+        tomatoes = new Dictionary<Vector3Int, Crop>();
+
+
         toolbarController = GetComponent<ToolbarController>();
     }
 
     private void Update()
     {
-        foreach(var crop in crops)
+        foreach (var crop in corns.Values)
         {
-            //Debug.Log(crop.position);
             Grow(crop);
         }
-        
+        foreach (var crop in parsleys.Values)
+        {
+            Grow(crop);
+        }
+        foreach (var crop in potatoes.Values)
+        {
+            Grow(crop);
+        }
+        foreach (var crop in strawberries.Values)
+        {
+            Grow(crop);
+        }
+        foreach (var crop in tomatoes.Values)
+        {
+            Grow(crop);
+        }
+
     }
 
     public void Mow(Vector3Int position)
@@ -117,7 +146,7 @@ public class CropsManager : MonoBehaviour
 
             cropSeeded.timerIsRunning = true;
             crops.Add(cropSeeded);
-            corns.Add(cropSeeded);
+            corns.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }    
@@ -130,7 +159,7 @@ public class CropsManager : MonoBehaviour
 
             cropSeeded.timerIsRunning = true;
             crops.Add(cropSeeded);
-            parsleys.Add(cropSeeded);
+            parsleys.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
@@ -143,7 +172,7 @@ public class CropsManager : MonoBehaviour
 
             cropSeeded.timerIsRunning = true;
             crops.Add(cropSeeded);
-            potatoes.Add(cropSeeded);
+            potatoes.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
@@ -156,7 +185,7 @@ public class CropsManager : MonoBehaviour
 
             cropSeeded.timerIsRunning = true;
             crops.Add(cropSeeded);
-            strawberries.Add(cropSeeded);
+            strawberries.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
@@ -169,7 +198,7 @@ public class CropsManager : MonoBehaviour
 
             cropSeeded.timerIsRunning = true;
             crops.Add(cropSeeded);
-            tomatoes.Add(cropSeeded);
+            tomatoes.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
@@ -253,4 +282,42 @@ public class CropsManager : MonoBehaviour
         }
     }
 
+    public void Collect(Vector3Int position, string name)
+    {
+        if (name == "corn")
+        {
+            cropTilemap.SetTile(position, invisible);
+            Destroy(corns[position]);
+            corns.Remove(position);
+            //dodanie do eq
+        }
+        else if (name == "parsley")
+        {
+            cropTilemap.SetTile(position, invisible);
+            Destroy(parsleys[position]);
+            parsleys.Remove(position);
+            //dodanie do eq
+        }
+        else if (name == "potato")
+        {
+            cropTilemap.SetTile(position, invisible);
+            Destroy(potatoes[position]);
+            potatoes.Remove(position);
+            //dodanie do eq
+        }
+        else if (name == "strawberry")
+        {
+            cropTilemap.SetTile(position, invisible);
+            Destroy(strawberries[position]);
+            strawberries.Remove(position);
+            //dodanie do eq
+        }
+        else if (name == "tomato")
+        {
+            cropTilemap.SetTile(position, invisible);
+            Destroy(tomatoes[position]);
+            tomatoes.Remove(position);
+            //dodanie do eq
+        }
+    }
 }
