@@ -68,8 +68,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1531631431
+  m_SortingLayer: 1
   m_SortingOrder: 1
   m_Sprite: {fileID: -3085000837880981780, guid: 1509ed9173876264fae13764b195c47b,
     type: 3}
@@ -98,6 +98,5 @@ MonoBehaviour:
   speed: 5
   pickUpDistance: 1.5
   ttl: 10
-  tree: {fileID: 6059839254566700546, guid: 5f11b7414f54a3d42a5baa06cf89192e, type: 3}
   item: {fileID: 11400000, guid: 5e239568605621747826406fb0e330d2, type: 2}
   count: 1
