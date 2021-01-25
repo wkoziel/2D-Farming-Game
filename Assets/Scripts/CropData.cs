@@ -11,7 +11,7 @@ public class CropData : ScriptableObject
 
     public bool noPlant;
 
-    public bool withCorn;
+    /*public bool withCorn;
 
     public bool withParsley;
 
@@ -19,5 +19,9 @@ public class CropData : ScriptableObject
 
     public bool withStrawberry;
 
-    public bool withTomato;
+    public bool withTomato;*/
+
+    public bool planted;
+
+    public bool collectible;
 }

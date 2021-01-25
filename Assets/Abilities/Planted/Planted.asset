@@ -1,0 +1,42 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 348970da7a89457449bd9a313adb7b71, type: 3}
+  m_Name: Planted
+  m_EditorClassIdentifier: 
+  tiles:
+  - {fileID: 11400000, guid: 70f9d904bd7a40546bdc37d5fef26f88, type: 2}
+  - {fileID: 11400000, guid: dc1fbd34106692d469a1adcef3967557, type: 2}
+  - {fileID: 11400000, guid: 5ec510b3d1254d14c869c80726b0855e, type: 2}
+  - {fileID: 11400000, guid: f537cf2d62ff427449e977ace6633a59, type: 2}
+  - {fileID: 11400000, guid: d6ff94e22d202fe4e8d706c40ca62dc8, type: 2}
+  - {fileID: 11400000, guid: 466e6382193f660459895c6342a43e51, type: 2}
+  - {fileID: 11400000, guid: f5b6783d44a55d04182a4dc2668e6534, type: 2}
+  - {fileID: 11400000, guid: eb096d47a51c2f34497c9c23f37c7432, type: 2}
+  - {fileID: 11400000, guid: b4e7a60ddc9d78c4dbcb8e844c45758e, type: 2}
+  - {fileID: 11400000, guid: f74fab5af4e37d04eba4123aaf4ea18c, type: 2}
+  - {fileID: 11400000, guid: c8bf50d8b412f814bb34fa33c5fe8b7b, type: 2}
+  - {fileID: 11400000, guid: 7cb8a0b42c018c140b68086cdb7b5ee4, type: 2}
+  - {fileID: 11400000, guid: c312531477f3ed848b78af541930ae80, type: 2}
+  - {fileID: 11400000, guid: 37439744300fec943b85c8b4bef7bc08, type: 2}
+  - {fileID: 11400000, guid: 86cb7153cbc51984bb14d240ed6e0d23, type: 2}
+  - {fileID: 11400000, guid: 589ca961d693ced43a8842a7da74aa07, type: 2}
+  - {fileID: 11400000, guid: 7ed5df4f870840d4d88fd78f3e1d3318, type: 2}
+  - {fileID: 11400000, guid: 662e4aadef9cbad4aa9c50699cf3b10c, type: 2}
+  - {fileID: 11400000, guid: 5beab1aa86ba57e439b4a3e01f4733d0, type: 2}
+  - {fileID: 11400000, guid: 90648e8e2b85a8f46acd94659a856a62, type: 2}
+  - {fileID: 11400000, guid: 4240f4fd12165fb43bef5991d343b467, type: 2}
+  - {fileID: 11400000, guid: 0e6466e8e77606c4197ac66dcf45b612, type: 2}
+  - {fileID: 11400000, guid: e769fc3a034a73d4fbd128f3557f5a3d, type: 2}
+  - {fileID: 11400000, guid: 87230d02a1c7a9a4a8cd6a29215b73c7, type: 2}
+  noPlant: 0
+  planted: 1
+  collectible: 0

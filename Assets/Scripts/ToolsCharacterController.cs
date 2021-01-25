@@ -258,7 +258,7 @@ public class ToolsCharacterController : MonoBehaviour
                     toolbarPanel.SetActive(true);
 
                 }
-                else if (fields[(Vector2Int)selectedTilePosition].collectible)
+                else if (crops[(Vector2Int)selectedTilePosition].collectible)
                 {
 
                 }

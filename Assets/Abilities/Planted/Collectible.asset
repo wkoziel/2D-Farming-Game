@@ -10,18 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 348970da7a89457449bd9a313adb7b71, type: 3}
-  m_Name: Strawberry
+  m_Name: Collectible
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: 86cb7153cbc51984bb14d240ed6e0d23, type: 2}
-  - {fileID: 11400000, guid: 589ca961d693ced43a8842a7da74aa07, type: 2}
-  - {fileID: 11400000, guid: 7ed5df4f870840d4d88fd78f3e1d3318, type: 2}
-  - {fileID: 11400000, guid: 662e4aadef9cbad4aa9c50699cf3b10c, type: 2}
-  - {fileID: 11400000, guid: 5beab1aa86ba57e439b4a3e01f4733d0, type: 2}
+  - {fileID: 11400000, guid: ca9ebb65846e0bd46bff751ccb6747d4, type: 2}
+  - {fileID: 11400000, guid: 67208945f274d3246ad87f9635fb7e32, type: 2}
+  - {fileID: 11400000, guid: 9f8b0edba3492254bae8630f40db1e9c, type: 2}
   - {fileID: 11400000, guid: 091e1b1febe22574b840537a6253d916, type: 2}
+  - {fileID: 11400000, guid: bd471a28033e6be4d994ab55cadeab4b, type: 2}
   noPlant: 0
-  withCorn: 0
-  withParsley: 0
-  withPotato: 0
-  withStrawberry: 1
-  withTomato: 0
+  planted: 0
+  collectible: 1
