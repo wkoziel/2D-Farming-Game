@@ -15,7 +15,7 @@ public class TileData : ScriptableObject
 
     public bool ableToSeed;
 
-    //public bool waterable;
-    
+    public bool waterable;
+
     //public bool collectible;
 }

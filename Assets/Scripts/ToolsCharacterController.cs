@@ -16,6 +16,7 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] TileData plowableTiles;
     [SerializeField] TileData toMowTiles;
     [SerializeField] TileData toSeedTiles;
+    [SerializeField] TileData waterableTiles;
     ToolbarController toolbarController;
     [SerializeField] GameObject toolbarPanel;
 
@@ -206,7 +207,7 @@ public class ToolsCharacterController : MonoBehaviour
             TileData tileData = tileMapReadController.GetTileData(tileBase);
             //TileData cropData = cropsReadController.GetTileData(tileBase);
 
-            if (tileData != plowableTiles && tileData != toMowTiles && tileData != toSeedTiles)
+            if (tileData != plowableTiles && tileData != toMowTiles && tileData != toSeedTiles && tileData != waterableTiles)
             {
                 return;
             }
@@ -272,11 +273,14 @@ public class ToolsCharacterController : MonoBehaviour
 
                     // Refreshing the count of seeds
                     RefreshToolbar();
-
-                }
-                
+                }               
             }
-            
+
+            else if (crops[(Vector2Int)selectedTilePosition].planted && fields[(Vector2Int)selectedTilePosition].waterable && toolbarController.GetItem.Name == "WateringCan")
+            {
+                cropsManager.Water(selectedTilePosition);
+            }
+
             else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn)
             {
                 cropsManager.Collect(selectedTilePosition, "corn");

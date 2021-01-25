@@ -21,6 +21,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: cd9f2c052aa2383469d7474703d449c4, type: 2}
   - {fileID: 11400000, guid: 2ea7cb1d43047bd47a9e45772f00d3a6, type: 2}
   - {fileID: 11400000, guid: eea1e1251f0390643a1fd401bbcdd335, type: 2}
+  - {fileID: 11400000, guid: 0c876423ab7c91c4bbcbad355b74550c, type: 2}
   plowable: 0
   ableToMow: 0
   ableToSeed: 0
+  waterable: 0

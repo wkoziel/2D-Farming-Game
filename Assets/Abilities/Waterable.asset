@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f8ea649dd24586418b134c6c896f1c6, type: 3}
-  m_Name: AbleToSeed
+  m_Name: Waterable
   m_EditorClassIdentifier: 
   tiles:
-  - {fileID: 11400000, guid: 26ccf3f4859eb2440b63f1def36d0c1a, type: 2}
+  - {fileID: 11400000, guid: 05e9e8b128aeca74092bf2d693ec52ab, type: 2}
   plowable: 0
   ableToMow: 0
-  ableToSeed: 1
-  waterable: 0
+  ableToSeed: 0
+  waterable: 1

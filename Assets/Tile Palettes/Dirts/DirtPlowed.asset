@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: Plowed
+  m_Name: DirtPlowed
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 6389272540002557646, guid: 1509ed9173876264fae13764b195c47b,
+  m_Sprite: {fileID: -3328804424743113820, guid: 1509ed9173876264fae13764b195c47b,
     type: 3}
-  m_Color: {r: 0.6226415, g: 0.46348837, b: 0.252581, a: 1}
+  m_Color: {r: 0.8113208, g: 0.55609065, b: 0.49750802, a: 1}
   m_Transform:
     e00: 1
     e01: 0

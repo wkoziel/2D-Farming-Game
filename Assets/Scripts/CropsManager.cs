@@ -5,8 +5,11 @@ using UnityEngine.Tilemaps;
 
 public class CropsManager : MonoBehaviour
 {
+    [SerializeField] TileBase grass;
     [SerializeField] TileBase plowed;
     [SerializeField] TileBase mowed;
+    [SerializeField] TileBase toWater;
+    [SerializeField] TileBase watered;
     [SerializeField] TileBase invisible;
     [SerializeField] Tilemap groundTilemap;
     [SerializeField] Tilemap cropTilemap;
@@ -14,7 +17,8 @@ public class CropsManager : MonoBehaviour
 
     Dictionary<Vector2Int, TileData> fields = new Dictionary<Vector2Int, TileData>();
 
-    public List<Crop> crops;
+    //public List<Crop> crops;
+    public Dictionary<Vector3Int, Crop> crops;
     Crop crop;
     //public List<Crop> corns;
     public Dictionary<Vector3Int, Crop> corns;
@@ -81,14 +85,14 @@ public class CropsManager : MonoBehaviour
         }
 
         fields = ToolsCharacterController.fields;
-        crops = new List<Crop>();
+        //crops = new List<Crop>();
         /*corns = new List<Crop>();
         parsleys = new List<Crop>();
         potatoes = new List<Crop>();
         strawberries = new List<Crop>();
-        tomatoes = new List<Crop>();
-        
         tomatoes = new List<Crop>();*/
+
+        crops = new Dictionary<Vector3Int, Crop>();
         corns = new Dictionary<Vector3Int, Crop>();
         parsleys = new Dictionary<Vector3Int, Crop>();
         potatoes = new Dictionary<Vector3Int, Crop>();
@@ -101,7 +105,7 @@ public class CropsManager : MonoBehaviour
 
     private void Update()
     {
-        foreach (var crop in corns.Values)
+        /*foreach (var crop in corns.Values)
         {
             Grow(crop);
         }
@@ -120,7 +124,9 @@ public class CropsManager : MonoBehaviour
         foreach (var crop in tomatoes.Values)
         {
             Grow(crop);
-        }
+        }*/
+        foreach (var crop in crops.Values)
+            Grow(crop);
 
     }
 
@@ -144,12 +150,12 @@ public class CropsManager : MonoBehaviour
             cropSeeded.state = cropSeeded.state0;
             cropSeeded.timeRemaining = 5;
 
-            cropSeeded.timerIsRunning = true;
-            crops.Add(cropSeeded);
+            //cropSeeded.timerIsRunning = true;
+            crops.Add(position, cropSeeded);
             corns.Add(position, cropSeeded);
-            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
+            //Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
-        }    
+        }
         else if (name == "parsley")
         {
             cropSeeded = Instantiate(parsley);
@@ -157,8 +163,8 @@ public class CropsManager : MonoBehaviour
             cropSeeded.state = cropSeeded.state0;
             cropSeeded.timeRemaining = 5;
 
-            cropSeeded.timerIsRunning = true;
-            crops.Add(cropSeeded);
+            //cropSeeded.timerIsRunning = true;
+            crops.Add(position, cropSeeded);
             parsleys.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
@@ -170,8 +176,8 @@ public class CropsManager : MonoBehaviour
             cropSeeded.state = cropSeeded.state0;
             cropSeeded.timeRemaining = 5;
 
-            cropSeeded.timerIsRunning = true;
-            crops.Add(cropSeeded);
+            //cropSeeded.timerIsRunning = true;
+            crops.Add(position, cropSeeded);
             potatoes.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
@@ -183,8 +189,8 @@ public class CropsManager : MonoBehaviour
             cropSeeded.state = cropSeeded.state0;
             cropSeeded.timeRemaining = 5;
 
-            cropSeeded.timerIsRunning = true;
-            crops.Add(cropSeeded);
+            //cropSeeded.timerIsRunning = true;
+            crops.Add(position, cropSeeded);
             strawberries.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
@@ -196,13 +202,13 @@ public class CropsManager : MonoBehaviour
             cropSeeded.state = cropSeeded.state0;
             cropSeeded.timeRemaining = 5;
 
-            cropSeeded.timerIsRunning = true;
-            crops.Add(cropSeeded);
+            //cropSeeded.timerIsRunning = true;
+            crops.Add(position, cropSeeded);
             tomatoes.Add(position, cropSeeded);
             // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
-
+        groundTilemap.SetTile(position, toWater);
     }
 
     string DisplayTime(float timeToDisplay)
@@ -211,6 +217,12 @@ public class CropsManager : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    public void Water(Vector3Int position)
+    {
+        crops[position].timerIsRunning = true;
+        groundTilemap.SetTile(position, watered);
     }
 
     void Grow(Crop crop)
@@ -236,6 +248,7 @@ public class CropsManager : MonoBehaviour
                         crop.state = crop.state4;
 
                     cropTilemap.SetTile(crop.position, crop.state);
+                    groundTilemap.SetTile(crop.position, toWater);
 
 
                     if (crop.state == crop.state4)
@@ -245,7 +258,7 @@ public class CropsManager : MonoBehaviour
                     else
                     {
                         crop.timeRemaining = 5;
-                        crop.timerIsRunning = true;
+                        crop.timerIsRunning = false;
                     }
                 }
                 else
@@ -262,6 +275,7 @@ public class CropsManager : MonoBehaviour
                         crop.state = crop.state5;
 
                     cropTilemap.SetTile(crop.position, crop.state);
+                    groundTilemap.SetTile(crop.position, toWater);
 
 
                     if (crop.state == crop.state5)
@@ -271,12 +285,9 @@ public class CropsManager : MonoBehaviour
                     else
                     {
                         crop.timeRemaining = 5;
-                        crop.timerIsRunning = true;
+                        crop.timerIsRunning = false;
                     }
                 }
-
-                //Debug.Log(crop.stages.Count);
-
 
             }
         }
@@ -319,5 +330,12 @@ public class CropsManager : MonoBehaviour
             tomatoes.Remove(position);
             //dodanie do eq
         }
+        crops.Remove(position);
+        int texture = UnityEngine.Random.Range(0, 2);
+        if (texture == 0)
+            groundTilemap.SetTile(position, mowed);
+        else
+            groundTilemap.SetTile(position, grass);
+
     }
 }
