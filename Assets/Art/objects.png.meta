@@ -28,7 +28,7 @@ TextureImporter:
     second: objects_7
   - first:
       213: 1336440320741484319
-    second: objects_8
+    second: chest2
   - first:
       213: -93750458980389090
     second: objects_9
@@ -678,7 +678,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: objects_8
+      name: chest2
       rect:
         serializedVersion: 2
         x: 149
