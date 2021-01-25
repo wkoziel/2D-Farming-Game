@@ -10,23 +10,28 @@ public class HealthController : MonoBehaviour
     public Slider healthSlider;
     public float maxHealth;
     public static float currentHealth;
+    public Image fillSlider;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHealth = maxHealth;
+        fillSlider = (temperatureSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
+
     }
 
     // Update is called once per frame
     void Update()
     {
         healthSlider.value = currentHealth;
-        if (currentHealth < 50)
+        if (currentHealth >= 50)
+            fillSlider.color = Color.green;
+        else if (currentHealth < 50 && currentHealth >= 30)
         {
-            var fill = (healthSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
             Color orangeColor = new Color();
-            fill.color = new Color(1f, 0.5f, 0f);
-            if (currentHealth < 30)
-                fill.color = Color.red;
+            fillSlider.color = new Color(1f, 0.5f, 0f);
         }
+        else if (currentHealth < 30)
+            fillSlider.color = Color.red;
     }
 }

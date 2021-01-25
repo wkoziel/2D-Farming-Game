@@ -9,23 +9,28 @@ public class HungerController : MonoBehaviour
     public Slider hungerSlider;
     public float maxHunger;
     public static float currentHunger;
+    public Image fillSlider;
+
     // Start is called before the first frame update
     void Start()
     {
         currentHunger = maxHunger;
+        fillSlider = (temperatureSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
+
     }
 
     // Update is called once per frame
     void Update()
     {
         hungerSlider.value = currentHunger;
-        if(currentHunger < 50)
+        if (currentHunger >= 50)
+            fillSlider.color = Color.green;
+        else if (currentHunger < 50 && currentHunger >= 30)
         {
-            var fill = (hungerSlider as UnityEngine.UI.Slider).GetComponentsInChildren<UnityEngine.UI.Image>().FirstOrDefault(t => t.name == "Fill");
             Color orangeColor = new Color();
-            fill.color = new Color(1f, 0.5f, 0f);
-            if (currentHunger < 30)
-                fill.color = Color.red;
+            fillSlider.color = new Color(1f, 0.5f, 0f);
         }
+        else if (currentHunger < 30)
+            fillSlider.color = Color.red;
     }
 }
