@@ -22,6 +22,25 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2ea7cb1d43047bd47a9e45772f00d3a6, type: 2}
   - {fileID: 11400000, guid: eea1e1251f0390643a1fd401bbcdd335, type: 2}
   - {fileID: 11400000, guid: 0c876423ab7c91c4bbcbad355b74550c, type: 2}
+  - {fileID: 11400000, guid: 49bb4fde9ab97394d9946abca5a299ef, type: 2}
+  - {fileID: 11400000, guid: 6740787e8f5f1654daf41aebb3948a42, type: 2}
+  - {fileID: 11400000, guid: 2e5f8cf207a5a494990ccec939d1ff9a, type: 2}
+  - {fileID: 11400000, guid: b9d779096f00f9e47a316c59d067fe01, type: 2}
+  - {fileID: 11400000, guid: bd3bd3883dd4d824ea9dd55518f43d05, type: 2}
+  - {fileID: 11400000, guid: 0e90756ad578cbf42800eed407508f95, type: 2}
+  - {fileID: 11400000, guid: 4d320607427e55c4180761083ed2b82b, type: 2}
+  - {fileID: 11400000, guid: 5128ac395c85d84459a178f77fe0cb26, type: 2}
+  - {fileID: 11400000, guid: 27878fb914ecf544783b81272331f540, type: 2}
+  - {fileID: 11400000, guid: 36b9235c37728eb4f9dd2050a0c78313, type: 2}
+  - {fileID: 11400000, guid: 5ae08ef75cbcd2d4a8a580eba1cd69e4, type: 2}
+  - {fileID: 11400000, guid: 823e73fefaa735f458b46a0ca86188ae, type: 2}
+  - {fileID: 11400000, guid: 01b19d83dd536b34381b34f34e9ff08a, type: 2}
+  - {fileID: 11400000, guid: a36fe95b21654634ebc0ec327bbfa549, type: 2}
+  - {fileID: 11400000, guid: 28ffd4b14a0e2bf47b33d890a9f68183, type: 2}
+  - {fileID: 11400000, guid: ec79680c673546342bb0d4b9f43ec5f5, type: 2}
+  - {fileID: 11400000, guid: e43322483c1489c469866215b123d710, type: 2}
+  - {fileID: 11400000, guid: 80590b9455f17a24fb4dbd91d3c5fc8f, type: 2}
+  - {fileID: 11400000, guid: bb3585806e772374c8056242765f9e93, type: 2}
   plowable: 0
   ableToMow: 0
   ableToSeed: 0
