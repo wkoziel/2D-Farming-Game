@@ -76,9 +76,9 @@ public class DayTimeController : MonoBehaviour
 
 
         //Rozjaśnia się w godzinach 20 - 4
-        if ((time > 72000f && time < 86400f) || ((time > 0f && time < 14400f)))
+        if ((time > 72000f && time < 86400f) || ((time > 0f && time < 21600f)))
         {
-            if (light.intensity > 0.3f)
+            if (light.intensity > 0.1f)
             {
                 light.intensity -= LightTransition;
             }
@@ -90,7 +90,7 @@ public class DayTimeController : MonoBehaviour
         }
         
         //Lights up 4 - 7
-        if (time > 14400f && time < 25200f)
+        if (time > 21600f && time < 25200f)
         {
             if (light.intensity < 1f)
                 light.intensity += LightTransition;

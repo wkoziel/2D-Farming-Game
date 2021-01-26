@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{7C679FBB-6728-B5B3-163D-25942C343864}</ProjectGuid>
+    <ProjectGuid>{EC332DFE-2808-2973-D891-3C907417C5E1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Unity.2D.Tilemap.Extras</AssemblyName>
@@ -270,14 +270,11 @@
     <Reference Include="UnityEditor.WindowsStandalone.Extensions">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEditor.WebGL.Extensions">
-      <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
-    </Reference>
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
-      <HintPath>C:/Users/Piotr Hadam/Desktop/Studia/game/game/2D-Farming-Game/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+      <HintPath>C:/Users/wojte/Documents/Unity/2D Farming Game/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
     </Reference>
     <Reference Include="netstandard">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -625,10 +622,10 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/Piotr Hadam/Desktop/Studia/game/game/2D-Farming-Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/wojte/Documents/Unity/2D Farming Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/Piotr Hadam/Desktop/Studia/game/game/2D-Farming-Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/wojte/Documents/Unity/2D Farming Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
