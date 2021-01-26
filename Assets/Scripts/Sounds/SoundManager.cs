@@ -24,7 +24,13 @@ public class SoundManager : MonoBehaviour
             sound.source.loop = sound.loop;
         }
     }
-
+    public void MuteAll()
+    {
+        foreach (var sound in sounds)
+        {
+            sound.source.mute = !sound.source.mute;
+        }
+    }
     public void Play(string name)
     {
         Sound s = new Sound();

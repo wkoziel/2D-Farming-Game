@@ -11,6 +11,10 @@ public class TreeCuttable : ToolHit
 
     public override void Hit()
     {
+        if (!FindObjectOfType<SoundManager>().SoundIsPlaying("Cut"))
+        {
+            FindObjectOfType<SoundManager>().Play("Cut");
+        }
         hitCount++;
         if (hitCount > 5){
             // spawning wood

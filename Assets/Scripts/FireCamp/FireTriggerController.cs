@@ -18,6 +18,11 @@ public class FireTriggerController : MonoBehaviour
         {
             TemperatureController.currentTemperature += 1;
         }
+        if (!FindObjectOfType<SoundManager>().SoundIsPlaying("Fire"))
+        {
+            FindObjectOfType<SoundManager>().Play("Fire");
+        }
+
     }
 
     public void OnTriggerEnter2D(Collider2D collision)
