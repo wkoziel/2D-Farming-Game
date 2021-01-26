@@ -117,8 +117,6 @@ public class UI_ShopController : MonoBehaviour
     public void Show()
     {
         gameObject.SetActive(true);
-        inventoryPanel.SetActive(false);
-        toolbarPanel.SetActive(true);
         
     }
 
@@ -128,4 +126,10 @@ public class UI_ShopController : MonoBehaviour
     }
 
     //dodać obsługę kliknięcia i zakup przedmiotu
+
+    private void Update()
+    {
+        inventoryPanel.SetActive(false);
+        toolbarPanel.SetActive(true);
+    }
 }
