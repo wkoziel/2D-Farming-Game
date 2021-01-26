@@ -231,6 +231,8 @@ public class ToolsCharacterController : MonoBehaviour
 
             if (tileData != plowableTiles && tileData != toMowTiles && tileData != toSeedTiles && tileData != waterableTiles)
             {
+                if(toolbarController.GetItem.Name == "WateringCan")
+                    FindObjectOfType<SoundManager>().Play("Water");
                 return;
             }
 
@@ -301,6 +303,7 @@ public class ToolsCharacterController : MonoBehaviour
             else if (crops[(Vector2Int)selectedTilePosition].planted && fields[(Vector2Int)selectedTilePosition].waterable && toolbarController.GetItem.Name == "WateringCan")
             {
                 cropsManager.Water(selectedTilePosition);
+                FindObjectOfType<SoundManager>().Play("Water");
             }
 
             else if (crops[(Vector2Int)selectedTilePosition].collectibleCorn && toolbarController.GetItem.Name == "Bag")

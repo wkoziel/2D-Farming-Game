@@ -81,6 +81,7 @@ public class UI_ShopController : MonoBehaviour
 
         if (money.canBuyItems(itemCost))
         {
+            FindObjectOfType<SoundManager>().Play("Money");
             // w tym miejscu trzeba bedzie zrobic if dla kazdego z rodzajow nasiona
             if (item.Name.Contains("Seeds_Corn"))
             {
