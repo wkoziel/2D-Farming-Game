@@ -23,6 +23,24 @@ public class PlayerControl : MonoBehaviour
         currentState = PlayerState.walk;
         animator = GetComponent<Animator>();
         myRigidbody2D = GetComponent<Rigidbody2D>();
+
+        
+    }
+
+    private void Awake()
+    {
+        // Deleting all objects from the inventory
+        //foreach (ItemSlot itemSlot in GameManager.instance.inventoryContainer.slots)
+        //{
+        //    if (itemSlot != null)
+        //    {
+        //        if (itemSlot.item != null)
+        //        {
+        //            GameManager.instance.inventoryContainer.RemoveItem(itemSlot.item, itemSlot.count);
+        //        }
+                
+        //    }
+        //}
     }
 
     // Update is called once per frame

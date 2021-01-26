@@ -40,6 +40,7 @@ public class ItemContainer : ScriptableObject
     // Defining all methods which we use to interact with the inventory
 
     // Adds item to the container
+
     public void Add(Item item, int count = 1)
     {
         // Determining if the item is stackable - if it's not then find the first free
