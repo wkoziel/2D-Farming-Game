@@ -17,6 +17,7 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] TileData toMowTiles;
     [SerializeField] TileData toSeedTiles;
     [SerializeField] TileData waterableTiles;
+    InventoryController inventoryController;
     ToolbarController toolbarController;
     [SerializeField] GameObject toolbarPanel;
 
@@ -53,6 +54,7 @@ public class ToolsCharacterController : MonoBehaviour
         fields = new Dictionary<Vector2Int, TileData>();
         crops = new Dictionary<Vector2Int, CropData>();
         toolbarController = GetComponent<ToolbarController>();
+        inventoryController = GetComponent<InventoryController>();
     }
 
     // Update is called once per frame
@@ -63,12 +65,15 @@ public class ToolsCharacterController : MonoBehaviour
         Marker();
         if (Input.GetMouseButtonDown(0)) // lewy przycisk myszki
         {
-            
-            if (UseToolWorld() == true )
+            if (!inventoryController.isOpen)
             {
-                return;
+                if (UseToolWorld() == true)
+                {
+                    return;
+                }
+                UseTool();
             }
-            UseTool();
+
         }
     }
 
