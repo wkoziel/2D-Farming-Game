@@ -109,9 +109,9 @@ public class DayTimeController : MonoBehaviour
             MoneyController.money += 100;
         }
         //Jesli zdrowie spranie do 0 zmiana na scene game over
-        if(HealthController.currentHealth == 0)
+        if(HealthController.currentHealth < 1)
         {
-            //Zmiana sceny
+            Application.LoadLevel(3);
         }
     }
 
