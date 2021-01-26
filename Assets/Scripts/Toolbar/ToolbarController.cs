@@ -9,8 +9,6 @@ public class ToolbarController : MonoBehaviour
 
     [SerializeField] int toolbarSize = 8;
     public int selectedTool;                               // Holds the id of the selected tool
-
-    // Scroll functionality?
    
 
     internal void Set(int id)
@@ -33,17 +31,6 @@ public class ToolbarController : MonoBehaviour
             return GameManager.instance.inventoryContainer.slots[selectedTool].count;
         }
     }
-
-    // Alternative for the method RemoveItem in ItemContainer
-    //public void ReduceCount()
-    //{
-    //    GameManager.instance.inventoryContainer.slots[selectedTool].count--;
-
-    //    if (GameManager.instance.inventoryContainer.slots[selectedTool].count <= 0)
-    //    {
-
-    //    }
-    //}
 
 
 }

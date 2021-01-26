@@ -171,13 +171,15 @@ public class ToolsCharacterController : MonoBehaviour
             CampFireHit hitFire = collidor.GetComponent<CampFireHit>();
             ChestHit hitChest = collidor.GetComponent<ChestHit>();
 
-            if (hitTree != null && toolbarController.GetItem.Name == "Axe" && CastRay() == true)
+            if (hitTree != null && toolbarController.GetItem != null &&
+                toolbarController.GetItem.Name == "Axe" && CastRay() == true)
             {
                 hitTree.Hit();
                 // Debug.Log("we can hit");
                 return true;
             }
-            if (hitFire != null && toolbarController.GetItem.Name == "Wood" && CastRay() == true)
+            if (hitFire != null && toolbarController.GetItem != null &&
+                toolbarController.GetItem.Name == "Wood" && CastRay() == true)
             {
                 hitFire.Hit();
                 return true;
