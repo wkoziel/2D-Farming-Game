@@ -11,6 +11,9 @@ public class InventoryController : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
+
         if (Input.GetKeyDown(KeyCode.E))
         {
             panel.SetActive(!panel.activeInHierarchy);

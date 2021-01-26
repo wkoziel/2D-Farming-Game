@@ -44,6 +44,8 @@ public class SoundManager : MonoBehaviour
         }
         try
         {
+            if (Time.timeScale == 0)
+                return;
             s.source.Play();
         }
         catch (Exception e)

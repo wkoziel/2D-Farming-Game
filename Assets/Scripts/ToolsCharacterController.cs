@@ -146,6 +146,9 @@ public class ToolsCharacterController : MonoBehaviour
 
     void CanSelectCheck()
     {
+        if (Time.timeScale == 0)
+            return;
+
         Vector2 characterPosition = transform.position;
         Vector2 cameraPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         selectable = Vector2.Distance(characterPosition, cameraPosition) < maxDistance;
@@ -160,6 +163,9 @@ public class ToolsCharacterController : MonoBehaviour
     // interacting with physical objects in the world
     private bool UseToolWorld()
     {
+        if (Time.timeScale == 0)
+            return false;
+
         // CUTTING TREE
         Vector2 position = rgbd2d.position + character.lastMotionVector * offsetDistance;
         Collider2D[] colliders = Physics2D.OverlapCircleAll(position, sizeOfInteractableArea);
@@ -202,6 +208,9 @@ public class ToolsCharacterController : MonoBehaviour
 
     private void UseTool()
     {
+        if (Time.timeScale == 0)
+            return;
+
         // when sth is present on the grid but you can't plant there
         if (selectable == true && toolbarController.GetItem != null)
         {

@@ -36,6 +36,9 @@ public class DayTimeController : MonoBehaviour
 
     void Update()
     {
+        if (Time.timeScale == 0)
+            return;
+
         //licznik wskaźnika głodu i temperatury
         hungerUpdaterCounter += 1;
         temperatureUpdateCounter += 1;
