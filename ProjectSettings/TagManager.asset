@@ -6,6 +6,7 @@ TagManager:
   tags:
   - toolbar
   - chest
+  - ShowOnPause
   layers:
   - Default
   - TransparentFX
