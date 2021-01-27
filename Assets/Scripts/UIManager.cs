@@ -6,12 +6,17 @@ using UnityEngine;
 public class UIManager : MonoBehaviour
 {
 	GameObject[] pauseObjects;
+	GameObject[] aboutObjects;
+	GameObject[] controlsObjects;
 
 	void Start()
 	{
 		Time.timeScale = 1;
 		pauseObjects = GameObject.FindGameObjectsWithTag("ShowOnPause");
+		controlsObjects = GameObject.FindGameObjectsWithTag("ShowOnControls");
+		aboutObjects = GameObject.FindGameObjectsWithTag("ShowOnAbout");
 		hidePaused();
+		hideControls();
 	}
 
 	void Update()
@@ -26,7 +31,6 @@ public class UIManager : MonoBehaviour
 			}
 			else if (Time.timeScale == 0)
 			{
-				Debug.Log("high");
 				Time.timeScale = 1;
 				hidePaused();
 			}
@@ -69,6 +73,31 @@ public class UIManager : MonoBehaviour
 		}
 	}
 
+	public void showControls()
+    {
+		foreach (GameObject g in controlsObjects)
+			g.SetActive(true);
+    }
+
+	public void hideControls()
+	{
+		foreach (GameObject g in controlsObjects)
+			g.SetActive(false);
+	}
+
+	public void showAbout()
+	{
+		foreach (GameObject g in aboutObjects)
+			g.SetActive(true);
+	}
+
+	public void hideAbout()
+	{
+		foreach (GameObject g in aboutObjects)
+			g.SetActive(false);
+	}
+
+
 	public void LoadLevel(string level)
 	{
 		Application.LoadLevel(level);
@@ -92,5 +121,17 @@ public class UIManager : MonoBehaviour
 	public void StartGame()
     {
 		Application.LoadLevel(1);
+    }
+
+	public void ClickControls()
+    {
+		hideAbout();
+		showControls();
+    }
+
+	public void ClickAbout()
+    {
+		hideControls();
+		showAbout();
     }
 }

@@ -10,6 +10,8 @@ TagManager:
   - inventory
   - shop
   - dialoguePanel
+  - ShowOnAbout
+  - ShowOnControls
   layers:
   - Default
   - TransparentFX
