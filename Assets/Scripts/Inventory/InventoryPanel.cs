@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class InventoryPanel : ItemPanel
 {
-    //[SerializeField] ItemContainer inventory;
-
     public override void OnClick(int id)
     {
         //ItemContainer inventory = GameManager.instance.inventoryContainer;

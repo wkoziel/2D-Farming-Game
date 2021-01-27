@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// CLASS USED TO DROP AND DRAG ITEMS OUTSIDE OF INVENTORY - NOT USED YET
-
 public class ItemSpawnManager : MonoBehaviour
 {
     public static ItemSpawnManager instance;

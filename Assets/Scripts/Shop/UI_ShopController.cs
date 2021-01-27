@@ -21,16 +21,12 @@ public class UI_ShopController : MonoBehaviour
     private void Start()
     {
         Dictionary<string, Sprite> plantsDictionary = CreateSeedsFromSprite();
-        //CreateItemButton(plantsDictionary["Seed3"], "Seed3", 100, 0, "50 red seeds");
-        //CreateItemButton(plantsDictionary["Seeds1"], "Seeds1", 100, 1, "50 yellow seeds");
 
-        // to trzeba naprawic:
         CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 0, "4 corn seeds");
         CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 60, 1, "3 parsley seeds");
         CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", 85, 2, "4 tomato seeds");
         CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", 145, 3, "7 strawberry seeds");
         CreateItemButton(plantsDictionary["Seeds_Potato"], "Seeds_Potato", 70, 4, "Potato tuber");
-
 
         gameObject.SetActive(false);
         Hide();
@@ -82,7 +78,7 @@ public class UI_ShopController : MonoBehaviour
         if (money.canBuyItems(itemCost))
         {
             FindObjectOfType<SoundManager>().Play("Money");
-            // w tym miejscu trzeba bedzie zrobic if dla kazdego z rodzajow nasiona
+
             if (item.Name.Contains("Seeds_Corn"))
             {
                 GameManager.instance.inventoryContainer.Add(item, 4);

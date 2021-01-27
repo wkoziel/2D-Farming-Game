@@ -25,26 +25,8 @@ public class DragAndDropController : MonoBehaviour
         if (itemIcon.activeInHierarchy == true)
         {
             // Assign mouse position to the item icon
-            iconTransform.position = Input.mousePosition;
-
-            // Unclick Raycast Target = not clickable by mouse
-
-            // Implementing dropping out of the inventory - NOT DONE YET
-            // Detecting whether we click inside or outside the inventory panel
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                // This checks whether we're over any UI elements
-                if (EventSystem.current.IsPointerOverGameObject() == false)
-                {
-                    //Debug.Log("We are clicking outside the panel");
-                }
-            }
-            
+            iconTransform.position = Input.mousePosition;            
         }
-
-
-
     }
 
     internal void OnClick(ItemSlot itemSlot)

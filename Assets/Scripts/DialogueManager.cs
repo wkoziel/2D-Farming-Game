@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,25 +9,39 @@ public class DialogueManager : MonoBehaviour
     public GameObject dialogueBox;
     public bool dialogueActive;
     GameObject toolbar;
+    GameObject inventory;
+    GameObject shop;
+    GameObject chest;
     public string[] sentences;
     private int index;
     public Text textDisplay;
     public float typingSpeed;
+
+    
 
     public GameObject pressToContinue;
 
     private void Awake()
     {
         toolbar = GameObject.FindWithTag("toolbar");
-        
+        shop = GameObject.FindWithTag("shop");
+        chest = GameObject.FindWithTag("chest");
+        inventory = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("inventory"));
     }
 
     // Start is called before the first frame update
     void Start()
     {
         toolbar.SetActive(false);
+        shop.SetActive(false);
+        chest.SetActive(false);
+        inventory.SetActive(false);
+        
+        //Debug.Log(inventory);
+
         StartCoroutine(Type());
     }
+
 
     // Update is called once per frame
     void Update()
@@ -35,7 +50,11 @@ public class DialogueManager : MonoBehaviour
         {
             GoToNextSentence();
             pressToContinue.SetActive(true);
+
         }
+
+        //inventory.SetActive(false);
+        //toolbar.SetActive(false);
         
     }
 
@@ -65,6 +84,8 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueBox.SetActive(false);
                 toolbar.SetActive(true);
+                chest.SetActive(true);
+                shop.SetActive(true);
             }
             
         }

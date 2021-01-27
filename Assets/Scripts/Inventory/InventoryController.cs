@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class InventoryController : MonoBehaviour
@@ -8,13 +9,21 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject panel;
     [SerializeField] GameObject toolbarPanel;
     public bool isOpen = false;
+    GameObject dialogue;
+    GameObject shop;
+
+    private void Start()
+    {
+        dialogue = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("dialoguePanel"));
+        Debug.Log(dialogue);
+    }
 
     void Update()
     {
         if (Time.timeScale == 0)
             return;
 
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E) && !dialogue.activeSelf)
         {
             panel.SetActive(!panel.activeInHierarchy);
             toolbarPanel.SetActive(!toolbarPanel.activeInHierarchy);

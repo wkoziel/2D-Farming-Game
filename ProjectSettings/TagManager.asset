@@ -7,6 +7,9 @@ TagManager:
   - toolbar
   - chest
   - ShowOnPause
+  - inventory
+  - shop
+  - dialoguePanel
   layers:
   - Default
   - TransparentFX
