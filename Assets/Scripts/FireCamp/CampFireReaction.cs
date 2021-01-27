@@ -27,7 +27,7 @@ public class CampFireReaction : CampFireHit
     IEnumerator LateCall()
     {
 
-        yield return new WaitForSeconds(60);
+        yield return new WaitForSeconds(120);
         fire.SetActive(false);
     }
 }
