@@ -43,7 +43,7 @@ public class DayTimeController : MonoBehaviour
         hungerUpdaterCounter += 1;
         temperatureUpdateCounter += 1;
         //tutaj dostosowac jak szybko maleje wskaznik najedzenia
-        if (hungerUpdaterCounter == 500)
+        if (hungerUpdaterCounter == 250)
         {
             HungerController.currentHunger -= 1;
             hungerUpdaterCounter = 0;

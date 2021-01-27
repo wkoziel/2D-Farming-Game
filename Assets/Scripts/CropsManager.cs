@@ -277,7 +277,7 @@ public class CropsManager : MonoBehaviour
             tomatoes.Remove(position);
         }
         crops.Remove(position); //remove element of dictionary with all crops
-        MoneyController.money += 10;
+        MoneyController.money += 20;
 
         int texture = UnityEngine.Random.Range(0, 2); //random int - 0 or 1
         if (texture == 0)
