@@ -16,17 +16,13 @@ public class DialogueManager : MonoBehaviour
     private int index;
     public Text textDisplay;
     public float typingSpeed;
-
-    
-
     public GameObject pressToContinue;
 
     private void Awake()
     {
-        toolbar = GameObject.FindWithTag("toolbar");
-        shop = GameObject.FindWithTag("shop");
-        //Debug.Log(shop);
-        chest = GameObject.FindWithTag("chest");
+        toolbar = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("toolbar"));
+        shop = Resources.FindObjectsOfTypeAll<GameObject>().LastOrDefault(g => g.CompareTag("shop"));
+        chest = Resources.FindObjectsOfTypeAll<GameObject>().LastOrDefault(g => g.CompareTag("chest"));
         inventory = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("inventory"));
     }
 
@@ -37,8 +33,6 @@ public class DialogueManager : MonoBehaviour
         shop.SetActive(false);
         chest.SetActive(false);
         inventory.SetActive(false);
-        
-        //Debug.Log(inventory);
 
         StartCoroutine(Type());
     }
@@ -47,20 +41,19 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Stopping random letters from appearing
         if (textDisplay.text == sentences[index] && dialogueActive && Input.GetKeyDown(KeyCode.Space))
         {
             GoToNextSentence();
             pressToContinue.SetActive(true);
 
         }
-
-        //inventory.SetActive(false);
-        //toolbar.SetActive(false);
         
     }
 
     IEnumerator Type()
     {
+        // Writing sentences in a certain speed
         foreach(char letter in sentences[index].ToCharArray())
         {
             textDisplay.text += letter;
@@ -68,6 +61,7 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    // Moving through sentences
     public void GoToNextSentence()
     {
         pressToContinue.SetActive(false);
