@@ -22,11 +22,11 @@ public class UI_ShopController : MonoBehaviour
     {
         Dictionary<string, Sprite> plantsDictionary = CreateSeedsFromSprite();
 
-        CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 0, "4 corn seeds");
-        CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 60, 1, "3 parsley seeds");
-        CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", 85, 2, "4 tomato seeds");
-        CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", 145, 3, "7 strawberry seeds");
-        CreateItemButton(plantsDictionary["Seeds_Potato"], "Seeds_Potato", 70, 4, "Potato tuber");
+        CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 0, "Corn Seeds");
+        CreateItemButton(plantsDictionary["Seeds_Parsley"], "Seeds_Parsley", 30, 1, "Parsley Seeds");
+        CreateItemButton(plantsDictionary["Seeds_Tomato"], "Seeds_Tomato", 60, 2, "Tomato Seeds");
+        CreateItemButton(plantsDictionary["Seeds_Strawberry"], "Seeds_Strawberry", 150, 3, "Strawberry seeds");
+        CreateItemButton(plantsDictionary["Seeds_Potato"], "Seeds_Potato", 110, 4, "Potato tuber");
 
         gameObject.SetActive(false);
         Hide();
@@ -85,11 +85,11 @@ public class UI_ShopController : MonoBehaviour
             }
             else if (item.Name.Contains("Seeds_Tomato"))
             {
-                GameManager.instance.inventoryContainer.Add(item, 4);
+                GameManager.instance.inventoryContainer.Add(item, 3);
             }
             else if (item.Name.Contains("Seeds_Strawberry"))
             {
-                GameManager.instance.inventoryContainer.Add(item, 7);
+                GameManager.instance.inventoryContainer.Add(item, 6);
             }
             else if (item.Name.Contains("Seeds_Parsley"))
             {

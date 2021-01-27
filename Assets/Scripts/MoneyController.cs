@@ -10,7 +10,7 @@ public class MoneyController : MonoBehaviour
 
     void Start()
     {
-        money = 1100;
+        money = 500;
     }
 
     void Update()

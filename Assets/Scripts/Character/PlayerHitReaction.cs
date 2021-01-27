@@ -15,32 +15,30 @@ public class PlayerHitReaction : PlayerHit
         {
             case "Food_Corn":
                 Debug.Log("Zjadłeś kukurydze");
-                AddHealth(10);
-                AddHunger(50);
+                AddHunger(20);
                 break;
 
             case "Food_Parsley":
                 Debug.Log("Zjadłeś pietruszkę");
-                AddHealth(10);
-                AddHunger(50);
+                AddHealth(5);
+                AddHunger(10);
                 break;
 
             case "Food_Potato":
                 Debug.Log("Zjadłeś ziemniaka");
-                AddHealth(10);
-                AddHunger(50);
+                AddHealth(5);
+                AddHunger(40);
                 break;
 
             case "Food_Strawberry":
                 Debug.Log("Zjadłeś truskawkę");
-                AddHealth(10);
-                AddHunger(50);
+                AddHealth(30);
+                AddHunger(10);
                 break;
 
             case "Food_Tomato":
                 Debug.Log("Zjadłeś pomidora");
-                AddHealth(10);
-                AddHunger(50);
+                AddHunger(30);
                 break;
         }
         GameManager.instance.inventoryContainer.RemoveItem(GameManager.instance.toolbarControllerGlobal.GetItem, 1);

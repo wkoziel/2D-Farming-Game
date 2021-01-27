@@ -38,7 +38,7 @@ public class PlayerControl : MonoBehaviour
         //        {
         //            GameManager.instance.inventoryContainer.RemoveItem(itemSlot.item, itemSlot.count);
         //        }
-                
+
         //    }
         //}
     }

@@ -15,7 +15,7 @@ public class TreeCuttable : ToolHit
         FindObjectOfType<SoundManager>().Play("Cut");
         hitCount++;
         if (hitCount >= 3){
-            MoneyController.money += 50;
+            MoneyController.money += 40;
             // spawning wood
             while (dropCount > 0)
             {

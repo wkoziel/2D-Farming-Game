@@ -106,7 +106,7 @@ public class DayTimeController : MonoBehaviour
         {
             time = 0;
             //codzienna dostawa punktow
-            MoneyController.money += 100;
+            MoneyController.money += 200;
         }
         //Jesli zdrowie spranie do 0 zmiana na scene game over
         if(HealthController.currentHealth < 1)

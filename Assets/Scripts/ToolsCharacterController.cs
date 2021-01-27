@@ -89,6 +89,15 @@ public class ToolsCharacterController : MonoBehaviour
             {
                 return true;
             }
+        }
+        return false;
+    }
+    private bool CastRayPlayer()
+    {
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit2D hit = Physics2D.Raycast(ray.origin, ray.direction, Mathf.Infinity);
+        if (hit)
+        {
             if (hit.collider.gameObject.name.Contains("Player"))
             {
                 return true;
@@ -96,8 +105,7 @@ public class ToolsCharacterController : MonoBehaviour
         }
         return false;
     }
-
-    private void SelectTile()
+            private void SelectTile()
     {
         selectedTilePosition = tileMapReadController.GetGridPosition(Input.mousePosition, true);
         TileBase tileBase = tileMapReadController.GetTileBase(selectedTilePosition);
@@ -197,7 +205,7 @@ public class ToolsCharacterController : MonoBehaviour
                 hitChest.Hit();
                 return true;
             }
-            if (hitPlayer != null && CastRay() == true && (toolbarController.GetItem.Name == "Food_Corn" || toolbarController.GetItem.Name == "Food_Parsley"
+            if (hitPlayer != null && CastRayPlayer() == true && (toolbarController.GetItem.Name == "Food_Corn" || toolbarController.GetItem.Name == "Food_Parsley"
                     || toolbarController.GetItem.Name == "Food_Potato" || toolbarController.GetItem.Name == "Food_Strawberry" || toolbarController.GetItem.Name == "Food_Tomato"))
             {
                 //Debug.Log(toolbarController.GetItem.Name);
