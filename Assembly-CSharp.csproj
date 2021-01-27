@@ -64,8 +64,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Menu\MainMenu.cs" />
-    <Compile Include="Assets\Menu\MouseHover.cs" />
     <Compile Include="Assets\Scripts\Character\CameraMovement.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerHit.cs" />

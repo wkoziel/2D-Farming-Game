@@ -83,4 +83,14 @@ public class UIManager : MonoBehaviour
     {
 		Application.LoadLevel(0);
     }
+
+	public void LoadAbout()
+    {
+		Application.LoadLevel(2);
+    }
+
+	public void StartGame()
+    {
+		Application.LoadLevel(1);
+    }
 }
