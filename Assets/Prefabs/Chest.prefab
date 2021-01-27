@@ -106,7 +106,9 @@ MonoBehaviour:
     type: 3}
   pickUpBag: {fileID: 4815640872035699330, guid: c6197e8aded27b5418467bb07287e045,
     type: 3}
-  dropCount: 5
+  pickUpPotato: {fileID: 718072922502668134, guid: d0b02f423e49a1e489331677085a8c77,
+    type: 3}
+  dropCount: 6
   spread: 0.9
 --- !u!61 &4158007756349523148
 BoxCollider2D:
