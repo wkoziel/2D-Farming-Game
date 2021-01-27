@@ -5,14 +5,10 @@ using UnityEngine;
 public class PickUpItem : MonoBehaviour
 {
     Transform player;
-    [SerializeField] float speed = 5f;  // speed of moving the object towards the player
-    [SerializeField] float pickUpDistance = 1.5f;
-    [SerializeField] float ttl = 10f;
-
+    [SerializeField] float speed = 5f;  // Speed of moving the object towards the player
+    [SerializeField] float pickUpDistance = 1.5f;     // Distance of picking up items
     [SerializeField] Item item;
     public int count = 1;
-
-
     GameObject toolbar;
 
     private void Start()
@@ -25,7 +21,7 @@ public class PickUpItem : MonoBehaviour
     {
         float distance = Vector3.Distance(transform.position, player.position);
 
-        // if the player is not in the distance to pick up logs no function is executed
+        // If the player is not in the distance to pick up logs no function is executed
         if (distance > pickUpDistance)
         {
             return;
@@ -41,12 +37,10 @@ public class PickUpItem : MonoBehaviour
 
                 toolbar.SetActive(!toolbar.activeInHierarchy);
                 toolbar.SetActive(true);
-
-                //Debug.Log(GameManager.instance.toolbarControllerGlobal.GetItem.Name);
             }
             else
             {
-                Debug.LogWarning("no inventory container attached to game manager");
+                Debug.LogWarning("No inventory container attached to game manager");
             }
 
             Destroy(gameObject);

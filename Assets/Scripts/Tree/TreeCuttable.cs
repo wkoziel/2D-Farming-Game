@@ -16,12 +16,13 @@ public class TreeCuttable : ToolHit
         hitCount++;
         if (hitCount >= 3){
             MoneyController.money += 40;
-            // spawning wood
+
+            // Spawning wood
             while (dropCount > 0)
             {
                 dropCount -= 1;
 
-                // calculating where logs will drop
+                // Calculating where logs will drop
                 Vector3 position = transform.position;
                 position.x -= spread * UnityEngine.Random.value - spread / 2;
                 position.y -= spread * UnityEngine.Random.value - spread / 2;

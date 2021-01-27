@@ -9,7 +9,6 @@ public class InventoryController : MonoBehaviour
     [SerializeField] GameObject toolbarPanel;
     public bool isOpen = false;
     GameObject dialogue;
-    GameObject shop;
 
     private void Start()
     {
@@ -21,7 +20,6 @@ public class InventoryController : MonoBehaviour
         if (Time.timeScale == 0)
             return;
 
-        //Debug.Log(dialogue.activeSelf);
         // Opens/closes inventory after clicking E (equipment) on keyboard
         if (Input.GetKeyDown(KeyCode.E) && !dialogue.activeSelf)
         {
