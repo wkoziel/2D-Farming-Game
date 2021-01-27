@@ -25,6 +25,7 @@ public class DialogueManager : MonoBehaviour
     {
         toolbar = GameObject.FindWithTag("toolbar");
         shop = GameObject.FindWithTag("shop");
+        //Debug.Log(shop);
         chest = GameObject.FindWithTag("chest");
         inventory = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("inventory"));
     }
