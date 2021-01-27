@@ -17,22 +17,16 @@ public class CropsManager : MonoBehaviour
 
     Dictionary<Vector2Int, TileData> fields = new Dictionary<Vector2Int, TileData>();
 
-    //public List<Crop> crops;
     public Dictionary<Vector3Int, Crop> crops;
-    Crop crop;
-    //public List<Crop> corns;
+    //Crop crop;
     public Dictionary<Vector3Int, Crop> corns;
     Crop corn;
-    //public List<Crop> parsleys;
     public Dictionary<Vector3Int, Crop> parsleys;
     Crop parsley;
-    //public List<Crop> potatoes;
     public Dictionary<Vector3Int, Crop> potatoes;
     Crop potato;
-    //public List<Crop> strawberries;
     public Dictionary<Vector3Int, Crop> strawberries;
     Crop strawberry;
-    //public List<Crop> tomatoes;
     public Dictionary<Vector3Int, Crop> tomatoes;
     Crop tomato;
 
@@ -50,16 +44,6 @@ public class CropsManager : MonoBehaviour
     private void Start()
     {
         // Looking for the crop item in the game
-        /*foreach (SeedSlot itemSlot in GameManager.instance.allSeedsContainer.slots)
-        {
-            if (itemSlot.item.Name == "corn" || itemSlot.item.Name == "parsley" || itemSlot.item.Name == "potato" || itemSlot.item.Name == "strawberry" || itemSlot.item.Name == "tomato")
-            {
-                crop = itemSlot.item;
-            }
-
-
-        }*/
-
         foreach (SeedSlot itemSlot in GameManager.instance.allSeedsContainer.slots)
         {
             if (itemSlot.item.Name == "corn")
@@ -85,12 +69,6 @@ public class CropsManager : MonoBehaviour
         }
 
         fields = ToolsCharacterController.fields;
-        //crops = new List<Crop>();
-        /*corns = new List<Crop>();
-        parsleys = new List<Crop>();
-        potatoes = new List<Crop>();
-        strawberries = new List<Crop>();
-        tomatoes = new List<Crop>();*/
 
         crops = new Dictionary<Vector3Int, Crop>();
         corns = new Dictionary<Vector3Int, Crop>();
@@ -105,29 +83,8 @@ public class CropsManager : MonoBehaviour
 
     private void Update()
     {
-        /*foreach (var crop in corns.Values)
-        {
-            Grow(crop);
-        }
-        foreach (var crop in parsleys.Values)
-        {
-            Grow(crop);
-        }
-        foreach (var crop in potatoes.Values)
-        {
-            Grow(crop);
-        }
-        foreach (var crop in strawberries.Values)
-        {
-            Grow(crop);
-        }
-        foreach (var crop in tomatoes.Values)
-        {
-            Grow(crop);
-        }*/
         foreach (var crop in crops.Values)
-            Grow(crop);
-
+            Grow(crop); //updating time of growth
     }
 
     public void Mow(Vector3Int position)
@@ -143,30 +100,27 @@ public class CropsManager : MonoBehaviour
     public void SeedCrop(Vector3Int position, string name)
     {
         Crop cropSeeded;
+        //depended on what plant we want to seed
         if (name == "corn")
         {
-            cropSeeded = Instantiate(corn);
-            cropSeeded.position = position;
-            cropSeeded.state = cropSeeded.state0;
-            cropSeeded.timeRemaining = 5;
+            cropSeeded = Instantiate(corn); //clone sample corn
+            cropSeeded.position = position; //assign a position
+            cropSeeded.state = cropSeeded.state0; //assign initial state
+            cropSeeded.timeRemaining = 120; //assign time to grow
 
-            //cropSeeded.timerIsRunning = true;
-            crops.Add(position, cropSeeded);
-            corns.Add(position, cropSeeded);
-            //Debug.Log(DisplayTime(cropSeeded.timeRemaining));
-            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
+            crops.Add(position, cropSeeded); //add to dictionary of all crops
+            corns.Add(position, cropSeeded); //add to dictionary of all corns
+            cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0); //change a tile on tilemap with crops
         }
         else if (name == "parsley")
         {
             cropSeeded = Instantiate(parsley);
             cropSeeded.position = position;
             cropSeeded.state = cropSeeded.state0;
-            cropSeeded.timeRemaining = 5;
+            cropSeeded.timeRemaining = 60;
 
-            //cropSeeded.timerIsRunning = true;
             crops.Add(position, cropSeeded);
             parsleys.Add(position, cropSeeded);
-            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
         else if (name == "potato")
@@ -174,12 +128,10 @@ public class CropsManager : MonoBehaviour
             cropSeeded = Instantiate(potato);
             cropSeeded.position = position;
             cropSeeded.state = cropSeeded.state0;
-            cropSeeded.timeRemaining = 5;
+            cropSeeded.timeRemaining = 90;
 
-            //cropSeeded.timerIsRunning = true;
             crops.Add(position, cropSeeded);
             potatoes.Add(position, cropSeeded);
-            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
         else if (name == "strawberry")
@@ -187,12 +139,10 @@ public class CropsManager : MonoBehaviour
             cropSeeded = Instantiate(strawberry);
             cropSeeded.position = position;
             cropSeeded.state = cropSeeded.state0;
-            cropSeeded.timeRemaining = 5;
+            cropSeeded.timeRemaining = 90;
 
-            //cropSeeded.timerIsRunning = true;
             crops.Add(position, cropSeeded);
             strawberries.Add(position, cropSeeded);
-            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
         else if (name == "tomato")
@@ -200,15 +150,13 @@ public class CropsManager : MonoBehaviour
             cropSeeded = Instantiate(tomato);
             cropSeeded.position = position;
             cropSeeded.state = cropSeeded.state0;
-            cropSeeded.timeRemaining = 5;
+            cropSeeded.timeRemaining = 60;
 
-            //cropSeeded.timerIsRunning = true;
             crops.Add(position, cropSeeded);
             tomatoes.Add(position, cropSeeded);
-            // Debug.Log(DisplayTime(cropSeeded.timeRemaining));
             cropTilemap.SetTile(cropSeeded.position, cropSeeded.state0);
         }
-        groundTilemap.SetTile(position, toWater);
+        groundTilemap.SetTile(position, toWater); //change a tile on tilemap with ground
     }
 
     string DisplayTime(float timeToDisplay)
@@ -221,23 +169,26 @@ public class CropsManager : MonoBehaviour
 
     public void Water(Vector3Int position)
     {
-        crops[position].timerIsRunning = true;
-        groundTilemap.SetTile(position, watered);
+        crops[position].timerIsRunning = true; //init a timer - plant can grow
+        groundTilemap.SetTile(position, watered); //change a tile on tilemap with gorund
+        //Debug.Log(crops[position].timeRemaining);
+
     }
 
     void Grow(Crop crop)
     {
-        if (crop.timerIsRunning)
+        if (crop.timerIsRunning) //if watered - timer is running
         {
             if (crop.timeRemaining > 0)
             {
-                crop.timeRemaining -= Time.deltaTime;
+                crop.timeRemaining -= Time.deltaTime; //counting down
                 //Debug.Log(DisplayTime(crop.timeRemaining));
             }
             else
             {
-                if (crop.name == "Parsley(Clone)")
+                if (crop.name == "Parsley(Clone)") //parsley has less states of grow
                 {
+                    //update state
                     if (crop.state == crop.state0)
                         crop.state = crop.state1;
                     else if (crop.state == crop.state1)
@@ -247,22 +198,19 @@ public class CropsManager : MonoBehaviour
                     else if (crop.state == crop.state3)
                         crop.state = crop.state4;
 
-                    cropTilemap.SetTile(crop.position, crop.state);
-                    groundTilemap.SetTile(crop.position, toWater);
+                    cropTilemap.SetTile(crop.position, crop.state); //change a tile on tilemap with crops to next state
+                    groundTilemap.SetTile(crop.position, toWater); //change a tile on tilemap with ground to waterable
 
 
-                    if (crop.state == crop.state4)
+                    crop.timerIsRunning = false; //timer stops counting
+                    if (crop.state != crop.state4)
                     {
-                        crop.timerIsRunning = false;
-                    }
-                    else
-                    {
-                        crop.timeRemaining = 5;
-                        crop.timerIsRunning = false;
+                        crop.timeRemaining = 60; //time to next state
                     }
                 }
                 else
                 {
+                    //update state
                     if (crop.state == crop.state0)
                         crop.state = crop.state1;
                     else if (crop.state == crop.state1)
@@ -274,18 +222,20 @@ public class CropsManager : MonoBehaviour
                     else if (crop.state == crop.state4)
                         crop.state = crop.state5;
 
-                    cropTilemap.SetTile(crop.position, crop.state);
-                    groundTilemap.SetTile(crop.position, toWater);
+                    cropTilemap.SetTile(crop.position, crop.state); //change a tile on tilemap with crops to next state
+                    groundTilemap.SetTile(crop.position, toWater); //change a tile on tilemap with ground to waterable
 
-
-                    if (crop.state == crop.state5)
+                    crop.timerIsRunning = false; //timer stops counting
+                    if (crop.state != crop.state5)
                     {
-                        crop.timerIsRunning = false;
-                    }
-                    else
-                    {
-                        crop.timeRemaining = 5;
-                        crop.timerIsRunning = false;
+                        if (crop.name == "Corn(Clone)")
+                            crop.timeRemaining = 120; //time to next state
+                        if (crop.name == "Potato(Clone)")
+                            crop.timeRemaining = 90; //time to next state
+                        if (crop.name == "Strawberry(Clone)")
+                            crop.timeRemaining = 90; //time to next state
+                        if (crop.name == "Tomato(Clone)")
+                            crop.timeRemaining = 60; //time to next state
                     }
                 }
 
@@ -295,47 +245,44 @@ public class CropsManager : MonoBehaviour
 
     public void Collect(Vector3Int position, string name)
     {
+        //depending on what plant we want to collect
         if (name == "corn")
         {
-            cropTilemap.SetTile(position, invisible);
-            Destroy(corns[position]);
-            corns.Remove(position);
-            //dodanie do eq
+            cropTilemap.SetTile(position, invisible); //set tile on tilemap with crops to unplanted
+            Destroy(corns[position]); //destroy object of corn
+            corns.Remove(position); //remove element of dictionary with corns
         }
         else if (name == "parsley")
         {
             cropTilemap.SetTile(position, invisible);
             Destroy(parsleys[position]);
             parsleys.Remove(position);
-            //dodanie do eq
         }
         else if (name == "potato")
         {
             cropTilemap.SetTile(position, invisible);
             Destroy(potatoes[position]);
             potatoes.Remove(position);
-            //dodanie do eq
         }
         else if (name == "strawberry")
         {
             cropTilemap.SetTile(position, invisible);
             Destroy(strawberries[position]);
             strawberries.Remove(position);
-            //dodanie do eq
         }
         else if (name == "tomato")
         {
             cropTilemap.SetTile(position, invisible);
             Destroy(tomatoes[position]);
             tomatoes.Remove(position);
-            //dodanie do eq
         }
-        crops.Remove(position);
-        int texture = UnityEngine.Random.Range(0, 2);
+        crops.Remove(position); //remove element of dictionary with all crops
+
+        int texture = UnityEngine.Random.Range(0, 2); //random int - 0 or 1
         if (texture == 0)
-            groundTilemap.SetTile(position, mowed);
+            groundTilemap.SetTile(position, mowed); //if random in == 0 - change tile on tilemap with ground to dirt
         else
-            groundTilemap.SetTile(position, grass);
+            groundTilemap.SetTile(position, grass); //if random in == 1 - change tile on tilemap with ground to grass
 
     }
 }

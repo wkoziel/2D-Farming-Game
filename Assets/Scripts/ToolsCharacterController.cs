@@ -24,18 +24,11 @@ public class ToolsCharacterController : MonoBehaviour
     [SerializeField] float offsetDistance = 1f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
 
-    /*[SerializeField] Corn corn;
-    [SerializeField] Parsley parsley;
-    [SerializeField] Potato potato;
-    [SerializeField] Strawberry strawberry;
-    [SerializeField] Tomato tomato;*/
-    //[SerializeField] Crop crop;
-
-    private static int cornAmount = 4;
-    private static int parsleyAmount = 3;
+    private static int cornAmount = 3;
+    private static int parsleyAmount = 1;
     private static int potatoAmount = 1;
-    private static int strawberryAmount = 6;
-    private static int tomatoAmount = 3;
+    private static int strawberryAmount = 1;
+    private static int tomatoAmount = 1;
 
 
     Vector3Int selectedTilePosition;
@@ -65,7 +58,7 @@ public class ToolsCharacterController : MonoBehaviour
         Marker();
         if (Input.GetMouseButtonDown(0)) // lewy przycisk myszki
         {
-            if (!inventoryController.isOpen)
+            if (!inventoryController.isOpen) //you can use tools only if inventory is closed
             {
                 if (UseToolWorld() == true)
                 {
@@ -154,7 +147,7 @@ public class ToolsCharacterController : MonoBehaviour
 
     void CanSelectCheck()
     {
-        if (Time.timeScale == 0)
+        if (Time.timeScale == 0) //if game paused
             return;
 
         Vector2 characterPosition = transform.position;
@@ -224,7 +217,7 @@ public class ToolsCharacterController : MonoBehaviour
 
     private void UseTool()
     {
-        if (Time.timeScale == 0)
+        if (Time.timeScale == 0) //if game paused - return
             return;
 
         // when sth is present on the grid but you can't plant there
@@ -234,18 +227,20 @@ public class ToolsCharacterController : MonoBehaviour
             TileData tileData = tileMapReadController.GetTileData(tileBase);
             //TileData cropData = cropsReadController.GetTileData(tileBase);
 
-            if (tileData != plowableTiles && tileData != toMowTiles && tileData != toSeedTiles && tileData != waterableTiles)
+            /*if (toolbarController.GetItem.Name == "WateringCan" && fields[(Vector2Int)selectedTilePosition].watered) //if you are using watering can - play sound of water
+                FindObjectOfType<SoundManager>().Play("Water");*/
+
+            if (tileData != plowableTiles && tileData != toMowTiles && tileData != toSeedTiles && tileData != waterableTiles) //if tile doesn't have any ability
             {
-                if(toolbarController.GetItem.Name == "WateringCan")
-                    FindObjectOfType<SoundManager>().Play("Water");
                 return;
             }
 
             // Debug.Log("Wybrane narzędzie: " + toolbarController.GetItem.Name);
             //Debug.Log(crops[(Vector2Int)selectedTilePosition]);
-            //if ((!crops[(Vector2Int)selectedTilePosition].withTomato && !crops[(Vector2Int)selectedTilePosition].withStrawberry && !crops[(Vector2Int)selectedTilePosition].withPotato && !crops[(Vector2Int)selectedTilePosition].withParsley && !crops[(Vector2Int)selectedTilePosition].withCorn) || !crops[(Vector2Int)selectedTilePosition])
+            //if there is no plant on tile
             if (crops[(Vector2Int)selectedTilePosition].noPlant)
             {
+                //usage of tools if tile has suitable ability
                 if (fields[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel")
                 {
                     cropsManager.Mow(selectedTilePosition);
@@ -256,7 +251,7 @@ public class ToolsCharacterController : MonoBehaviour
                 }
                 else if (fields[(Vector2Int)selectedTilePosition].ableToSeed && toolbarController.GetItem.isSeed == true)
                 {
-                    switch (toolbarController.GetItem.Name)
+                    switch (toolbarController.GetItem.Name) //depending on what seed you have chosen
                     {
                         case "Seeds_Corn":
                             // Checking whether we have more than 4 seeds to seed
@@ -305,6 +300,7 @@ public class ToolsCharacterController : MonoBehaviour
                 }               
             }
 
+            //usage of tools if there is a planted tile
             else if (crops[(Vector2Int)selectedTilePosition].planted && fields[(Vector2Int)selectedTilePosition].waterable && toolbarController.GetItem.Name == "WateringCan")
             {
                 cropsManager.Water(selectedTilePosition);
