@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 using UnityEngine.EventSystems;
+using System.Linq;
 
 public class ToolsCharacterController : MonoBehaviour
 {
@@ -20,6 +21,7 @@ public class ToolsCharacterController : MonoBehaviour
     InventoryController inventoryController;
     ToolbarController toolbarController;
     [SerializeField] GameObject toolbarPanel;
+    GameObject shop;
 
     [SerializeField] float offsetDistance = 1f;
     [SerializeField] float sizeOfInteractableArea = 1.2f;
@@ -48,6 +50,8 @@ public class ToolsCharacterController : MonoBehaviour
         crops = new Dictionary<Vector2Int, CropData>();
         toolbarController = GetComponent<ToolbarController>();
         inventoryController = GetComponent<InventoryController>();
+
+        shop = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("UIshop"));
     }
 
     // Update is called once per frame
@@ -243,13 +247,13 @@ public class ToolsCharacterController : MonoBehaviour
                 return;
             }
 
-            // Debug.Log("Wybrane narzędzie: " + toolbarController.GetItem.Name);
-            //Debug.Log(crops[(Vector2Int)selectedTilePosition]);
+
             //if there is no plant on tile
             if (crops[(Vector2Int)selectedTilePosition].noPlant)
             {
                 //usage of tools if tile has suitable ability
-                if (fields[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel")
+                if (fields[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel"
+                    && !shop.activeSelf)
                 {
                     cropsManager.Mow(selectedTilePosition);
                 }

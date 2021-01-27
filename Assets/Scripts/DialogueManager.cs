@@ -36,8 +36,6 @@ public class DialogueManager : MonoBehaviour
         shop.SetActive(false);
         chest.SetActive(false);
         inventory.SetActive(false);
-        
-        //Debug.Log(inventory);
 
         StartCoroutine(Type());
     }
@@ -52,9 +50,6 @@ public class DialogueManager : MonoBehaviour
             pressToContinue.SetActive(true);
 
         }
-
-        //inventory.SetActive(false);
-        //toolbar.SetActive(false);
         
     }
 
