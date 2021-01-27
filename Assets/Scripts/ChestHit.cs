@@ -9,8 +9,9 @@ public class ChestHit : ToolHit
     [SerializeField] GameObject pickUpHoe;
     [SerializeField] GameObject pickUpShovel;
     [SerializeField] GameObject pickUpBag;
+    [SerializeField] GameObject pickUpPotato;
 
-    [SerializeField] int dropCount = 5;
+    [SerializeField] int dropCount = 6;
     [SerializeField] float spread = 0.9f;
 
     List<GameObject> items;
@@ -23,6 +24,7 @@ public class ChestHit : ToolHit
         items.Add(pickUpHoe);
         items.Add(pickUpShovel);
         items.Add(pickUpBag);
+        items.Add(pickUpPotato);
     }
 
     public override void Hit()
@@ -38,7 +40,6 @@ public class ChestHit : ToolHit
             position.y -= spread * UnityEngine.Random.value - spread / 2;
 
             GameObject newObject = Instantiate(items[dropCount]);
-
             newObject.transform.position = position;
          }
 
