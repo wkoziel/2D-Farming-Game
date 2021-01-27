@@ -74,11 +74,9 @@ public class UI_ShopController : MonoBehaviour
 
     void TaskWithParameters(long itemCost, Item item)
     {
-        money.substractMoney(itemCost);
-        //Debug.Log(itemCost);
-
         if (money.canBuyItems(itemCost))
         {
+            money.substractMoney(itemCost);
             FindObjectOfType<SoundManager>().Play("Money");
 
             if (item.Name.Contains("Seeds_Corn"))
