@@ -14,9 +14,11 @@ public class DayTimeController : MonoBehaviour
     public int hungerUpdaterCounter;
     public int healthUpdaterCounter;
     public int temperatureUpdateCounter;
+    public int day;
 
     private void Start()
     {
+        day = 0;
         time = 25200f;
         hungerUpdaterCounter = 0;
         healthUpdaterCounter = 0;
@@ -105,6 +107,7 @@ public class DayTimeController : MonoBehaviour
         if (time > SecondsInDay)
         {
             time = 0;
+            day += 1;
             //codzienna dostawa punktow
             MoneyController.money += 200;
         }
@@ -112,6 +115,10 @@ public class DayTimeController : MonoBehaviour
         if(HealthController.currentHealth < 1)
         {
             Application.LoadLevel(3);
+        }
+        if(day == 9 && time > 25200f)
+        {
+            Application.LoadLevel(4);
         }
     }
 
