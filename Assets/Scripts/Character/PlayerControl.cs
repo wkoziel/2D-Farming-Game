@@ -30,17 +30,17 @@ public class PlayerControl : MonoBehaviour
     private void Awake()
     {
         // Deleting all objects from the inventory
-        //foreach (ItemSlot itemSlot in GameManager.instance.inventoryContainer.slots)
-        //{
-        //    if (itemSlot != null)
-        //    {
-        //        if (itemSlot.item != null)
-        //        {
-        //            GameManager.instance.inventoryContainer.RemoveItem(itemSlot.item, itemSlot.count);
-        //        }
+        foreach (ItemSlot itemSlot in GameManager.instance.inventoryContainer.slots)
+        {
+            if (itemSlot != null)
+            {
+                if (itemSlot.item != null)
+                {
+                    GameManager.instance.inventoryContainer.RemoveItem(itemSlot.item, itemSlot.count);
+                }
 
-        //    }
-        //}
+            }
+        }
     }
 
     // Update is called once per frame
