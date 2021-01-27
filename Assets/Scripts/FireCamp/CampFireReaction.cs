@@ -16,7 +16,7 @@ public class CampFireReaction : CampFireHit
     {
         fire.SetActive(true);
 
-        GameManager.instance.inventoryContainer.RemoveItem(GameManager.instance.toolbarControllerGlobal.GetItem, 10);
+        GameManager.instance.inventoryContainer.RemoveItem(GameManager.instance.toolbarControllerGlobal.GetItem, 5);
 
         toolbar.SetActive(!toolbar.activeInHierarchy);
         toolbar.SetActive(true);
