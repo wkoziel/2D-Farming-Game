@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    // Opens up the inventory after clicking I on the keyboard
     [SerializeField] GameObject panel;
     [SerializeField] GameObject toolbarPanel;
     public bool isOpen = false;
@@ -22,6 +21,7 @@ public class InventoryController : MonoBehaviour
         if (Time.timeScale == 0)
             return;
 
+        // Opens/closes inventory after clicking E (equipment) on keyboard
         if (Input.GetKeyDown(KeyCode.E) && !dialogue.activeSelf)
         {
             panel.SetActive(!panel.activeInHierarchy);

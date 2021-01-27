@@ -2,13 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Basic class for the inventory and toolbar panel
 public class ItemPanel : MonoBehaviour
 {
-    // Instead of creating two very similar functionalities for InventoryPanel and
-    // ToolbarPanel there's one class: ItemPanel
-
     public ItemContainer inventory;
-    public List<InventoryButton> buttons;         // Serialized list of buttons
+    public List<InventoryButton> buttons;
 
     private void Start()
     {
@@ -23,9 +21,6 @@ public class ItemPanel : MonoBehaviour
 
     private void SetIndex()
     {
-        // We need to add the exception for the toolbar panel where there are only 8 spots
-        // to do that we add the buttons.Count condition
-
         for (int i = 0; i < inventory.slots.Count && i < buttons.Count; i++)
         {
             buttons[i].SetIndex(i);
@@ -39,19 +34,16 @@ public class ItemPanel : MonoBehaviour
 
     public void Show()
     {
-        // setting or hiding buttons based on the inventory
-
-        // if there's no item in the slot then call the Clean method to hide what the button contains
-        // when there's an item in a slot set it to the button
-
         for (int i = 0; i < inventory.slots.Count && i < buttons.Count; i++)
         {
             if (inventory.slots[i].item == null)
             {
+                // Hiding what the slot in inventory contains in the button
                 buttons[i].Clean();
             }
             else
             {
+                // Setting the button to the item in the inventory
                 buttons[i].Set(inventory.slots[i]);
             }
         }

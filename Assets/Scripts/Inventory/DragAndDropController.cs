@@ -18,10 +18,10 @@ public class DragAndDropController : MonoBehaviour
         iconTransform = itemIcon.GetComponent<RectTransform>();
         itemIconImage = itemIcon.GetComponent<Image>();
     }
-
-    // Checking whether the item icon is active in hierarchy
+    
     private void Update()
     {
+        // Checking whether the item icon is active in hierarchy
         if (itemIcon.activeInHierarchy == true)
         {
             // Assign mouse position to the item icon
@@ -40,7 +40,7 @@ public class DragAndDropController : MonoBehaviour
         else
         {
             // If the item slot is not empty we exchange items inside the item slots
-            // Storing the item and the count from the inventory item slot
+
             Item item = itemSlot.item;
             int count = itemSlot.count;
 
@@ -54,16 +54,14 @@ public class DragAndDropController : MonoBehaviour
 
     private void UpdateIcon()
     {
-        // If there's sth chosen update the icon
-        // put the item sprite from the object into the item icon
-
         if (itemSlot.item == null)
         {
-            // Hides the icon if nothing is chosen
+            // Hides the icon if no item is chosen
             itemIcon.SetActive(false);
         }
         else
         {
+            // Assigns the new item icon
             itemIcon.SetActive(true);
             itemIconImage.sprite = itemSlot.item.icon;
         }

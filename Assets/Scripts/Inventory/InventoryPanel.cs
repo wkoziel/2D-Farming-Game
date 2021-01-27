@@ -6,7 +6,6 @@ public class InventoryPanel : ItemPanel
 {
     public override void OnClick(int id)
     {
-        //ItemContainer inventory = GameManager.instance.inventoryContainer;
         GameManager.instance.dragAndDropController.OnClick(inventory.slots[id]);
         Show();
     }

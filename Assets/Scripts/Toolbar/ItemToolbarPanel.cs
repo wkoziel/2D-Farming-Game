@@ -10,14 +10,12 @@ public class ItemToolbarPanel : ItemPanel
     private void Start()
     {
         Init();
-
-        // Highlights the first item on the list
-        Highlight(0);
+        Highlight(0);       // Highlights the first item on the list
     }
 
+    // Choosing a new item in the toolbar
     public override void OnClick(int id)
     {
-        //Show();
         toolbarController.Set(id);
         Highlight(id);
         

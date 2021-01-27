@@ -4,12 +4,13 @@ using UnityEngine;
 using System;
 
 [Serializable]
+
 public class ItemSlot
 {
     public Item item;
     public int count;
 
-    // Set the item in the drag and drop controller
+    // Sets the item in the drag and drop controller
     public void Copy(ItemSlot slot)
     {
         item = slot.item;
@@ -33,31 +34,30 @@ public class ItemSlot
 
 [CreateAssetMenu(menuName = "Data/Item Container")]
 
+// The inventory is a new Menu asset
+
 public class ItemContainer : ScriptableObject
 {
     public List<ItemSlot> slots;
-
-    // Defining all methods which we use to interact with the inventory
 
     // Adds item to the container
 
     public void Add(Item item, int count = 1)
     {
-        // Determining if the item is stackable - if it's not then find the first free
-        // slot and insert the item there
-
+        // Determining if the item is stackable
         if (item.stackable)
-        {        
+        {   
+            // Finding slot with the same item
             ItemSlot itemSlot = slots.Find(x => x.item == item);
 
 
             if (itemSlot != null)
             {
-                itemSlot.count += count;  // More than 1 item
+                itemSlot.count += count;  // Adding the count
             }
             else
             {
-                // If not - add a new item to the slot
+                // If the item doesn't exist yet it is added
                 itemSlot = slots.Find(x => x.item == null);
 
                 if (itemSlot != null)
@@ -71,7 +71,6 @@ public class ItemContainer : ScriptableObject
         {
             ItemSlot itemSlot = slots.Find(x => x.item == null);
 
-            // If there is no empty slots item will not be added
             if (itemSlot != null)
             {
                 itemSlot.item = item;
@@ -97,7 +96,7 @@ public class ItemContainer : ScriptableObject
 
             itemSlot.count-=count;
 
-            if (itemSlot.count <= 0)        // Clearing the slot if it's empty
+            if (itemSlot.count <= 0)   // Clearing the slot if it's empty
             {
                 itemSlot.Clear();
             }

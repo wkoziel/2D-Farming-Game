@@ -4,12 +4,14 @@ using UnityEngine;
 using System;
 
 [Serializable]
+
+// Class which helps to store all Crop objects
 public class SeedSlot
 {
     public Crop item;
     public int count;
 
-    // Set the item in the drag and drop controller
+    // Sets the item in the drag and drop controller
     public void Copy(SeedSlot slot)
     {
         item = slot.item;

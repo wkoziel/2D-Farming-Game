@@ -1,11 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-// IPointerClickHandler starts to work every time we click on an UI object
 public class InventoryButton : MonoBehaviour, IPointerClickHandler
 {
     [SerializeField] Image icon;
@@ -27,6 +25,7 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
         if (slot.item.stackable == true)
         {
             text.gameObject.SetActive(true);
+
             // Adjusting the count of the objects in inventory
             text.text = slot.count.ToString();
         }
@@ -45,12 +44,14 @@ public class InventoryButton : MonoBehaviour, IPointerClickHandler
         text.gameObject.SetActive(false);
     }
 
+    // Clicking on an item with the mouse
     public void OnPointerClick(PointerEventData eventData)
     {
         ItemPanel itemPanel = transform.parent.GetComponent<ItemPanel>();
         itemPanel.OnClick(myIndex);
     }
 
+    // Highlightin the chosen item
     public void Highlight(bool param)
     {
         highlight.gameObject.SetActive(param);
