@@ -13,7 +13,7 @@ public class InventoryController : MonoBehaviour
 
     private void Start()
     {
-        dialogue = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("dialoguePanel"));
+        dialogue = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("startDialogue"));
     }
 
     void Update()
@@ -21,6 +21,7 @@ public class InventoryController : MonoBehaviour
         if (Time.timeScale == 0)
             return;
 
+        //Debug.Log(dialogue.activeSelf);
         // Opens/closes inventory after clicking E (equipment) on keyboard
         if (Input.GetKeyDown(KeyCode.E) && !dialogue.activeSelf)
         {

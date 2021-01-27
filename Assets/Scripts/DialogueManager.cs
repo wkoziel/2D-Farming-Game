@@ -85,6 +85,7 @@ public class DialogueManager : MonoBehaviour
                 dialogueBox.SetActive(false);
                 toolbar.SetActive(true);
                 chest.SetActive(true);
+
                 shop.SetActive(true);
             }
             
