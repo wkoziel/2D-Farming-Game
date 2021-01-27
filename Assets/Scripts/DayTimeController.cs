@@ -71,7 +71,7 @@ public class DayTimeController : MonoBehaviour
         if (time > 25200f && time < 72000f)
         {
             light.intensity = 1f;
-            
+            TemperatureController.currentTemperature = 100;
         }
 
 
