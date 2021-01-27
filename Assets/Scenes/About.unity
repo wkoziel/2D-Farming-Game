@@ -538,7 +538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.1, y: -1.9}
+  m_AnchoredPosition: {x: 0.099962, y: -1.9001}
   m_SizeDelta: {x: 754.5779, y: 419.71024}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &235865319
@@ -867,10 +867,10 @@ RectTransform:
   m_Father: {fileID: 2082020200}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 377.2889, y: -223.635}
-  m_SizeDelta: {x: 754.5778, y: 447.27}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452658316
 MonoBehaviour:
@@ -2074,7 +2074,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -17, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &1538029507
 MonoBehaviour:
@@ -2394,10 +2394,10 @@ RectTransform:
   m_Father: {fileID: 1717537940}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 368.78894, y: -433.26}
-  m_SizeDelta: {x: 737.5779, y: 866.52}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1755202606
 MonoBehaviour:
@@ -2433,9 +2433,11 @@ MonoBehaviour:
     the best option when you suffer from poor health, the most expesive seed\n\ttomato
     - really bland vegetable, it gives you some filling and doesn't improve your
     health but is cheap and grows fast.\nYou can get the seeds from the parrot -
-    it will be your one and only friend in here. \r\nBut it is not as friendly as
-    you think, it will not give you them for free, you will be able to buy them for
-    points obtained for the days you have survived and the trees you felled."
+    it will be your one and only friend in here. But it is not as friendly as you
+    think, it will not give you them for free, you will be able to buy them for points
+    obtained for the days you have survived, the trees you felled and the foods you
+    collected.\nAnd don't be too depressed, if you'll survive long enough, help will
+    come."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
