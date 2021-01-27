@@ -30,13 +30,14 @@ public class ToolsCharacterController : MonoBehaviour
     private static int strawberryAmount = 1;
     private static int tomatoAmount = 1;
 
-
     Vector3Int selectedTilePosition;
     Vector3Int selectedCropPosition;
     bool selectable;
 
     public static Dictionary<Vector2Int, TileData> fields;
     public static Dictionary<Vector2Int, CropData> crops;
+
+    UI_ShopController shopPanel;
 
 
     // Start is called before the first frame update
@@ -48,6 +49,9 @@ public class ToolsCharacterController : MonoBehaviour
         crops = new Dictionary<Vector2Int, CropData>();
         toolbarController = GetComponent<ToolbarController>();
         inventoryController = GetComponent<InventoryController>();
+
+        var shopPanelAll = Resources.FindObjectsOfTypeAll<UI_ShopController>();
+        shopPanel = shopPanelAll[0];
     }
 
     // Update is called once per frame
@@ -208,7 +212,6 @@ public class ToolsCharacterController : MonoBehaviour
             if (hitPlayer != null && CastRayPlayer() == true && (toolbarController.GetItem.Name == "Food_Corn" || toolbarController.GetItem.Name == "Food_Parsley"
                     || toolbarController.GetItem.Name == "Food_Potato" || toolbarController.GetItem.Name == "Food_Strawberry" || toolbarController.GetItem.Name == "Food_Tomato"))
             {
-                //Debug.Log(toolbarController.GetItem.Name);
                 hitPlayer.Hit();
                 return true;
             }
@@ -249,7 +252,8 @@ public class ToolsCharacterController : MonoBehaviour
             if (crops[(Vector2Int)selectedTilePosition].noPlant)
             {
                 //usage of tools if tile has suitable ability
-                if (fields[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel")
+                if (fields[(Vector2Int)selectedTilePosition].ableToMow && toolbarController.GetItem.Name == "Shovel" 
+                    && shopPanel.isOpen == false)
                 {
                     cropsManager.Mow(selectedTilePosition);
                 }

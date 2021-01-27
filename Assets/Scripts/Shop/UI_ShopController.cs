@@ -11,6 +11,7 @@ public class UI_ShopController : MonoBehaviour
     public Button btn;
     [SerializeField] GameObject toolbarPanel;
     [SerializeField] GameObject inventoryPanel;
+    public bool isOpen;
 
     private void Awake()
     {
@@ -20,6 +21,7 @@ public class UI_ShopController : MonoBehaviour
 
     private void Start()
     {
+
         Dictionary<string, Sprite> plantsDictionary = CreateSeedsFromSprite();
 
         CreateItemButton(plantsDictionary["Seeds_Corn"], "Seeds_Corn", 100, 0, "Corn Seeds");
@@ -112,12 +114,14 @@ public class UI_ShopController : MonoBehaviour
 
     public void Show()
     {
+        isOpen = true;
         gameObject.SetActive(true);
         
     }
 
     public void Hide()
     {
+        isOpen = false;
         gameObject.SetActive(false);
     }
 

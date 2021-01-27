@@ -15,7 +15,6 @@ public class InventoryController : MonoBehaviour
     private void Start()
     {
         dialogue = Resources.FindObjectsOfTypeAll<GameObject>().FirstOrDefault(g => g.CompareTag("dialoguePanel"));
-        Debug.Log(dialogue);
     }
 
     void Update()
