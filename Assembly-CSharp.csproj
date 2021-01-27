@@ -84,9 +84,8 @@
     <Compile Include="Assets\Scripts\Inventory\InventoryPanel.cs" />
     <Compile Include="Assets\Scripts\Inventory\Item.cs" />
     <Compile Include="Assets\Scripts\Inventory\ItemContainer.cs" />
-    <Compile Include="Assets\Scripts\Inventory\ItemSpawnManager.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ItemPanel.cs" />
     <Compile Include="Assets\Scripts\Inventory\SeedContainer.cs" />
-    <Compile Include="Assets\Scripts\ItemPanel.cs" />
     <Compile Include="Assets\Scripts\MarkerManager.cs" />
     <Compile Include="Assets\Scripts\MoneyController.cs" />
     <Compile Include="Assets\Scripts\Parameters\HealthController.cs" />
