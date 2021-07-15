@@ -17,7 +17,7 @@ The player is shipwrecked on a desert island. Your goal is to survive - find too
 
 
 ## Technologies Used
-- C# with Unity - version 2019.3.4
+- **C# with Unity** - version 2019.3.4
 
 ## Setup
 You can play our game by using **2D Farming Game.exe** in **2D-Farming-Game/build/final**
