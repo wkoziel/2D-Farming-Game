@@ -1,4 +1,4 @@
-# Skradzione Wzory
+# 2D Farming Game
 > Implementation of a survival game inspired by Stardew Valley, in which the player becomes a shipwrecked man on an island and has to provide himself with the means of survival, a game developed using Unity.
 > 
 ## Table of Contents
